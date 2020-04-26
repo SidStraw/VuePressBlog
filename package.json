@@ -1,0 +1,35 @@
+{
+  "name": "vuepress-blog-template",
+  "version": "1.0.0",
+  "description": "My Website & Blog",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev",
+    "build": "vuepress build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/z3by/vuepress-blog-template.git"
+  },
+  "keywords": [
+    "vue.js",
+    "vuepress",
+    "blog",
+    "vuepress/plugin-blog"
+  ],
+  "author": {
+    "name": "Ahmad Mostafa",
+    "url": "https://ahmadmostafa.com",
+    "email": "zoaby.am@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/z3by/vuepress-blog-template/issues"
+  },
+  "homepage": "https://github.com/z3by/vuepress-blog-template#readme",
+  "devDependencies": {
+    "vuepress": "^1.2.0",
+    "vuepress-plugin-crisp": "^1.0.0",
+    "vuepress-theme-modern-blog": "^2.4.1"
+  }
+}
