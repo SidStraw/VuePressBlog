@@ -1,6 +1,6 @@
 module.exports = {
-  title: "<TITLE>", // replace with site title
-  description: "<DESCRIPTION>", // replace with site description
+  title: "Sid吸管", // replace with site title
+  description: "資訊爆炸的時代，更要懂的小口啜飲", // replace with site description
   // theme: "modern-blog",
   themeConfig: {
     // these values will be injected to the head element in each page
@@ -20,34 +20,34 @@ module.exports = {
     // summary is a snippet of your post shown in the posts list.
     summary: true,
     // number of summary characters shown in the post card.
-    summaryLength: 300,
+    summaryLength: 100,
     
     // an image shown in the top of your home page
     heroImage: "/images/hero.jpeg",
     
     // navbar items
-    nav: [
-      {
-        text: "Home",
-        link: "/",
-        icon: 'el-icon-house' // see all available icons here https://element.eleme.io/#/en-US/component/icon
-      },
-      {
-        text: "Projects",
-        link: "/projects/",
-        icon: "el-icon-folder" // see all available icons here https://element.eleme.io/#/en-US/component/icon
-      }
-    ],
+    // nav: [
+    //   {
+    //     text: "Home",
+    //     link: "/",
+    //     icon: 'el-icon-house' // see all available icons here https://element.eleme.io/#/en-US/component/icon
+    //   },
+    //   {
+    //     text: "Projects",
+    //     link: "/projects/",
+    //     icon: "el-icon-folder" // see all available icons here https://element.eleme.io/#/en-US/component/icon
+    //   }
+    // ],
     
     // this is used for the "about" card in home page.
     about: {
-      fullName: "<YOUR NAME> or <YOUR SITE NAME>",
-      image: "/images/bg_1.png",
+      fullName: "Sid吸管",
+      image: "/images/sid.jpg",
       bio:
-        "<BIO>"
+        "吸管就是拿來Sid"
     },
     
-    disqus: "<DISQUS SITE ID>", // for comments, visit https://disqus.com/ for more info.
+    disqus: "codeshop-1", // for comments, visit https://disqus.com/ for more info.
     
     googleAnalytics: "<GOOGLE ANALYTICS ID>", // for site analytics, visit https://analytics.google.com/analytics/web/ for more information.
     
@@ -55,54 +55,50 @@ module.exports = {
     hostname: "<YOUR SITE DOMAIN NAME>", // required for site map.
 
     socialShare: true,
-    socialShareNetworks: ["twitter", "facebook"],
+    socialShareNetworks: ["facebook"],
 
     footer: {
       contact: [
         {
           type: "github",
-          link: "https://github.com/z3by/"
+          link: "https://github.com/sidstraw/"
         },
-        {
-          type: "instagram",
-          link: "https://instagram.com/z3bya/"
-        },
+        // {
+        //   type: "instagram",
+        //   link: "https://instagram.com/z3bya/"
+        // },
         {
           type: "facebook",
-          link: "https://facebook.com/ahmad.mostafa.z3by/"
+          link: "https://facebook.com/j80304xz/"
         },
         {
           type: "linkedin",
-          link: "https://www.linkedin.com/in/z3by/"
+          link: "https://www.linkedin.com/in/sidstraw/"
         },
-        {
-          type: "youtube",
-          link: "https://www.youtube.com/channel/UC8fZybVYhEnCe1UwwVidVcg"
-        },
-        {
-          type: "twitter",
-          link: "https://twitter.com/ahmad_mostafa10/"
-        }
+        // {
+        //   type: "youtube",
+        //   link: "https://www.youtube.com/channel/UC8fZybVYhEnCe1UwwVidVcg"
+        // },
       ],
       copyright: [
+        // {
+        //   text: "This theme is available for you!",
+        //   link: "https://github.com/z3by/vuepress-theme-modern-blog"
+        // },
         {
-          text: "This theme is available for you!",
-          link: "https://github.com/z3by/vuepress-theme-modern-blog"
-        },
-        {
-          text: `MIT Licensed Copyright © ${new Date().getFullYear()}-present`,
+          text: `Copyright © ${new Date().getFullYear()} SidStraw All rights reserved.`,
           link:
-            "https://github.com/z3by/vuepress-theme-modern-blog/blob/master/LICENSE"
+            "https://facebook.com/j80304xz/"
         }
       ]
     }
   },
 
   plugins: [
-    [
-      'crisp', {
-        siteID: "<CRISP SITE ID>" // visit https://crisp.chat/en/ for more or remove this plugin to disable it.
-      }
-    ]
+    // [
+    //   'crisp', {
+    //     siteID: "<CRISP SITE ID>" // visit https://crisp.chat/en/ for more or remove this plugin to disable it.
+    //   }
+    // ]
   ]
 };
