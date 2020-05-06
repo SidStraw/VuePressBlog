@@ -12,7 +12,7 @@ jobs:
     - name: markdownlint-cli
       uses: ./.github/workflows/docker/lint/
       env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
     - name: Commit files
       run: |
         echo ${{ github.ref }}
@@ -24,4 +24,4 @@ jobs:
       if: github.ref == 'refs/heads/master'
       uses: ad-m/github-push-action@master
       with:
-        github_token: ${{ secrets.TOKEN }}
+        github_token: ${{ secrets.GITHUB_TOKEN }}
