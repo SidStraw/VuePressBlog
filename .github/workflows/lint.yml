@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: markdownlint-cli
-      uses: z3by/ahmadmostafa.com/.github/workflows/docker/lint/Dockerfile
+      uses: SidStraw/VpressBlog/.github/workflows/docker/lint/Dockerfile
       env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
     - name: Commit files

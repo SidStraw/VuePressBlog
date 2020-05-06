@@ -1,21 +1,32 @@
 module.exports = {
   title: "Sid吸管", // replace with site title
-  description: "資訊爆炸的時代，更要懂的小口啜飲", // replace with site description
+  description: "資訊爆炸的時代，更要懂得小口啜飲", // replace with site description
   // theme: "modern-blog",
+  head: [
+    ['link', { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" }],
+    ['link', { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" }],
+    ['link', { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" }],
+    ['link', { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png" }],
+    ['link', { rel: "manifest", href: "/site.webmanifest" }],
+    ['link', { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#5bbad5" }],
+    ['link', { rel: "shortcut icon", href: "/favicon.ico" }],
+    ['meta', { name: "msapplication-TileColor", content: "#da532c" }],
+    ['meta', { name: "theme-color", content: "#ffffff" }],
+  ],
   themeConfig: {
     // these values will be injected to the head element in each page
     // replace icons with your site icons
-    head: [
-      ['link', { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" }],
-      ['link', { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" }],
-      ['link', { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" }],
-      ['link', { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png" }],
-      ['link', { rel: "manifest", href: "/site.webmanifest" }],
-      ['link', { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#5bbad5" }],
-      ['link', { rel: "shortcut icon", href: "https://ahmadmostafa.com/favicon.ico" }],
-      ['meta', { name: "msapplication-TileColor", content: "#da532c" }],
-      ['meta', { name: "theme-color", content: "#ffffff" }],
-    ],
+    // head: [
+    //   ['link', { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" }],
+    //   ['link', { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" }],
+    //   ['link', { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" }],
+    //   ['link', { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png" }],
+    //   ['link', { rel: "manifest", href: "/site.webmanifest" }],
+    //   ['link', { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#5bbad5" }],
+    //   ['link', { rel: "shortcut icon", href: "https://ahmadmostafa.com/favicon.ico" }],
+    //   ['meta', { name: "msapplication-TileColor", content: "#da532c" }],
+    //   ['meta', { name: "theme-color", content: "#ffffff" }],
+    // ],
     
     // summary is a snippet of your post shown in the posts list.
     summary: true,

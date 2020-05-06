@@ -9,7 +9,7 @@
     >
       <div class="p-3 text-center text-light">
         <h1 class="display-3">{{ $site.title }}</h1>
-        <p class="font-weight-light h3 text-light">{{ $site.description }}</p>
+        <p class="h3 text-light">{{ $site.description }}</p>
         <a
           href="#posts"
           class="el-button el-button--primary my-3"
@@ -82,12 +82,15 @@ export default {
 <style src="prismjs/themes/prism-okaidia.css"></style>
 
 
-<style>
+<style scoped>
 header.home-hero {
   background-color: #999;
   background-blend-mode: multiply;
   padding: 10rem 0rem;
   background-repeat: none;
   background-size: cover;
+}
+.display-3 {
+  font-weight: 800;
 }
 </style>
