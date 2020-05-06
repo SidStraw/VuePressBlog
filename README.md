@@ -1,6 +1,7 @@
 # Sid's Vuepress Blog
 
 ## Getting Started
+
 - install it locally [installing]
 - add some markdown posts to `_posts`, check the existing example
 - deploy your blog, check [Deployment](#deployment)
