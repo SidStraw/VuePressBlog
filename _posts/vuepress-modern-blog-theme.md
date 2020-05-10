@@ -1,50 +1,120 @@
 ---
-date: '2019-10-14'
-slug: vuepress-modern-blog-theme
+date: '2020-05-10'
+slug: google-cloud-platform
 tags:
-- 行銷經驗
-title: 你真的需要名片嗎？
-description: 你真的需要名片嗎？
-author: Sid
-location: Irbid-Jordan
-image: /images/sid.jpg
-meta:
-  - name: title
-    content: Create a modern vuepress blog in 5 minutes!
-  - name: description
-    content: create a modern vuepress blog
-  - name: keywords
-    content: Ahmad Mostafa, Vuepress, Vue.js, Vuepress website, vuepress blog, vuepress theme, vuepress blog theme, vue blog, create vuepress blog, blog theme, create a blog
-  - name: author
-    content: Ahmad Mostafa
+- 前端開發
+title: Google Cloud Platform 介紹與前端應用
+description: Google Cloud Platform 介紹與前端應用
+author: SidStraw
+image: https://i.imgur.com/9KCYWz6.png
 featured: true
 ---
 
-「吸管，你有名片嗎？」
-『有喔！請掃一下這個QR Code～』（拿出手機
+## 在 GCP 中主要具有 7 大功能
 
+----
 
-⇧這就是我的名片
+1. Compute：運算相關服務，包含虛擬主機、App Engine 等
+1. Storage：SQL、NoSQL 資料庫與檔案儲存空間
+1. Networking：平衡系統負載和提供安全規則的設置
+1. Stackdriver：提供日誌記錄、監控、追踪等工具
+1. Tools：為開發人員管理部署和應用程式構建的服務
+1. Big Data：處理和分析大型數據的服務
+1. Artificial Intelligence：提供一系列API運行特定的人工智慧和機器學習任務
 
-也許很多人都會告訴你，開始做生意就要趕快去印自己的名片在各種場合中發送，但是這樣的行動真的有效益嗎？
+---
 
-一、交換名片的意義
-交換名片的目的，往往是為了曝光自己的生意，讓別人在有需求的時候可以想到你進而與你聯絡，這在過去確實是一個非常重要的行銷手段，甚至很多的人都以發完多少名片作為自己的行動目標。
+## Cloud Identity and Access Management（IAM）
+IAM 用於定義誰可以訪問哪些資源。我們可以透過IAM服務來檢查和修改此類角色和權限。
 
-可是我們可以想想，現在當你有什麼需要的時候，你所做的事情是什麼？是去翻名片收集冊（現在還有收藏名片的人越來越少了吧…），還是對著手機喊一聲「OK Google」呢？（或是喊「Siri」也可以啦…）
+進入 IAM 頁面後會看到其中列出的所有帳號，可從 Type 區分為 Service account 及 User
 
-現在的時空背景下，人們取得資訊的管道太過廣闊，如果你沒有給人留下足夠的記憶點，就算對方收下了名片往往也只是石沉大海。
+**請注意，Service account 為資源建立時由 GCP 自動建立，除刪除重建資源外無法恢復，相關操作請謹慎進行**
 
-二、廣發名片不如強化印象
-了解了這樣的概念以後，假設你在一個公開的場合想要結交新的人脈或是拓展事業，你會選擇穿梭在人群中間不斷送出名片，回家後看著發空的名片盒洋洋得意，或是好好的在一個族群中與人深度的交流，然後直接在彼此的手機中留下對方的聯絡方式呢？
+----
 
-即使你的目的是希望能最大範圍的散播自己的訊息，也至少要讓自己的存在是具有記憶點的。
+|身份|viewer|editor|owner|
+|---|---|---|---|
+|權限|唯讀|修改現有資源|新增資源及修改其他使用者|
 
-讓人對你有記憶點的方式很多，也許是你自信的態度、獨特的打扮，又或者像我一樣當需要交換名片時，我拿出的卻是手機。
+---
 
-三、不斷強化形象的「名片」：網站
-如果你送出名片的目的是為了在接下來的交流中提高形象或社交地位，那麽名片交換這個流程確實有其必要性，但倘若你發送名片的目的在於行銷或拓展人脈，我想現代化的工具：「網站」會更適合你。
+## Google Cloud API
+類似「服務」的概念，GCP 所提供的各種服務皆以 API 的方式呈現，目前 GCP 上已有 200 多個 API ，範圍包含 SaaS 、虛擬機、大數據、機器學習等各領域，可以按照自身使用的需求來決定是否啟用，相關費用與計費方式也都會在 API 頁面列出。
 
-畢竟一個設計精美的網站所提供的資訊遠比小小的名片來得更加多元，當對方對你所經營的事業產生興趣時，能在短時間給予更多的誘因及記憶點，大幅提升你的行銷效益。
+----
 
-而我個人在使用上是搭配LINE@作為工具，畢竟LINE是台灣普及率最高的通訊媒體，也許對方的手機中沒有QR Code掃描的APP，但是一定有LINE可以掃描加入我的LINE@好友，只要事先將LINE@完成各項自動訊息及主頁設定，就可以讓對方加入後轉而瀏覽你的網站，更可以在日後主動與對方聯繫，可謂一舉數得啊！
+需要功能？去吧！GCP 把 API 都列在 API Library 了！
+
+---
+
+## Cloud Shell
+GCP 的控制除了透過 UI 介面以外，也可以使用 Command line 來進行控制，GCP 內建有網頁式的 Terminal 工具，已經完成 Cloud SDK 等相關環境設置，如果有啟用運算資源（虛擬主機）也可以直接開啟網頁式 Termanal 連結進入該主機。
+>註：請使用 Chrome 以免發生不預期的錯誤
+
+----
+
+如想要透過本機 Terminal 工具連結 GCP 需自行安裝 Cloud SDK 
+Cloud SDK 相關指令與安裝流程請參閱 [Cloud SDK 說明文件](https://cloud.google.com/sdk/gcloud/)
+
+---
+
+## 雲端服務架構區分
+1. 基礎架構即服務 (IaaS)
+1. 平台即服務 (PaaS)
+1. 軟體即服務 (SaaS)
+
+----
+
+### 基礎架構即服務 (IaaS)
+提供客戶儲存、網路、伺服器及其他運算資源
+
+----
+
+### 平台即服務 (PaaS)
+供應基礎架構，如 App Engine 提供 Node.js、Java、Ruby、C#、Go、Python 和 PHP 的運行環境，並支援 Docker Image 部署
+
+----
+
+### 體即服務 (SaaS)
+直接提供雲端服務使用，例如 Cloud Firestore、Cloud Functions 等
+
+---
+
+## 小型 Web 專案主要需求資源
+1. Compute：運算相關服務，包含虛擬主機、App Engine 等
+1. Storage：SQL、NoSQL 資料庫與檔案儲存空間
+2. Networking：主要進行 IP、防火牆等相關網路設定
+
+----
+
+完整的 Web 服務勢必需要包含DNS、託管主機、後端邏輯與資料庫架構，而 DNS、SSL、CDN 相關服務有普及率更高，費用也相對較低的 Cloudflare，故此處僅羅列出 Compute、Storage 相關資源。
+
+---
+
+## Compute 相關資源介紹
+1. COMPUTE ENGINE
+3. APP ENGINE
+4. KUBERNETES ENGINE
+5. Cloud Functions
+
+---
+
+## Storage 相關資源介紹
+1. CLOUD SQL
+2. Cloud Firestore
+3. Cloud Storage
+
+---
+
+## Networking
+1. VNC
+
+---
+
+## Serverless 架構
+如果是想建立 MVP 最小可行性產品 (Minimum Viable Product) 快速投入市場，那麼直接使用 Serverless 架構的 Firebase 是一個不錯的選項，Firebase 的服務結合了靜態網站的部署還有上面列出的 `Cloud Functions`、`Cloud Firestore`、`Cloud Storage` 等服務
+
+----
+
+Serverless 架構可讓前端工程師不需費神處理主機、資安防護、資料庫正規化等不擅長的領域，可以直接在前端程式中操作 `Cloud Firestore` NoSQL 資料庫，若是需要較為複雜的功能，或是有安全性及商業邏輯暴露的考量，也可搭配`Cloud Functions` 使用 Node.js 作為後端架構。
