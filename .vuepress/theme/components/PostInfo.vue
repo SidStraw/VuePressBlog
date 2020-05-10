@@ -5,15 +5,9 @@
       {{ new Date(date.trim()).toDateString() }}
     </div>
     <div
-      class="post-info-item"
-      v-if="timeToRead"
-    >
+      class="post-info-item">
       <ClockIcon />
-      {{ timeToRead }}
-    </div>
-    <div class="post-info-item">
-      <NavigationIcon />
-      {{ location }}
+      {{ $page.frontmatter.tags.join('、') }}
     </div>
   </div>
 </template>
@@ -23,7 +17,7 @@ import { NavigationIcon, ClockIcon, CalendarIcon } from "vue-feather-icons";
 
 export default {
   components: { NavigationIcon, ClockIcon, CalendarIcon },
-  props: ["date", "timeToRead", "location"]
+  props: ["date"]
 };
 </script>
 

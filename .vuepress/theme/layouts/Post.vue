@@ -5,24 +5,22 @@
         body-style="padding: 0"
         class="mb-4"
       >
-        <img
-          :src="$withBase($frontmatter.image)"
-          :alt="$frontmatter.title"
-          v-if="$frontmatter.image"
-          class="w-100"
-        />
         <div class="p-3">
           <h1 align="center">{{ $frontmatter.title }}</h1>
           <PostInfo
             :date="$frontmatter.date"
-            :timeToRead="$page.readingTime.text"
-            :location="$frontmatter.location"
             class="text-secondary d-flex justify-content-center my-3"
           />
         </div>
       </el-card>
 
       <el-card body-style="padding: 1rem 2rem;">
+        <img
+          :src="$withBase($frontmatter.image)"
+          :alt="$frontmatter.title"
+          v-if="$frontmatter.image"
+          class="w-100"
+        />
         <Content />
       </el-card>
       <el-card class="my-4">

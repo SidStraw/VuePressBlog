@@ -44,8 +44,6 @@
     <div class="d-flex justify-content-end text-secondary p-4 mt-2 border-top border-light">
       <PostInfo
         :date="post.frontmatter.date"
-        :timeToRead="post.readingTime.text"
-        :location="post.frontmatter.location"
       />
     </div>
   </el-card>
