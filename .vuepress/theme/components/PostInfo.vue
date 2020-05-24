@@ -2,12 +2,12 @@
   <div class="ui-post-info d-flex">
     <div class="post-info-item">
       <CalendarIcon />
-      {{ new Date(date.trim()).toDateString() }}
+      {{ new Date(frontmatter.date.trim()).toDateString() }}
     </div>
     <div
       class="post-info-item">
       <ClockIcon />
-      {{ $page.frontmatter.tags.join('、') }}
+      {{ frontmatter.tags.join('、') }}
     </div>
   </div>
 </template>
@@ -17,7 +17,7 @@ import { NavigationIcon, ClockIcon, CalendarIcon } from "vue-feather-icons";
 
 export default {
   components: { NavigationIcon, ClockIcon, CalendarIcon },
-  props: ["date"]
+  props: ["frontmatter"]
 };
 </script>
 

@@ -8,7 +8,7 @@
         <div class="p-3">
           <h1 align="center">{{ $frontmatter.title }}</h1>
           <PostInfo
-            :date="$frontmatter.date"
+            :frontmatter="$frontmatter"
             class="text-secondary d-flex justify-content-center my-3"
           />
         </div>
