@@ -43,7 +43,7 @@
     </div>
     <div class="d-flex justify-content-end text-secondary p-4 mt-2 border-top border-light">
       <PostInfo
-        :frontmatter="$frontmatter"
+        :frontmatter="post.frontmatter"
       />
     </div>
   </el-card>
