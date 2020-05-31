@@ -14,12 +14,8 @@
       :debounce="200"
     >
       <template slot-scope="props">
-        <li
-          role="option"
-          v-html="props.item.value"
-        ></li>
+        <li role="option" v-html="props.item.value"></li>
       </template>
-
     </el-autocomplete>
   </div>
 </template>
@@ -28,13 +24,14 @@
 import Flexsearch from "flexsearch";
 
 export default {
-  data () {
+  data() {
     return {
       index: null,
+      zhIndex: null,
       query: ""
     };
   },
-  mounted () {
+  mounted() {
     this.index = new Flexsearch({
       tokenize: "forward",
       doc: {
@@ -42,15 +39,24 @@ export default {
         field: ["title", "content"]
       }
     });
+    this.zhIndex = new Flexsearch({
+      encode: false,
+      tokenize: function(str) {
+        return str.replace(/[\x00-\x7F]/g, "").split("");
+      },
+      doc: {
+        id: "key",
+        field: ["title", "content"]
+      }
+    });
     const { pages } = this.$site;
     this.index.add(pages);
+    this.zhIndex.add(pages);
   },
   methods: {
-    querySearchAsync (queryString, cb) {
+    querySearchAsync(queryString, cb) {
       const { pages, themeConfig } = this.$site;
       const query = queryString.trim().toLowerCase();
-      const usingGoogleSearch =
-        themeConfig.googleCustomSearchEngineID && themeConfig.googleAPIKey;
       const max = themeConfig.searchMaxSuggestions || 20;
       if (this.index === null || query.length < 1) {
         return cb([]);
@@ -60,51 +66,53 @@ export default {
         {
           limit: max,
           threshold: 4,
-          encode: 'extra'
+          encode: "extra"
         },
-        (result) => {
-          if (result.length) {
-            const resolvedResult = result.map(page => {
-              return {
-                link: page.path,
-                value: this.getQuerySnippet(page)
-              };
-            });
-            return cb(resolvedResult);
-          } else {
-            if (usingGoogleSearch) {
-              return cb([
-                {
-                  value: `Search the entire site for "${query}"`,
-                  link: `/search?q=${query}`
-                }
-              ]);
-            } else {
-              cb([{ value: `No results! Try something else.`, link: '' }]);
+        result => {
+          this.zhIndex.search(
+            query,
+            {
+              limit: max,
+              threshold: 4,
+              encode: "extra"
+            },
+            zhResult => {
+              if (result.length && zhResult.length) {
+                result = result.filter(item => zhResult.some( zhItem => zhItem.key === item.key))
+              } else {
+                result = [...result, ...zhResult]
+              }
+              if (result.length) {
+                const resolvedResult = result.map(page => {
+                  return {
+                    link: page.path,
+                    value: this.getQuerySnippet(page)
+                  };
+                });
+                return cb(resolvedResult);
+              } else {
+                cb([{ value: `No results! Try something else.`, link: "" }]);
+              }
             }
-          }
+          );
         }
       );
     },
-    getQuerySnippet (page) {
-      const queryPosition = page.content.toLowerCase().indexOf(this.query)
-      const startIndex = queryPosition - 20 < 0 ? 0 : queryPosition - 20
-      const endIndex = queryPosition + 30
-      const querySnippet = page.content.slice(startIndex, endIndex)
-        .toLowerCase()
-        .replace(this.query, `<strong class="text--primary">${this.query}</strong>`)
-        .split(' ')
-        .slice(1, -1)
-        .join(' ')
-      if (querySnippet) {
-        return `<strong class="text--primary">${page.title}</strong> > .. ${querySnippet} ..`
-          .replace(/\|/g, ' ')
-          .replace(/:::/g, ' ')
-      } else {
-        return page.title
-      }
+    getQuerySnippet(page) {
+      const queryPosition = page.content.toLowerCase().indexOf(this.query.toLowerCase());
+      const startIndex = queryPosition;
+      const endIndex = queryPosition + 20;
+      const querySnippet = page.content
+        .slice(startIndex, endIndex)
+        .replace(
+          new RegExp(`(${this.query})`, 'i'),
+          `<strong class="text--primary">$1</strong>`
+        )
+      return `<strong class="text--primary">${page.title}</strong> > .. ${querySnippet} ..`
+        .replace(/\|/g, " ")
+        .replace(/:::/g, " ");
     },
-    handleSelect (item) {
+    handleSelect(item) {
       if (item.link) {
         this.$router.push(item.link);
       }
