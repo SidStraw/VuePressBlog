@@ -27,8 +27,7 @@
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "example:dev": "vuepress dev example --temp example/.temp",
-    "example:build": "vuepress build example --temp example/.temp",
-    "prepublishOnly": "npm run example:build && conventional-changelog -p angular -r 2 -i CHANGELOG.md -s"
+    "example:build": "vuepress build example --temp example/.temp"
   },
   "repository": {
     "url": "SidStraw/vuepress-theme-sidstraw-blog",

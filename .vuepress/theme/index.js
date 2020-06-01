@@ -114,7 +114,6 @@ module.exports = (themeConfig, ctx) => {
 
   const config = {
     plugins,
-    // extend: 'modern-blog',
     define: {
       THEME_BLOG_PAGINATION_COMPONENT: themeConfig.paginationComponent
         ? themeConfig.paginationComponent

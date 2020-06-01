@@ -1,7 +1,7 @@
 module.exports = {
   title: "Sid吸管", // replace with site title
   description: "資訊爆炸的時代，更要懂得小口啜飲", // replace with site description
-  // theme: "modern-blog",
+  // theme: "sidstraw-blog",
   head: [
     ['link', { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" }],
     ['link', { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" }],
