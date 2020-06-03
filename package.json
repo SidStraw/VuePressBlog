@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/z3by/vuepress-blog-template.git"
+    "url": "SidStraw/VpressBlog.git"
   },
   "keywords": [
     "vue.js",
@@ -18,15 +18,15 @@
     "vuepress/plugin-blog"
   ],
   "author": {
-    "name": "Ahmad Mostafa",
-    "url": "https://ahmadmostafa.com",
-    "email": "zoaby.am@gmail.com"
+    "email": "j80304xz@gmail.com",
+    "name": "SidStraw",
+    "url": "https://sidstraw.dev/"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/z3by/vuepress-blog-template/issues"
+    "url": "https://github.com/SidStraw/VpressBlog/issues"
   },
-  "homepage": "https://github.com/z3by/vuepress-blog-template#readme",
+  "homepage": "https://github.com/SidStraw/VpressBlog#readme",
   "devDependencies": {
     "vuepress": "^1.2.0",
     "vuepress-plugin-crisp": "^1.0.0"
