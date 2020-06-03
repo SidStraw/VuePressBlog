@@ -1,6 +1,6 @@
 module.exports = {
   title: "Sid吸管", // replace with site title
-  description: "資訊爆炸的時代，更要懂得小口啜飲", // replace with site description
+  description: "吸管就是拿來Sid", // replace with site description
   // theme: "sidstraw-blog",
   head: [
     ['link', { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" }],
@@ -63,7 +63,7 @@ module.exports = {
     googleAnalytics: "<GOOGLE ANALYTICS ID>", // for site analytics, visit https://analytics.google.com/analytics/web/ for more information.
     
     sitemap: true, // auto generate site map for your site for better SEO.
-    hostname: "<YOUR SITE DOMAIN NAME>", // required for site map.
+    hostname: "https://sidstraw.dev/", // required for site map.
 
     socialShare: true,
     socialShareNetworks: ["facebook"],
