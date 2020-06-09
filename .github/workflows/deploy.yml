@@ -32,8 +32,13 @@ jobs:
         cmd: build # will run `yarn build` command
     - name: Commit files
       run: |
+        cd .vuepress
+        ls -all
         cd $PUBLISH_DIR
+        echo ${{ github.ref }}
+        echo $PUBLISH_DIR
         git init
+        echo init
         git config --local user.name $USER_NAME
         git config --local user.email $USER_EMAIL
         git status
@@ -41,5 +46,11 @@ jobs:
         git checkout -b gh-pages
         git add --all
         git commit -m "deploy to Github pages"
-        git push origin gh-pages -f
-        echo 🤘 deploy gh-pages complete.
+    - name: Push changes
+      if: github.ref == 'refs/heads/gh-pages'
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: 'gh-pages'
+        force: true
+
