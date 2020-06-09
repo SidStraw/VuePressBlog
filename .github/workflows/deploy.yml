@@ -40,5 +40,10 @@ jobs:
         git checkout -b gh-pages
         git add --all
         git commit -m "deploy to Github pages"
-        git push origin gh-pages -f
-        echo 🤘 deploy gh-pages complete.
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: 'gh-pages'
+        force: true
+
