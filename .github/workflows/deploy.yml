@@ -10,8 +10,6 @@ jobs:
     name: Build and deploy gh-pages
     env:
       MY_SECRET   : ${{secrets.commit_secret}}
-      USER_NAME   : githubaction
-      USER_EMAIL  : githubaction@sidstraw.dev
       PUBLISH_DIR : .vuepress/dist
     runs-on: ubuntu-latest
     strategy:
@@ -34,21 +32,13 @@ jobs:
       run: |
         echo ${{secrets.DEPLOY_PASSWORD}} | sudo -S chown -R $USER:$USER $PUBLISH_DIR
         cd $PUBLISH_DIR
-        ls -all
         git init
-        echo init
-        git config --local user.name $USER_NAME
-        git config --local user.email $USER_EMAIL
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
         git status
         git remote add origin https://$MY_SECRET@github.com/$GITHUB_REPOSITORY.git
         git checkout -b gh-pages
         git add --all
         git commit -m "deploy to Github pages"
-    - name: Push changes
-      if: github.ref == 'refs/heads/gh-pages'
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: 'gh-pages'
-        force: true
-
+        git push origin gh-pages -f
+        echo 🤘 deploy gh-pages complete.
