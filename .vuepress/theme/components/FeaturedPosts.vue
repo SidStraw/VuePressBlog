@@ -1,9 +1,6 @@
 <template>
-  <div
-    class="container featured-posts"
-    v-if="posts.length"
-  >
-    <el-carousel
+  <div class="container featured-posts" v-if="posts.length">
+    <!-- <el-carousel
       :interval="4000"
       type="card"
       height="300px"
@@ -22,16 +19,43 @@
           >Read this Post <i class="el-icon-arrow-right"></i></router-link>
         </div>
       </el-carousel-item>
-    </el-carousel>
+    </el-carousel> -->
+    <v-carousel height="400" hide-delimiter-background show-arrows-on-hover>
+      <v-carousel-item
+        v-for="post in posts"
+        :key="post.key"
+        :src="post.frontmatter.image"
+      >
+        <!-- <v-sheet height="100%"> -->
+        <v-container class="fill-height">
+          <v-row class="fill-height" align="center" justify="center">
+            <div class="text-h1">{{ post.title }}</div>
+          </v-row>
+        </v-container>
+        <!-- </v-sheet> -->
+      </v-carousel-item>
+    </v-carousel>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'featured-posts',
+  name: "featured-posts",
+  data() {
+    return {
+      colors: [
+        "indigo",
+        "warning",
+        "pink darken-2",
+        "red lighten-1",
+        "deep-purple accent-4"
+      ],
+      slides: ["First", "Second", "Third", "Fourth", "Fifth"]
+    };
+  },
   computed: {
-    posts () {
-      return this.$site.pages.filter(page => page.frontmatter.featured == true)
+    posts() {
+      return this.$site.pages.filter(page => page.frontmatter.featured == true);
     }
   }
 };

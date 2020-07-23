@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <v-app id="inspire">
     <Header />
     <DefaultGlobalLayout />
     <Footer />
-  </div>
+  </v-app>
 </template>
 
 <script>
