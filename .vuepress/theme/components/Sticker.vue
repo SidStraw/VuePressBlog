@@ -66,13 +66,13 @@ export default {
 </script>
 
 <style lang="stylus">
-.sticker {
-  position: fixed;
+// .sticker {
+//   position: fixed;
 
-  &.stick-float {
-    top: auto;
-    position: absolute;
-  }
-}
+//   &.stick-float {
+//     top: auto;
+//     position: absolute;
+//   }
+// }
 </style>
 

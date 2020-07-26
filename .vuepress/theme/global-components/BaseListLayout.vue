@@ -83,7 +83,7 @@ export default {
 
 
 <style scoped>
-header.home-hero {
+/* header.home-hero {
   background-color: #999;
   background-blend-mode: multiply;
   padding: 10rem 0rem;
@@ -92,5 +92,5 @@ header.home-hero {
 }
 .display-3 {
   font-weight: 800;
-}
+} */
 </style>

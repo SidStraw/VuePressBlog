@@ -27,7 +27,7 @@ export default {
 </script>
 
 <style lang="stylus">
-.cursor-pointer {
-  cursor: pointer;
-}
+// .cursor-pointer {
+//   cursor: pointer;
+// }
 </style>

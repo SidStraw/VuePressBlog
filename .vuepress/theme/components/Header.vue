@@ -55,7 +55,7 @@ export default {
 </script>
 
 <style lang="stylus">
-.el-menu-item.is-active {
-  border-bottom: 3px solid $accentColor !important;
-}
+// .el-menu-item.is-active {
+//   border-bottom: 3px solid $accentColor !important;
+// }
 </style>

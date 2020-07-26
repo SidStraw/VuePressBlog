@@ -104,15 +104,15 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.el-card {
-  .card-header {
-    min-height: 220px;
-    background-color: darken($accentColor, 10%);
-  }
+// .el-card {
+//   .card-header {
+//     min-height: 220px;
+//     background-color: darken($accentColor, 10%);
+//   }
 
-  .card-img-bg {
-    background: $accentColor;
-    background: linear-gradient(to right, $accentColor, lighten($accentColor, 30%));
-  }
-}
+//   .card-img-bg {
+//     background: $accentColor;
+//     background: linear-gradient(to right, $accentColor, lighten($accentColor, 30%));
+//   }
+// }
 </style>

@@ -49,10 +49,10 @@ export default {
 </script>
 
 <style lang="stylus">
-.nav-link
-  color #222
+// .nav-link
+//   color #222
 
-.nav-link
-  &:hover, &.router-link-active
-    color $accentColor
+// .nav-link
+//   &:hover, &.router-link-active
+//     color $accentColor
 </style>

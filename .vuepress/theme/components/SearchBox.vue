@@ -123,26 +123,26 @@ export default {
 </script>
 
 <style lang="stylus">
-.search-wrapper {
-  .el-input__inner {
-    height: 2rem !important;
-  }
+// .search-wrapper {
+//   .el-input__inner {
+//     height: 2rem !important;
+//   }
 
-  .search-wrapper input {
-    width: 160px;
-    transition: all 0.5s ease;
-  }
+//   .search-wrapper input {
+//     width: 160px;
+//     transition: all 0.5s ease;
+//   }
 
-  .el-autocomplete-suggestion__wrap, .el-autocomplete-suggestion {
-    width: 100%;
-  }
+//   .el-autocomplete-suggestion__wrap, .el-autocomplete-suggestion {
+//     width: 100%;
+//   }
 
-  .el-input__suffix {
-    line-height: 2rem;
-  }
-}
+//   .el-input__suffix {
+//     line-height: 2rem;
+//   }
+// }
 
-.components-search {
-  width: 30rem !important;
-}
+// .components-search {
+//   width: 30rem !important;
+// }
 </style>

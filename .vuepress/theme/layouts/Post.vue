@@ -83,25 +83,25 @@ export default {
 </script>
 
 <style lang="stylus">
-.vuepress-blog-theme-content {
-  font-size: 16px;
-  letter-spacing: 0px;
-  color: #2c3e50;
-  position: relative;
-  padding: 15px;
-  max-width: 860px !important;
+// .vuepress-blog-theme-content {
+//   font-size: 16px;
+//   letter-spacing: 0px;
+//   color: #2c3e50;
+//   position: relative;
+//   padding: 15px;
+//   max-width: 860px !important;
 
-}
+// }
 
-.post-tags {
-  padding: 0;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
+// .post-tags {
+//   padding: 0;
+//   margin-top: 2rem;
+//   margin-bottom: 2rem;
+// }
 
-.disqus-comments {
-  margin-top: 0rem;
-}
+// .disqus-comments {
+//   margin-top: 0rem;
+// }
 
 </style>
 
