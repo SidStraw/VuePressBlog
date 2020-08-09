@@ -1,5 +1,5 @@
 <template>
-  <el-card
+  <!-- <el-card
     shadow="hover"
     :body-style="{ padding: '1rem' }"
   >
@@ -23,7 +23,7 @@
         </el-badge>
       </li>
     </ul>
-  </el-card>
+  </el-card> -->
 </template>
 
 <script>

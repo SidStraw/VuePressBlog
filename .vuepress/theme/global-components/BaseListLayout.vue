@@ -3,7 +3,8 @@
     id="base-list-layout"
     class="zoomIn"
   >
-    <header
+  test
+    <!-- <header
       class="home-hero"
       :style="{backgroundImage: 'url(' + $withBase($themeConfig.heroImage) + ')'}"
     >
@@ -38,7 +39,7 @@
           ></component>
         </div>
       </div>
-    </el-container>
+    </el-container> -->
   </div>
 </template>
 
@@ -46,13 +47,18 @@
 /* global THEME_BLOG_PAGINATION_COMPONENT */
 
 import Vue from "vue";
-import PostsList from "@theme/components/PostsList.vue";
-import About from "@theme/components/About.vue";
-import FeaturedPosts from "@theme/components/FeaturedPosts";
+// import PostsList from "@theme/components/PostsList.vue";
+// import About from "@theme/components/About.vue";
+// import FeaturedPosts from "@theme/components/FeaturedPosts";
 import { Pagination, SimplePagination } from '@vuepress/plugin-blog/lib/client/components'
 
 export default {
-  components: { PostsList, Pagination, FeaturedPosts, About },
+  components: { 
+    // PostsList,
+    Pagination,
+    // FeaturedPosts,
+    // About
+    },
   created () {
     this.paginationComponent = this.getPaginationComponent()
   },

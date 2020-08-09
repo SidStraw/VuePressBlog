@@ -27,31 +27,31 @@ module.exports = (themeConfig, ctx) => {
           lengthPerPage: 10
         }
       },
-      {
-        id: "project",
-        dirname: "_projects",
-        path: "/projects/",
-        layout: "Projects",
-        itemLayout: "Project",
-        frontmatter: { title: "Project" },
-        itemPermalink: "/projects/:slug",
-        pagination: {
-          lengthPerPage: 10
-        }
-      }
+      // {
+      //   id: "project",
+      //   dirname: "_projects",
+      //   path: "/projects/",
+      //   layout: "Projects",
+      //   itemLayout: "Project",
+      //   frontmatter: { title: "Project" },
+      //   itemPermalink: "/projects/:slug",
+      //   pagination: {
+      //     lengthPerPage: 10
+      //   }
+      // }
     ],
-    frontmatters: [
-      {
-        id: "tag",
-        keys: ["tag", "tags"],
-        path: "/tag/",
-        // layout: 'Tag',  defaults to `FrontmatterKey.vue`
-        frontmatter: { title: "Tag" },
-        pagination: {
-          lengthPerPage: 5
-        }
-      }
-    ]
+    // frontmatters: [
+    //   {
+    //     id: "tag",
+    //     keys: ["tag", "tags"],
+    //     path: "/tag/",
+    //     // layout: 'Tag',  defaults to `FrontmatterKey.vue`
+    //     frontmatter: { title: "Tag" },
+    //     pagination: {
+    //       lengthPerPage: 5
+    //     }
+    //   }
+    // ]
   };
 
   const { modifyBlogPluginOptions } = themeConfig;
@@ -78,11 +78,11 @@ module.exports = (themeConfig, ctx) => {
     ]
   ];
 
-  if (themeConfig.socialShare && themeConfig.socialShareNetworks) {
-    plugins.push(
-      ["social-share", { networks: themeConfig.socialShareNetworks }]
-    )
-  }
+  // if (themeConfig.socialShare && themeConfig.socialShareNetworks) {
+  //   plugins.push(
+  //     ["social-share", { networks: themeConfig.socialShareNetworks }]
+  //   )
+  // }
 
   if (themeConfig.sitemap && themeConfig.hostname) {
     plugins.push([

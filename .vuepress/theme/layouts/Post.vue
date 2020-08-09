@@ -1,6 +1,6 @@
 <template>
   <div id="vuperess-theme-blog__post-layout">
-    <main class="vuepress-blog-theme-content">
+    <!-- <main class="vuepress-blog-theme-content">
       <el-card
         body-style="padding: 0"
         class="mb-4"
@@ -63,21 +63,21 @@
           />
         </el-card>
       </ClientOnly>
-    </main>
+    </main> -->
   </div>
 </template>
 
 <script>
-import Toc from "@theme/components/Toc.vue";
-import PostInfo from "@theme/components/PostInfo.vue";
-import FeaturedPosts from "@theme/components/FeaturedPosts.vue";
+// import Toc from "@theme/components/Toc.vue";
+// import PostInfo from "@theme/components/PostInfo.vue";
+// import FeaturedPosts from "@theme/components/FeaturedPosts.vue";
 
 
 export default {
   components: {
-    Toc,
-    PostInfo,
-    FeaturedPosts,
+    // Toc,
+    // PostInfo,
+    // FeaturedPosts,
   }
 };
 </script>

@@ -1,21 +1,21 @@
 <template>
   <v-app id="inspire">
-    <Header />
+    <!-- <Header /> -->
     <DefaultGlobalLayout />
-    <Footer />
+    <!-- <Footer /> -->
   </v-app>
 </template>
 
 <script>
-import GlobalLayout from "@app/components/GlobalLayout.vue";
-import Header from "@theme/components/Header.vue";
-import Footer from "@theme/components/Footer.vue";
+import DefaultGlobalLayout from "@app/components/GlobalLayout.vue"; // in VuePress Core
+// import Header from "@theme/components/Header.vue";
+// import Footer from "@theme/components/Footer.vue";
 
 export default {
   components: {
-    DefaultGlobalLayout: GlobalLayout,
-    Header,
-    Footer
+    DefaultGlobalLayout,
+    // Header,
+    // Footer
   },
 
   data () {
