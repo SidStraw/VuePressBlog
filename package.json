@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/SidStraw/VpressBlog#readme",
   "devDependencies": {
+    "@mdi/font": "^5.4.55",
     "deepmerge": "^4.2.2",
     "fibers": "^5.0.0",
     "sass": "^1.26.8",

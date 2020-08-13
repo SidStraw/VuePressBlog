@@ -1,9 +1,9 @@
 <template>
   <div
     id="base-list-layout"
-    class="zoomIn"
   >
-  test
+    <Navbar />
+
     <!-- <header
       class="home-hero"
       :style="{backgroundImage: 'url(' + $withBase($themeConfig.heroImage) + ')'}"
@@ -50,10 +50,12 @@ import Vue from "vue";
 // import PostsList from "@theme/components/PostsList.vue";
 // import About from "@theme/components/About.vue";
 // import FeaturedPosts from "@theme/components/FeaturedPosts";
+import Navbar from '@theme/components/Navbar'
 import { Pagination, SimplePagination } from '@vuepress/plugin-blog/lib/client/components'
 
 export default {
-  components: { 
+  components: {
+    Navbar,
     // PostsList,
     Pagination,
     // FeaturedPosts,
