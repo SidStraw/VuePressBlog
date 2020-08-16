@@ -40,18 +40,18 @@ module.exports = (themeConfig, ctx) => {
       //   }
       // }
     ],
-    // frontmatters: [
-    //   {
-    //     id: "tag",
-    //     keys: ["tag", "tags"],
-    //     path: "/tag/",
-    //     // layout: 'Tag',  defaults to `FrontmatterKey.vue`
-    //     frontmatter: { title: "Tag" },
-    //     pagination: {
-    //       lengthPerPage: 5
-    //     }
-    //   }
-    // ]
+    frontmatters: [
+      {
+        id: "tag",
+        keys: ["tag", "tags"],
+        path: "/tag/",
+        // layout: 'Tag',  defaults to `FrontmatterKey.vue`
+        frontmatter: { title: "Tag" },
+        pagination: {
+          lengthPerPage: 5
+        }
+      }
+    ]
   };
 
   const { modifyBlogPluginOptions } = themeConfig;

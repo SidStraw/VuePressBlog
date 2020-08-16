@@ -1,7 +1,7 @@
 <template>
   <div id="vuperess-theme-blog__post-layout">
-    <!-- <main class="vuepress-blog-theme-content">
-      <el-card
+    <main class="vuepress-blog-theme-content">
+      <!-- <el-card
         body-style="padding: 0"
         class="mb-4"
       >
@@ -20,9 +20,9 @@
           :alt="$frontmatter.title"
           v-if="$frontmatter.image"
           class="w-100"
-        />
+        /> -->
         <Content />
-      </el-card>
+      <!-- </el-card>
       <el-card class="my-4">
         <div
           slot="header"
@@ -48,8 +48,8 @@
           >#{{tag}}</router-link>
         </div>
       </el-card>
-      <Toc />
-      <ClientOnly v-if="$themeConfig.disqus">
+      <Toc /> -->
+      <!-- <ClientOnly v-if="$themeConfig.disqus">
         <el-card class="comments-area my-4">
           <div
             slot="header"
@@ -62,8 +62,8 @@
             class="disqus-comments"
           />
         </el-card>
-      </ClientOnly>
-    </main> -->
+      </ClientOnly> -->
+    </main>
   </div>
 </template>
 

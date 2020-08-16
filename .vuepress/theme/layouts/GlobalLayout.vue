@@ -18,16 +18,25 @@ export default {
     // Footer
   },
 
-  data () {
+  data() {
     return {
-      isMobileHeaderOpen: false
+      isMobileHeaderOpen: false,
     };
   },
 
-  mounted () {
+  mounted() {
     this.$router.afterEach(() => {
       this.isMobileHeaderOpen = false;
     });
-  }
+  },
 };
 </script>
+
+<style lang="scss">
+.w-100 {
+  width: 100% !important;
+}
+.h-100 {
+  height: 100% !important;
+}
+</style>

@@ -1,36 +1,34 @@
 <template>
   <div>
-    <!-- <v-card class="overflow-hidden"> -->
     <v-app-bar
       app
       elevate-on-scroll
       shrink-on-scroll
       scroll-target
+      dense
       height="50"
       extension-height="30"
     >
-      <v-app-bar-nav-icon @click="drawer = true" />
-      <!-- <v-toolbar-title>Title</v-toolbar-title> -->
-      <v-spacer></v-spacer>
+      <div class="d-flex justify-space-around align-center w-100 h-100">
+        <v-app-bar-nav-icon @click="drawer = true" />
+        <v-spacer></v-spacer>
 
-      <div class="d-flex flex-column text-center">
-        <h1>Sid</h1>
-        <!-- <ul class="d-flex justify-space-around" style="list-style: none;">
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-        </ul> -->
+        <div class="d-flex flex-column text-center">
+          <h1>:標題</h1>
+        </div>
+
+        <v-spacer></v-spacer>
+
+        <v-btn icon @click="toggle">
+          <v-icon>mdi-magnify</v-icon>
+        </v-btn>
       </div>
 
-      <v-spacer></v-spacer>
-
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-
-      <template v-slot:extension>
-        <v-tabs centered @change="log">
-          <v-tab v-for="item in items" :key="item.title">{{item.title}}</v-tab>
+      <template v-slot:extension v-if="$vuetify.breakpoint.smAndUp">
+        <v-tabs optional centered @change="log">
+          <v-tab v-for="item in $tag.list" :key="item.name" :to="item.path">
+            {{ item.name }}
+          </v-tab>
         </v-tabs>
       </template>
     </v-app-bar>
@@ -41,43 +39,49 @@
         </v-list-item-avatar>
 
         <v-list-item-content>
-          <v-list-item-title>John</v-list-item-title>
+          <v-list-item-title>:標題</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
 
       <v-divider></v-divider>
 
       <v-list dense>
-        <v-list-item v-for="item in items" :key="item.title" link>
-          <v-list-item-icon>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-icon>
+        <v-list-item v-for="item in $tag.list" :key="item.title" link>
 
           <v-list-item-content>
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
+            <v-list-item-title>{{ item.name }}</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <!-- </v-card> -->
+    <SearchBox :showPopup="showPopup" @closePopup="toggle" />
   </div>
 </template>
 
 <script>
+import SearchBox from "./SearchBox.vue";
 export default {
+  name: "NavBar",
+  components: {
+    SearchBox,
+  },
   data() {
     return {
       drawer: false,
-      items: [
-        { title: "Home", icon: "mdi-code-json" },
-        { title: "About", icon: "mdi-magnify" },
-        { title: "Test", icon: "mdi-code-json" },
-      ],
+      showPopup: false,
+
     };
+  },
+  mounted() {
+    console.log(this.$vuetify.breakpoint.xs);
+    console.log(this.$tag);
   },
   methods: {
     log(e) {
       console.log(e);
+    },
+    toggle() {
+      this.showPopup = !this.showPopup;
     },
   },
 };
