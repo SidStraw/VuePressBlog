@@ -92,6 +92,7 @@ export default {
   watch: {
     query(newValue) {
       if (typeof newValue !== "number") return null;
+      this.show = false;
       this.$router.push(this.items[newValue].link);
     },
   },
