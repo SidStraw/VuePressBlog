@@ -2,7 +2,7 @@
   <div
     id="base-list-layout"
   >
-    <Navbar />
+    
 
     <!-- <header
       class="home-hero"

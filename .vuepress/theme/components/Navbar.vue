@@ -14,7 +14,9 @@
         <v-spacer></v-spacer>
 
         <div class="d-flex flex-column text-center">
-          <h1>:標題</h1>
+          <router-link to="/" class="text-decoration-none">
+            <h1>{{ $site.title }}</h1>
+          </router-link>
         </div>
 
         <v-spacer></v-spacer>
@@ -47,7 +49,6 @@
 
       <v-list dense>
         <v-list-item v-for="item in $tag.list" :key="item.title" link>
-
           <v-list-item-content>
             <v-list-item-title>{{ item.name }}</v-list-item-title>
           </v-list-item-content>
@@ -69,7 +70,6 @@ export default {
     return {
       drawer: false,
       showPopup: false,
-
     };
   },
   mounted() {
