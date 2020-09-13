@@ -2,21 +2,23 @@
   <v-app id="inspire">
     <!-- <Header /> -->
     <Navbar />
-    <DefaultGlobalLayout />
+    <div id="global-content" :class="$vuetify.breakpoint.smAndUp ? 'sm' : 'xs'">
+      <DefaultGlobalLayout />
+    </div>
     <!-- <Footer /> -->
   </v-app>
 </template>
 
 <script>
 import DefaultGlobalLayout from "@app/components/GlobalLayout.vue"; // in VuePress Core
-import Navbar from '@theme/components/Navbar'
+import Navbar from "@theme/components/Navbar";
 // import Header from "@theme/components/Header.vue";
 // import Footer from "@theme/components/Footer.vue";
 
 export default {
   components: {
     DefaultGlobalLayout,
-    Navbar
+    Navbar,
     // Header,
     // Footer
   },
@@ -41,5 +43,11 @@ export default {
 }
 .h-100 {
   height: 100% !important;
+}
+#global-content {
+  margin-top: 110px;
+  &.xs {
+    margin-top: 50px;
+  }
 }
 </style>
