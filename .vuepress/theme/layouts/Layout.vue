@@ -1,8 +1,6 @@
 <template>
-  <div>
+  <div class="grey lighten-5">
     <Home
-      id="home-content"
-      :class="$vuetify.breakpoint.smAndUp ? 'sm' : 'xs'"
       v-if="$pagination"
     />
     <Content v-else />
@@ -20,11 +18,3 @@ export default {
 </script>
 
 <style src="prismjs/themes/prism-okaidia.css"></style>
-<style lang="scss" scoped>
-#home-content {
-  margin-top: 110px;
-  &.xs {
-    margin-top: 50px;
-  }
-}
-</style>

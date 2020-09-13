@@ -1,5 +1,5 @@
 module.exports = {
-  title: "Sid吸管", // replace with site title
+  title: "網站標題", // replace with site title
   description: "吸管就是拿來Sid", // replace with site description
   // theme: "sidstraw-blog",
   head: [

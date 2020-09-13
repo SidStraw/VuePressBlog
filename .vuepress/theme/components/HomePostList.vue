@@ -1,42 +1,36 @@
 <template>
   <v-container grey lighten-5>
     <v-row justify="center">
-      <template v-for="(n, i) in 6">
-        <v-col cols="12" sm="6" lg="4" :key="n" v-if="i !== 10">
+      <template v-for="(post, i) in posts">
+        <v-col cols="12" sm="6" lg="4" :key="post.path" v-if="i !== 10">
           <v-card class="mx-auto" max-width="374">
-            <v-img
-              height="250"
-              src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
-            ></v-img>
+            <v-img height="250" :src="post.frontmatter.image"></v-img>
 
             <v-card-text>
-              <v-chip color="primary" label>：TAG</v-chip>
-              <v-chip color="primary" label>：T</v-chip>
-              <v-chip color="primary" label>：T</v-chip>
-              <v-chip color="primary" label>：T</v-chip>
+              <v-chip
+                v-for="(val, i) in post.frontmatter.tags"
+                :key="i"
+                class="mr-1 mt-1"
+                color="primary"
+                label
+              >
+                {{ val }}
+              </v-chip>
             </v-card-text>
 
             <v-divider class="mx-4"></v-divider>
 
-            <v-card-title> ：標題{{ n }} </v-card-title>
+            <v-card-title> {{ post.title }} </v-card-title>
 
             <v-card-text class="pb-0">
               <div>
-                ：文章簡述 Small plates, salads & sandwiches - an intimate
-                setting with 12 indoor seats plus patio seating.
-                {{
-                  n === 2
-                    ? `：文章簡述 Small plates, salads & sandwiches - an intimate setting
-                with 12 indoor seats plus patio seating.：文章簡述 Small plates, salads & sandwiches - an intimate setting
-                with 12 indoor seats plus patio seating.`
-                    : ""
-                }}
+                {{ post.frontmatter.description }}
               </div>
             </v-card-text>
 
             <v-card-actions>
               <v-chip class="ma-2" color="primary" outlined>
-                <v-icon left>mdi-calendar-range</v-icon>
+                <!-- <v-icon left>mdi-calendar-range</v-icon> -->
                 2020-03-01
               </v-chip>
               <v-spacer />
@@ -49,15 +43,29 @@
         </v-col>
       </template>
     </v-row>
+    <!-- <Pagination /> -->
   </v-container>
 </template>
 
 <script>
+import { Pagination } from "@vuepress/plugin-blog/lib/client/components";
 export default {
+  components: {
+    Pagination,
+  },
   data() {
     return {
       isActive: false,
+      page: 1,
     };
+  },
+  computed: {
+    posts() {
+      // const posts = this.$site.pages.filter((post) => post.pid === "post");
+      const posts = this.$pagination.pages;
+      // posts.length = 1;
+      return posts;
+    },
   },
   methods: {},
 };
