@@ -48,10 +48,13 @@
       <v-divider></v-divider>
 
       <v-list dense>
-        <v-list-item v-for="item in $tag.list" :key="item.title" link>
+        <v-list-item link v-for="item in $tag.list" :key="item.title" :href="item.path">
           <v-list-item-content>
             <v-list-item-title>{{ item.name }}</v-list-item-title>
           </v-list-item-content>
+          <v-list-item-action-text>
+            <v-badge :content="item.pages.length" color="grey" bottom overlap />
+          </v-list-item-action-text>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>

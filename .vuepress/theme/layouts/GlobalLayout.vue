@@ -5,13 +5,14 @@
     <div id="global-content" :class="$vuetify.breakpoint.smAndUp ? 'sm' : 'xs'">
       <DefaultGlobalLayout />
     </div>
-    <!-- <Footer /> -->
+    <Footer />
   </v-app>
 </template>
 
 <script>
 import DefaultGlobalLayout from "@app/components/GlobalLayout.vue"; // in VuePress Core
 import Navbar from "@theme/components/Navbar";
+import Footer from "@theme/components/Footer";
 // import Header from "@theme/components/Header.vue";
 // import Footer from "@theme/components/Footer.vue";
 
@@ -19,8 +20,8 @@ export default {
   components: {
     DefaultGlobalLayout,
     Navbar,
+    Footer
     // Header,
-    // Footer
   },
 
   data() {

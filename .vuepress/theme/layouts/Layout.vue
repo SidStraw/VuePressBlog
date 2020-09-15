@@ -4,7 +4,6 @@
       v-if="$pagination"
     />
     <Content v-else />
-    <div style="height: 200vh;"></div>
   </div>
 </template>
 

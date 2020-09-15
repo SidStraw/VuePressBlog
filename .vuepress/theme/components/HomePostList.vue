@@ -34,7 +34,7 @@
                 2020-03-01
               </v-chip>
               <v-spacer />
-              <v-btn color="secondary" text @click.prevent>
+              <v-btn color="secondary" text :href="post.path">
                 <v-icon class="mx-1">mdi-text-box-multiple-outline</v-icon>
                 READ MORE
               </v-btn>
