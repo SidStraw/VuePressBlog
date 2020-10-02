@@ -48,7 +48,7 @@
       <v-divider></v-divider>
 
       <v-list dense>
-        <v-list-item link v-for="item in $tag.list" :key="item.title" :href="item.path">
+        <v-list-item link v-for="item in $tag.list" :key="item.title" :to="item.path">
           <v-list-item-content>
             <v-list-item-title>{{ item.name }}</v-list-item-title>
           </v-list-item-content>

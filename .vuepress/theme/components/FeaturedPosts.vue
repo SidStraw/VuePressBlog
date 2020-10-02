@@ -4,7 +4,7 @@
       <template v-for="(item, index) in posts">
         <v-divider v-if="index !== 0" :key="index" :inset="true"></v-divider>
 
-        <v-list-item :key="item.path" :href="item.path">
+        <v-list-item :key="item.path" :to="item.path">
           <v-list-item-content>
             <!-- <v-list-item-title v-html="item.title"></v-list-item-title> -->
             <v-list-item-subtitle v-html="item.title"></v-list-item-subtitle>
