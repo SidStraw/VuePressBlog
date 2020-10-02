@@ -58,7 +58,7 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <SearchBox :showPopup="showPopup" @closePopup="toggle" />
+    <SearchBox :key="showPopup" :showPopup="showPopup" @closePopup="toggle" />
   </div>
 </template>
 
