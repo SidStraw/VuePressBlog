@@ -1,18 +1,26 @@
 module.exports = {
-  title: "Sid吸管", // replace with site title
+  title: "網站標題", // replace with site title
   description: "吸管就是拿來Sid", // replace with site description
   // theme: "sidstraw-blog",
   head: [
-    ['link', { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" }],
-    ['link', { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" }],
-    ['link', { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" }],
-    ['link', { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png" }],
-    ['link', { rel: "manifest", href: "/site.webmanifest" }],
-    ['link', { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#5bbad5" }],
-    ['link', { rel: "shortcut icon", href: "/favicon.ico" }],
-    ['meta', { name: "msapplication-TileColor", content: "#da532c" }],
-    ['meta', { name: "theme-color", content: "#ffffff" }],
+    // ['link', { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" }],
+    // ['link', { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" }],
+    // ['link', { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" }],
+    // ['link', { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png" }],
+    // ['link', { rel: "manifest", href: "/site.webmanifest" }],
+    // ['link', { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#5bbad5" }],
+    // ['link', { rel: "shortcut icon", href: "/favicon.ico" }],
+    // ['meta', { name: "msapplication-TileColor", content: "#da532c" }],
+    // ['meta', { name: "theme-color", content: "#ffffff" }],
+    ['meta', { name: "viewport", content: "width=device-width,user-scaleble=0,initial-scale=1.0,maximum-scale=1.0" }],
+    ['link', { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" }],
+    ['link', { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" }],
   ],
+  locales: {
+    '/': {
+      lang: 'zh-TW',
+    }
+  },
   themeConfig: {
     // these values will be injected to the head element in each page
     // replace icons with your site icons

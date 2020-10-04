@@ -22,13 +22,13 @@ export default {
 </script>
 
 <style lang="stylus">
-div.post-info-item {
-  margin-right: 1rem;
-  font-size: .8rem;
+// div.post-info-item {
+//   margin-right: 1rem;
+//   font-size: .8rem;
 
-  svg {
-    width: 17px;
-    height: 17px;
-  }
-}
+//   svg {
+//     width: 17px;
+//     height: 17px;
+//   }
+// }
 </style>

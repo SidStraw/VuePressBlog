@@ -1,38 +1,34 @@
 <template>
-  <div
-    class="container featured-posts"
-    v-if="posts.length"
-  >
-    <el-carousel
-      :interval="4000"
-      type="card"
-      height="300px"
-    >
-      <el-carousel-item
-        v-for="post in posts"
-        :key="post.key"
-        class="bg-light bg-cover border-10"
-        :style="{'background-image': $withBase(post.frontmatter.image) ? `url(${$withBase(post.frontmatter.image)})`: 'none', 'background-blend-mode': 'multiply', 'background-size': 'cover'}"
-      >
-        <div class="carousel-card-content d-flex justify-content-center align-items-center flex-column h-100">
-          <h4 class="story-title text-center h4 mb-3">{{ post.title }}</h4>
-          <router-link
-            :to="post.path"
-            class="el-button el-button--primary"
-          >Read this Post <i class="el-icon-arrow-right"></i></router-link>
-        </div>
-      </el-carousel-item>
-    </el-carousel>
-  </div>
+  <v-card max-width="450" class="mx-auto">
+    <v-list three-line>
+      <template v-for="(item, index) in posts">
+        <v-divider v-if="index !== 0" :key="index" :inset="true"></v-divider>
+
+        <v-list-item :key="item.path" :to="item.path">
+          <v-list-item-content>
+            <!-- <v-list-item-title v-html="item.title"></v-list-item-title> -->
+            <v-list-item-subtitle v-html="item.title"></v-list-item-subtitle>
+          </v-list-item-content>
+
+          <v-badge :content="index + 1" color="grey" bottom overlap>
+            <v-avatar>
+              <v-img :src="item.frontmatter.image"></v-img>
+            </v-avatar>
+          </v-badge>
+        </v-list-item>
+      </template>
+    </v-list>
+  </v-card>
 </template>
 
 <script>
 export default {
-  name: 'featured-posts',
   computed: {
-    posts () {
-      return this.$site.pages.filter(page => page.frontmatter.featured == true)
-    }
-  }
+    posts() {
+      const posts = this.$site.pages.filter((post) => post.pid === "post");
+      posts.length = 5;
+      return posts;
+    },
+  },
 };
 </script>

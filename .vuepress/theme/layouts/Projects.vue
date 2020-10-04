@@ -78,67 +78,67 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.el-container {
-  max-width: 1100px;
-  margin-right: auto !important;
-  margin-left: auto !important;
-  min-height: 80vh;
+// .el-container {
+//   max-width: 1100px;
+//   margin-right: auto !important;
+//   margin-left: auto !important;
+//   min-height: 80vh;
 
-  .project-card.card {
-    margin: .5rem;
-    background: linear-gradient(45deg, darken($accentColor, 30%), darken($accentColor, 70%));
-    color: lighten($accentColor, 80%);
-    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
-    transition: all 0.4s;
+//   .project-card.card {
+//     margin: .5rem;
+//     background: linear-gradient(45deg, darken($accentColor, 30%), darken($accentColor, 70%));
+//     color: lighten($accentColor, 80%);
+//     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
+//     transition: all 0.4s;
 
-    a:hover {
-      text-decoration: none;
-    }
+//     a:hover {
+//       text-decoration: none;
+//     }
 
-    &:hover {
-      transform: scale(0.99);
-      box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
-    }
+//     &:hover {
+//       transform: scale(0.99);
+//       box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+//     }
 
-    .project-card--links a {
-      color: $accentColor;
+//     .project-card--links a {
+//       color: $accentColor;
 
-      &:hover {
-        color: lighten($accentColor, 30%);
-      }
-    }
+//       &:hover {
+//         color: lighten($accentColor, 30%);
+//       }
+//     }
 
-    .project-card-header {
-      display: flex;
-      margin-bottom: 1rem;
-      justify-content: space-between;
-      align-items: center;
+//     .project-card-header {
+//       display: flex;
+//       margin-bottom: 1rem;
+//       justify-content: space-between;
+//       align-items: center;
 
-      .project-icon {
-        font-size: 3em;
-        position: relative;
-        top: 0.3rem;
-        color: lighten($accentColor, 50%);
-      }
-    }
+//       .project-icon {
+//         font-size: 3em;
+//         position: relative;
+//         top: 0.3rem;
+//         color: lighten($accentColor, 50%);
+//       }
+//     }
 
-    p.project-description {
-      color: lighten($accentColor, 60%);
-      margin: 1.5rem auto;
-    }
+//     p.project-description {
+//       color: lighten($accentColor, 60%);
+//       margin: 1.5rem auto;
+//     }
 
-    .languages-list {
-      list-style: none;
-      display: flex;
-      padding: 0;
-      margin: 0;
-      color: lighten($accentColor, 40%);
-      font-family: monospace;
+//     .languages-list {
+//       list-style: none;
+//       display: flex;
+//       padding: 0;
+//       margin: 0;
+//       color: lighten($accentColor, 40%);
+//       font-family: monospace;
 
-      li {
-        padding: 0 5px;
-      }
-    }
-  }
-}
+//       li {
+//         padding: 0 5px;
+//       }
+//     }
+//   }
+// }
 </style>

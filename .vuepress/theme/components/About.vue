@@ -1,118 +1,41 @@
 <template>
-  <div>
-    <el-card
-      align="center"
-      class="mx-auto zoomIn mb-3"
-      shadow="hover"
+  <v-card class="my-3 mx-auto" max-width="434" tile>
+    <v-img
+      height="100%"
+      src="https://cdn.vuetifyjs.com/images/cards/server-room.jpg"
+      class="bg-img"
+      :gradient="`to top right, ${$vuetify.theme.themes.light.secondary}, ${$vuetify.theme.themes.light.primary}`"
     >
-      <div class="card-header rounded p-3">
-        <div class="rounded-circle card-img-bg d-inline-block">
-          <img
-            :src="$withBase($themeConfig.about.image)"
-            :alt="$themeConfig.about.fullName"
-            width="160px"
-          />
-        </div>
-        <h1 class="mt-2 text-light">{{ $themeConfig.about.fullName }}</h1>
+      <div class="d-flex flex-column justify-center align-center my-5">
+        <v-avatar class="profile" color="grey" size="164" tile>
+          <v-img
+            src="https://cdn.vuetifyjs.com/images/profiles/marcus.jpg"
+          ></v-img>
+        </v-avatar>
+        <v-list-item color="rgba(0, 0, 0, .4)" dark>
+          <v-list-item-content class="text-center">
+            <v-list-item-title class="title">Marcus Obrien</v-list-item-title>
+            <v-list-item-subtitle>：Network Engineer</v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
+
+        <p class="text-center white--text lighten-5">
+          ：Network Engineer：Network Engineer：Network Engineer：Network
+          Engineer：Network Engineer：Network Engineer：Network
+          Engineer：Network Engineer：Network Engineer
+        </p>
       </div>
-      <div class="p-3">
-        <p>{{ $themeConfig.about.bio }}</p>
-      </div>
-      <hr class="mt-0" />
-      <ul
-        class="list-inline m-0"
-        v-if="contact"
-      >
-        <li
-          class="list-inline-item"
-          v-for="item in contact"
-          :key="item.text"
-        >
-          <NavLink :link="item.link">
-            <component :is="item.iconComponent"></component>
-            {{ item.text }}
-          </NavLink>
-        </li>
-      </ul>
-    </el-card>
-  </div>
+    </v-img>
+  </v-card>
 </template>
 
 <script>
-import {
-  GithubIcon,
-  FacebookIcon,
-  TwitterIcon,
-  YoutubeIcon,
-  InstagramIcon,
-  LinkedinIcon
-} from "vue-feather-icons";
-
 export default {
-  components: {
-    GithubIcon,
-    FacebookIcon,
-    TwitterIcon,
-    YoutubeIcon,
-    InstagramIcon,
-    LinkedinIcon
-  },
-
-  methods: {
-    getIconComponentName (contactType) {
-      switch (contactType) {
-        case "github":
-          return "GithubIcon";
-        case "facebook":
-          return "FacebookIcon";
-        case "twitter":
-          return "TwitterIcon";
-        case "instagram":
-          return "InstagramIcon";
-        case "linkedin":
-          return "LinkedinIcon";
-        case "youtube":
-          return "YoutubeIcon";
-        default:
-          return "";
-      }
-    }
-  },
-
-  computed: {
-    contact () {
-      return (
-        (this.$themeConfig.footer && this.$themeConfig.footer.contact) ||
-        []
-      )
-        .map(({ type, link }) => {
-          return {
-            iconComponent: this.getIconComponentName(type),
-            link
-          };
-        })
-        .filter(({ iconComponent }) => iconComponent);
-    },
-
-    copyright () {
-      return (
-        (this.$themeConfig.footer && this.$themeConfig.footer.copyright) || []
-      );
-    }
-  }
+  components: {},
 };
 </script>
 
-<style lang="stylus" scoped>
-.el-card {
-  .card-header {
-    min-height: 220px;
-    background-color: darken($accentColor, 10%);
-  }
-
-  .card-img-bg {
-    background: $accentColor;
-    background: linear-gradient(to right, $accentColor, lighten($accentColor, 30%));
-  }
+<style lang="scss" scoped>
+.bg-img {
 }
 </style>

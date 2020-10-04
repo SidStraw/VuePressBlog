@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import { isExternal, isMailto, isTel, ensureExt } from '../components/util'
+// import { isExternal, isMailto, isTel, ensureExt } from '../components/util'
 
 export default {
   props: {
@@ -49,10 +49,10 @@ export default {
 </script>
 
 <style lang="stylus">
-.nav-link
-  color #222
+// .nav-link
+//   color #222
 
-.nav-link
-  &:hover, &.router-link-active
-    color $accentColor
+// .nav-link
+//   &:hover, &.router-link-active
+//     color $accentColor
 </style>

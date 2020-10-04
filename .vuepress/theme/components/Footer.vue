@@ -1,181 +1,47 @@
 <template>
-  <footer class="footer">
-    <div class="footer-left-wrap">
-      <ul class="contact" v-if="contact">
-        <li class="contact-item" v-for="item in contact">
-          <NavLink :link="item.link">
-            <component :is="item.iconComponent"></component>
-            {{ item.text }}
-          </NavLink>
-        </li>
-      </ul>
-    </div>
+  <v-footer
+    dark
+    padless
+  >
+    <v-card
+      flat
+      tile
+      :color="$vuetify.theme.themes.light.secondary"
+      class="white--text text-center w-100"
+    >
+      <v-card-text>
+        <v-btn
+          v-for="icon in icons"
+          :key="icon"
+          class="mx-4 white--text"
+          icon
+        >
+          <v-icon size="24px">{{ icon }}</v-icon>
+        </v-btn>
+      </v-card-text>
 
-    <div class="footer-right-wrap">
-      <ul class="copyright" v-if="copyright">
-        <li class="copyright-item" v-for="item in copyright">
-          <NavLink :link="item.link">{{ item.text }}</NavLink>
-        </li>
-      </ul>
-    </div>
-  </footer>
+      <!-- <v-card-text class="white--text pt-0">
+        Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet. Mauris cursus commodo interdum. Praesent ut risus eget metus luctus accumsan id ultrices nunc. Sed at orci sed massa consectetur dignissim a sit amet dui. Duis commodo vitae velit et faucibus. Morbi vehicula lacinia malesuada. Nulla placerat augue vel ipsum ultrices, cursus iaculis dui sollicitudin. Vestibulum eu ipsum vel diam elementum tempor vel ut orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+      </v-card-text> -->
+
+      <v-divider></v-divider>
+
+      <v-card-text class="white--text">
+        {{ new Date().getFullYear() }} — <strong>SidStraw</strong>
+      </v-card-text>
+    </v-card>
+  </v-footer>
 </template>
 
 <script>
-import {
-  GithubIcon,
-  FacebookIcon,
-  TwitterIcon,
-  InstagramIcon,
-  LinkedinIcon,
-  YoutubeIcon
-} from "vue-feather-icons";
-
-export default {
-  components: {
-    GithubIcon,
-    FacebookIcon,
-    TwitterIcon,
-    InstagramIcon,
-    LinkedinIcon,
-    YoutubeIcon
-  },
-
-  methods: {
-    getIconComponentName(contactType) {
-      switch (contactType) {
-        case "github":
-          return "GithubIcon";
-        case "facebook":
-          return "FacebookIcon";
-        case "twitter":
-          return "TwitterIcon";
-        case "instagram":
-          return "InstagramIcon";
-        case "linkedin":
-          return "LinkedinIcon";
-        case "youtube":
-          return "YoutubeIcon";
-        default:
-          return "";
-      }
-    }
-  },
-
-  computed: {
-    contact() {
-      return (
-        (this.$themeConfig.footer && this.$themeConfig.footer.contact) ||
-        []
-      )
-        .map(({ type, link }) => {
-          return {
-            iconComponent: this.getIconComponentName(type),
-            link
-          };
-        })
-        .filter(({ iconComponent }) => iconComponent);
-    },
-
-    copyright() {
-      return (
-        (this.$themeConfig.footer && this.$themeConfig.footer.copyright) || []
-      );
-    }
+  export default {
+    data: () => ({
+      icons: [
+        'mdi-facebook',
+        'mdi-twitter',
+        'mdi-linkedin',
+        'mdi-instagram',
+      ],
+    }),
   }
-};
 </script>
-
-<style lang="stylus" scoped>
-ol, ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.footer {
-  height: 60px;
-  box-sizing: border-box;
-  background: linear-gradient(to right, darken($accentColor, 50%), darken($secondaryColor, 70%));
-  color: #FFF;
-  display: flex;
-  padding: 15px 32px;
-  word-break: wrap;
-
-  .footer-left-wrap {
-    line-height: 30px;
-    flex: 1;
-    display: flex;
-
-    .contact {
-      display: flex;
-
-      .contact-item {
-        flex: 1;
-        margin-right: 10px;
-
-        a {
-          font-size: 12px;
-          color: rgba(255, 255, 255, 0.45);
-          text-decoration: none;
-          transition: color 0.3s;
-
-          &:hover {
-            color: #FFF;
-          }
-        }
-      }
-    }
-  }
-
-  .footer-right-wrap {
-    flex: 1;
-    display: none;
-    align-items: center;
-
-    @media (min-width: $MQNarrow) {
-      display: flex;
-      justify-content: flex-end;
-    }
-
-    .copyright {
-      display: flex;
-      justify-content: flex-end;
-
-      .copyright-item {
-        flex: 0 0 auto;
-        padding: 0 10px;
-        position: relative;
-        line-height: 12px;
-
-        &:last-child {
-          border-right: none;
-        }
-
-        a {
-          font-size: 12px;
-          color: rgba(255, 255, 255, 0.6);
-          text-decoration: none;
-          transition: color 0.3s;
-
-          &:hover {
-            color: rgba(255, 255, 255, 0.9);
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: $MQMobile) {
-  .footer {
-    height: 100px;
-    flex-direction: column;
-
-    .footer-left-wrap {
-      align-items: center;
-      justify-content: center;
-    }
-  }
-}
-</style>

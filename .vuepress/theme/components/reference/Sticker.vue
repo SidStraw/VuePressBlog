@@ -1,38 +1,23 @@
 <template>
-  <div>
+  <component
+    :is="tag || 'div'"
+    class="sticker"
+    :class="needFloat ? [ 'stick-float' ] : undefined"
+    :style="needFloat ? { bottom: `${stickBottom}px` } : undefined"
+  >
     <slot></slot>
-  </div>
+  </component>
 </template>
 
 <script>
-/*
- * find parent vm by ref
- * @param {String} ref
- * @param {Vue} vm
- * @param {any} def default value
- * @returns {Element}
- */
-function findContainerInVm(ref, vm, def) {
-  if (!ref) return def;
-  let container;
-  let parent = vm;
-  while ((parent = parent.$parent) && !container) {
-    container = parent.$refs[ref];
-  }
-  // Ensure it's html element (ref could be component)
-  if (container && container.$el) {
-    container = container.$el;
-  }
-  return container || def;
-}
-
+import { findContainerInVm } from "./util";
 export default {
   props: ["stick", "tag"],
 
   data() {
     return {
       needFloat: false,
-      stickBottom: 0,
+      stickBottom: 0
     };
   },
 
@@ -40,7 +25,7 @@ export default {
     stick() {
       this.unStick();
       this.stickHandle();
-    },
+    }
   },
 
   methods: {
@@ -67,7 +52,7 @@ export default {
       this.needFloat = false;
       this.stickBottom = 0;
       window.removeEventListener("scroll", this._stickerScroll);
-    },
+    }
   },
 
   mounted() {
@@ -76,6 +61,18 @@ export default {
 
   beforeDestroy() {
     this.unStick();
-  },
+  }
 };
 </script>
+
+<style lang="stylus">
+// .sticker {
+//   position: fixed;
+
+//   &.stick-float {
+//     top: auto;
+//     position: absolute;
+//   }
+// }
+</style>
+
