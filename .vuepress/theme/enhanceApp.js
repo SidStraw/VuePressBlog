@@ -8,7 +8,6 @@ export default ({
     router, // the router instance for the app
     siteData // site metadata
 }) => {
-    console.log('siteData', siteData)
     Vue.use(Vuetify);
     options.vuetify = new Vuetify({
         theme: {

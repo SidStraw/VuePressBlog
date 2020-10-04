@@ -27,7 +27,7 @@
       </div>
 
       <template v-slot:extension v-if="$vuetify.breakpoint.smAndUp">
-        <v-tabs optional centered @change="log">
+        <v-tabs optional centered>
           <v-tab v-for="item in $tag.list" :key="item.name" :to="item.path">
             {{ item.name }}
           </v-tab>
@@ -48,7 +48,12 @@
       <v-divider></v-divider>
 
       <v-list dense>
-        <v-list-item link v-for="item in $tag.list" :key="item.title" :to="item.path">
+        <v-list-item
+          link
+          v-for="item in $tag.list"
+          :key="item.title"
+          :to="item.path"
+        >
           <v-list-item-content>
             <v-list-item-title>{{ item.name }}</v-list-item-title>
           </v-list-item-content>
@@ -75,14 +80,8 @@ export default {
       showPopup: false,
     };
   },
-  mounted() {
-    console.log(this.$vuetify.breakpoint.xs);
-    console.log(this.$tag);
-  },
+  mounted() {},
   methods: {
-    log(e) {
-      console.log(e);
-    },
     toggle() {
       this.showPopup = !this.showPopup;
     },
