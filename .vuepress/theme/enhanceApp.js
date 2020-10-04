@@ -14,8 +14,8 @@ export default ({
         theme: {
             themes: {
                 light: {
-                    primary: '#D3B793',
-                    secondary: '#99B7A3',
+                    primary: '#99B7A3',
+                    secondary: '#84969C',
                     accent: '#82B1FF',
                     error: '#FF5252',
                     info: '#2196F3',
