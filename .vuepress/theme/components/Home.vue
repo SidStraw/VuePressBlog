@@ -9,8 +9,10 @@
       </v-col>
       <v-col cols="12" md="4" lg="3">
         <v-container grey lighten-5 sticky>
-          <About />
-          <FeaturedPosts />
+          <v-row>
+            <v-col cols="12" sm="6" md="12"><About /></v-col>
+            <v-col cols="12" sm="6" md="12"><FeaturedPosts /></v-col>
+          </v-row>
         </v-container>
       </v-col>
     </v-row>
@@ -38,6 +40,6 @@ export default {
   position: relative;
   position: -webkit-sticky;
   position: sticky;
-  top: -260px;
+  top: -380px;
 }
 </style>

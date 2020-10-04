@@ -20,7 +20,7 @@ export default {
   components: {
     DefaultGlobalLayout,
     Navbar,
-    Footer
+    Footer,
     // Header,
   },
 
@@ -49,6 +49,35 @@ export default {
   margin-top: 110px;
   &.xs {
     margin-top: 50px;
+  }
+}
+.header-anchor {
+  display: none;
+}
+.post-content {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 600;
+    line-height: 1.25;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    
+  }
+  h2 {
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  img {
+    max-width: 100%;
+  }
+  hr {
+    margin: 16px 0;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
   }
 }
 </style>
