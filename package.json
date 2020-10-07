@@ -29,6 +29,7 @@
   "homepage": "https://github.com/SidStraw/VpressBlog#readme",
   "devDependencies": {
     "@mdi/font": "^5.4.55",
+    "@vuepress/plugin-back-to-top": "^1.6.0",
     "deepmerge": "^4.2.2",
     "fibers": "^5.0.0",
     "sass": "^1.26.8",

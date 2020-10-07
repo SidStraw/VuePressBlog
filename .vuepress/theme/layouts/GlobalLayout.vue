@@ -80,4 +80,7 @@ export default {
     border-top: 1px solid rgba(0, 0, 0, 0.05);
   }
 }
+.go-to-top {
+  display: block!important;
+}
 </style>

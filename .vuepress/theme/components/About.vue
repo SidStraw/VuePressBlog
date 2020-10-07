@@ -9,20 +9,18 @@
       <div class="d-flex flex-column justify-center align-center my-5">
         <v-avatar class="profile" color="grey" size="164" tile>
           <v-img
-            src="https://cdn.vuetifyjs.com/images/profiles/marcus.jpg"
+            :src="$site.themeConfig.about.image"
           ></v-img>
         </v-avatar>
         <v-list-item color="rgba(0, 0, 0, .4)" dark>
           <v-list-item-content class="text-center">
-            <v-list-item-title class="title">Marcus Obrien</v-list-item-title>
-            <v-list-item-subtitle>：Network Engineer</v-list-item-subtitle>
+            <v-list-item-title class="title">{{ $site.themeConfig.about.name }}</v-list-item-title>
+            <v-list-item-subtitle>{{ $site.themeConfig.about.position }}</v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
 
         <p class="text-center white--text lighten-5">
-          ：Network Engineer：Network Engineer：Network Engineer：Network
-          Engineer：Network Engineer：Network Engineer：Network
-          Engineer：Network Engineer：Network Engineer
+          {{ $site.themeConfig.about.bio }}
         </p>
       </div>
     </v-img>

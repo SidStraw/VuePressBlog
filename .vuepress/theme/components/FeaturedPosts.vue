@@ -26,7 +26,7 @@ export default {
   computed: {
     posts() {
       const posts = this.$site.pages.filter((post) => post.pid === "post");
-      posts.length = 5;
+      if(posts.length > 5) posts.length = 5;
       return posts;
     },
   },

@@ -6,7 +6,7 @@ module.exports = (themeConfig, ctx) => {
     summaryLength:
       typeof themeConfig.summaryLength === "number"
         ? themeConfig.summaryLength
-        : 400,
+        : 80,
     pwa: !!themeConfig.pwa
   });
 
@@ -64,25 +64,12 @@ module.exports = (themeConfig, ctx) => {
   const plugins = [
     "disqus",
     "seo",
-    "reading-time",
     "smooth-scroll",
     "reading-progress",
-    "@vuepress/medium-zoom",
-    "@vuepress/nprogress",
-    ["@vuepress/blog", blogPluginOptions],
-    [
-      "@vuepress/search",
-      {
-        searchMaxSuggestions: 10
-      }
-    ]
+    '@vuepress/back-to-top',
+    ["@vuepress/medium-zoom", {selector: '.post-content img',}],
+    ["@vuepress/blog", defaultBlogPluginOptions],
   ];
-
-  // if (themeConfig.socialShare && themeConfig.socialShareNetworks) {
-  //   plugins.push(
-  //     ["social-share", { networks: themeConfig.socialShareNetworks }]
-  //   )
-  // }
 
   if (themeConfig.sitemap && themeConfig.hostname) {
     plugins.push([

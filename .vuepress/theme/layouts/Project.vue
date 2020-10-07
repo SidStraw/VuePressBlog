@@ -1,6 +1,6 @@
 <template>
   <div id="vuperess-theme-blog__post-layout">
-    <main class="vuepress-blog-theme-content">
+    <!-- <main class="vuepress-blog-theme-content">
       <el-card
         body-style="padding: 1rem 2rem;"
         class="my-4"
@@ -20,7 +20,7 @@
       <el-card body-style="padding: 1rem 2rem;">
         <Content />
       </el-card>
-    </main>
+    </main> -->
   </div>
 </template>
 

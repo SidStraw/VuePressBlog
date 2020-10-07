@@ -3,6 +3,8 @@ module.exports = {
   description: "吸管就是拿來Sid", // replace with site description
   // theme: "sidstraw-blog",
   head: [
+    // these values will be injected to the head element in each page
+    // replace icons with your site icons
     // ['link', { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" }],
     // ['link', { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" }],
     // ['link', { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" }],
@@ -22,20 +24,6 @@ module.exports = {
     }
   },
   themeConfig: {
-    // these values will be injected to the head element in each page
-    // replace icons with your site icons
-    // head: [
-    //   ['link', { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" }],
-    //   ['link', { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" }],
-    //   ['link', { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" }],
-    //   ['link', { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png" }],
-    //   ['link', { rel: "manifest", href: "/site.webmanifest" }],
-    //   ['link', { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#5bbad5" }],
-    //   ['link', { rel: "shortcut icon", href: "https://ahmadmostafa.com/favicon.ico" }],
-    //   ['meta', { name: "msapplication-TileColor", content: "#da532c" }],
-    //   ['meta', { name: "theme-color", content: "#ffffff" }],
-    // ],
-    
     // summary is a snippet of your post shown in the posts list.
     summary: true,
     // number of summary characters shown in the post card.
@@ -60,8 +48,9 @@ module.exports = {
     
     // this is used for the "about" card in home page.
     about: {
-      fullName: "Sid吸管",
+      name: "Sid吸管",
       image: "/images/sid.jpg",
+      position: 'Frontend Engineer',
       bio:
         "吸管就是拿來Sid"
     },
@@ -84,7 +73,7 @@ module.exports = {
         },
         // {
         //   type: "instagram",
-        //   link: "https://instagram.com/z3bya/"
+        //   link: ""
         // },
         {
           type: "facebook",
@@ -96,13 +85,13 @@ module.exports = {
         },
         // {
         //   type: "youtube",
-        //   link: "https://www.youtube.com/channel/UC8fZybVYhEnCe1UwwVidVcg"
+        //   link: ""
         // },
       ],
       copyright: [
         // {
         //   text: "This theme is available for you!",
-        //   link: "https://github.com/z3by/vuepress-theme-modern-blog"
+        //   link: ""
         // },
         {
           text: `Copyright © ${new Date().getFullYear()} SidStraw All rights reserved.`,

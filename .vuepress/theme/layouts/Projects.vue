@@ -1,5 +1,5 @@
 <template>
-  <el-container>
+  <!-- <el-container>
     <el-main class="">
       <el-row
         :gutter="10"
@@ -55,7 +55,7 @@
         </el-col>
       </el-row>
     </el-main>
-  </el-container>
+  </el-container> -->
 </template>
 
 <script>
