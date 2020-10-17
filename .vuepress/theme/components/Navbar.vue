@@ -37,11 +37,11 @@
     <v-navigation-drawer v-model="drawer" app temporary>
       <v-list-item>
         <v-list-item-avatar>
-          <v-img src="https://randomuser.me/api/portraits/men/78.jpg"></v-img>
+          <v-img :src="$themeConfig.logo"></v-img>
         </v-list-item-avatar>
 
         <v-list-item-content>
-          <v-list-item-title>:標題</v-list-item-title>
+          <v-list-item-title>{{ $siteTitle }}</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
 

@@ -8,11 +8,11 @@
         </div>
       </v-col>
       <v-col cols="12" md="4" lg="3">
-        <v-container grey lighten-5 sticky>
-          <v-row>
-            <v-col cols="12" sm="6" md="12"><About /></v-col>
-            <v-col cols="12" sm="6" md="12"><FeaturedPosts /></v-col>
-          </v-row>
+        <v-container grey lighten-5 sticky h-100>
+          <div class="sticky" :style="{ top: `${stickyTop}px` }">
+            <About />
+            <FeaturedPosts ref="featuredPosts" />
+          </div>
         </v-container>
       </v-col>
     </v-row>
@@ -32,6 +32,14 @@ export default {
     FeaturedPosts,
     Pagination,
   },
+  data() {
+    return {
+      stickyTop: -244,
+    };
+  },
+  mounted() {
+    this.stickyTop = 0 - this.$refs.featuredPosts.$el.offsetTop + 78;
+  },
 };
 </script>
 
@@ -40,6 +48,5 @@ export default {
   position: relative;
   position: -webkit-sticky;
   position: sticky;
-  top: -380px;
 }
 </style>

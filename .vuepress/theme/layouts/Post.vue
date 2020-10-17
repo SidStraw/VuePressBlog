@@ -2,14 +2,15 @@
   <div class="grey lighten-5">
     <v-container grey lighten-5>
       <v-row no-gutters>
-        <v-col class="post-content pa-10" cols="12" md="8" lg="9">
+        <v-col class="post-content px-10" cols="12" md="8" lg="9">
+          <h1 v-if="$frontmatter.title">{{ $frontmatter.title }}</h1>
           <p
             v-if="$frontmatter.date"
             class="font-weight-black text--disabled ma-0"
           >
             {{ new Date($frontmatter.date.trim()).toDateString() }}
           </p>
-          <h1 v-if="$frontmatter.title">{{ $frontmatter.title }}</h1>
+
           <v-chip
             v-for="(val, i) in $frontmatter.tags"
             :key="i"
@@ -19,14 +20,20 @@
           >
             {{ val }}
           </v-chip>
-          <v-img v-if="$frontmatter.image" class="my-5" :src="$frontmatter.image"></v-img>
+          <v-img
+            v-if="$frontmatter.image"
+            class="my-5"
+            :src="$frontmatter.image"
+          ></v-img>
           <Content />
         </v-col>
         <v-col cols="12" md="4" lg="3">
-          <v-container grey lighten-5 sticky>
-            <About />
-            <Toc />
-            <FeaturedPosts />
+          <v-container grey lighten-5 h-100>
+            <div class="sticky" :style="{ top: `${stickyTop}px` }">
+              <About />
+              <Toc ref="toc" />
+              <FeaturedPosts />
+            </div>
           </v-container>
         </v-col>
       </v-row>
@@ -64,6 +71,14 @@ export default {
     // PostInfo,
     // FeaturedPosts,
   },
+  data() {
+    return {
+      stickyTop: -244,
+    };
+  },
+  mounted() {
+    this.stickyTop = 0 - this.$refs.toc.$el.offsetTop + 78;
+  },
 };
 </script>
 
@@ -72,9 +87,6 @@ export default {
   position: relative;
   position: -webkit-sticky;
   position: sticky;
-  top: -380px;
 }
 </style>
-
-<style src="prismjs/themes/prism-okaidia.css"></style>
 

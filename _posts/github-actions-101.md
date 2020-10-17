@@ -7,7 +7,9 @@
 > 檔案路徑： .github/workflows 中，檔名可以自由設置但需要以 .yml 作為副檔名結尾，表示檔案格式為 YAML
 以下範例檔為 .github/workflows/deploy.yml
 
-```jsx
+<v-icon>mdi-magnify</v-icon>
+
+```YAML
 name: Deploy gh-pages
 
 on:

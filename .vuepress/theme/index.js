@@ -10,8 +10,7 @@ module.exports = (themeConfig, ctx) => {
     pwa: !!themeConfig.pwa
   });
 
-  themeConfig.heroImage =
-    themeConfig.heroImage || "https://source.unsplash.com/random/800x600";
+  themeConfig.logo = themeConfig.logo || themeConfig.about.image;
 
   const defaultBlogPluginOptions = {
     directories: [
@@ -130,6 +129,7 @@ module.exports = (themeConfig, ctx) => {
     };
 
     pageCtx.content = removeMd(sanitizedContent)
+    pageCtx.frontmatter.image = pageCtx.frontmatter.image || `https://source.unsplash.com/random/600x400?nature,summer,light,${Date.now()}`
   }
 
   return config;
