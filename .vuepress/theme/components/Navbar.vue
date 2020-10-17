@@ -15,7 +15,7 @@
 
         <div class="d-flex flex-column text-center">
           <router-link to="/" class="text-decoration-none">
-            <h1>{{ $site.title }}</h1>
+            <div class="text-h4">{{ $site.title }}</div>
           </router-link>
         </div>
 

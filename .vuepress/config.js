@@ -30,6 +30,8 @@ module.exports = {
     summaryLength: 100,
     
     // an image shown in the top of your home page
+    heroImage: '',
+
     logo: "",
     
     // navbar items

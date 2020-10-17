@@ -23,7 +23,7 @@ module.exports = (themeConfig, ctx) => {
         frontmatter: { title: "Home" },
         itemPermalink: "/:year/:month/:day/:slug",
         pagination: {
-          lengthPerPage: 10
+          lengthPerPage: 12
         }
       },
       // {
