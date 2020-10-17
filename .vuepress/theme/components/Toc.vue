@@ -134,7 +134,7 @@ export default {
 };
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 .vuepress-toc {
   max-height: 100vh;
   max-width: 220px;

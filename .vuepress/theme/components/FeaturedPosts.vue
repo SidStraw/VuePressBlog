@@ -4,13 +4,13 @@
       <template v-for="(item, index) in posts">
         <v-divider v-if="index !== 0" :key="index" :inset="true"></v-divider>
 
-        <v-list-item :key="item.path" :to="item.path">
+        <v-list-item :key="item.path" :to="item.path" color="primary">
           <v-list-item-content>
             <!-- <v-list-item-title v-html="item.title"></v-list-item-title> -->
             <v-list-item-subtitle v-html="item.title"></v-list-item-subtitle>
           </v-list-item-content>
 
-          <v-badge :content="index + 1" color="grey" bottom overlap>
+          <v-badge :content="index + 1" color="secondary" bottom overlap>
             <v-avatar>
               <v-img :src="item.frontmatter.image"></v-img>
             </v-avatar>

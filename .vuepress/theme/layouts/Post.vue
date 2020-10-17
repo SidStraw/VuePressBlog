@@ -14,6 +14,7 @@
           <v-chip
             v-for="(val, i) in $frontmatter.tags"
             :key="i"
+            :to="`/tag/${val}`"
             class="mr-1 mt-1"
             color="primary"
             label

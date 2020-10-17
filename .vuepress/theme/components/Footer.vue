@@ -1,22 +1,21 @@
 <template>
-  <v-footer
-    dark
-    padless
-  >
+  <v-footer dark padless>
     <v-card
       flat
       tile
-      :color="$vuetify.theme.themes.light.secondary"
+      color="secondary"
       class="white--text text-center w-100"
     >
       <v-card-text>
         <v-btn
-          v-for="icon in icons"
-          :key="icon"
+          v-for="item in $themeConfig.footer.socialMedia"
+          :key="item.link"
+          :href="item.link"
+          target="_blank"
           class="mx-4 white--text"
           icon
         >
-          <v-icon size="24px">{{ icon }}</v-icon>
+          <v-icon size="24px">{{ "mdi-" + item.type.toLowerCase() }}</v-icon>
         </v-btn>
       </v-card-text>
 
@@ -27,21 +26,31 @@
       <v-divider></v-divider>
 
       <v-card-text class="white--text">
-        {{ new Date().getFullYear() }} — <strong>SidStraw</strong>
+        <template v-if="$themeConfig.footer.copyright">
+          {{ $themeConfig.footer.copyright }}
+        </template>
+        <template v-else>
+          Copyright © {{ new Date().getFullYear() }} - {{ $siteTitle }} All
+          rights reserved.
+        </template>
+
+        Powered by
+        <a
+          href="https://sidstraw.dev"
+          target="_blank"
+          class="white--text text-decoration-none"
+        >
+          SidStraw
+        </a>
       </v-card-text>
     </v-card>
   </v-footer>
 </template>
 
 <script>
-  export default {
-    data: () => ({
-      icons: [
-        'mdi-facebook',
-        'mdi-twitter',
-        'mdi-linkedin',
-        'mdi-instagram',
-      ],
-    }),
-  }
+export default {
+  data: () => ({
+    icons: ["mdi-facebook", "mdi-twitter", "mdi-linkedin", "mdi-instagram"],
+  }),
+};
 </script>

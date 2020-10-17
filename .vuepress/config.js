@@ -33,18 +33,18 @@ module.exports = {
     logo: "",
     
     // navbar items
-    // nav: [
-    //   {
-    //     text: "Home",
-    //     link: "/",
-    //     icon: 'el-icon-house' // see all available icons here https://element.eleme.io/#/en-US/component/icon
-    //   },
-    //   {
-    //     text: "Projects",
-    //     link: "/projects/",
-    //     icon: "el-icon-folder" // see all available icons here https://element.eleme.io/#/en-US/component/icon
-    //   }
-    // ],
+    nav: [
+      {
+        text: "Home",
+        link: "/",
+        icon: 'mdi-home' // see all available icons here https://materialdesignicons.com/
+      },
+      {
+        text: "What's VuePress",
+        link: "/2020/05/10/vuepress-introduction/",
+        icon: "mdi-vuejs" // see all available icons here https://materialdesignicons.com/
+      }
+    ],
     
     // this is used for the "about" card in home page.
     about: {
@@ -62,11 +62,8 @@ module.exports = {
     sitemap: true, // auto generate site map for your site for better SEO.
     hostname: "https://sidstraw.dev/", // required for site map.
 
-    socialShare: true,
-    socialShareNetworks: ["facebook"],
-
     footer: {
-      contact: [
+      socialMedia: [
         {
           type: "github",
           link: "https://github.com/sidstraw/"
@@ -88,17 +85,7 @@ module.exports = {
         //   link: ""
         // },
       ],
-      copyright: [
-        // {
-        //   text: "This theme is available for you!",
-        //   link: ""
-        // },
-        {
-          text: `Copyright © ${new Date().getFullYear()} SidStraw All rights reserved.`,
-          link:
-            "https://facebook.com/j80304xz/"
-        }
-      ]
+      copyright: `Copyright © ${ new Date().getFullYear() } - Sid吸管 All rights reserved.`
     }
   },
 

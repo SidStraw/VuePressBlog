@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="nav">
     <v-app-bar
       app
       elevate-on-scroll
@@ -27,8 +27,25 @@
       </div>
 
       <template v-slot:extension v-if="$vuetify.breakpoint.smAndUp">
-        <v-tabs optional centered>
-          <v-tab v-for="item in $tag.list" :key="item.name" :to="item.path">
+        <!-- 有設置 nav -->
+        <v-tabs v-if="$themeConfig.nav" optional centered>
+          <v-tab
+            v-for="item in $themeConfig.nav"
+            :key="item.text"
+            :to="item.link"
+          >
+            <v-icon v-if="item.icon" class="mr-2">{{ item.icon }}</v-icon>
+            {{ item.text }}
+          </v-tab>
+        </v-tabs>
+        <!-- 無nav使用tag -->
+        <v-tabs v-else optional centered>
+          <v-tab
+            v-for="item in $tag.list"
+            :key="item.text"
+            :to="item.link"
+          >
+            <v-icon class="mr-2">mdi-tag</v-icon>
             {{ item.name }}
           </v-tab>
         </v-tabs>
@@ -47,18 +64,54 @@
 
       <v-divider></v-divider>
 
-      <v-list dense>
+      <!-- 使用者自訂 Nav -->
+      <v-list dense v-if="$themeConfig.nav">
+        <v-list-item>
+          <v-list-item-content>
+            <v-list-item-subtitle>Navigation</v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
         <v-list-item
+          link
+          v-for="item in $themeConfig.nav"
+          :key="item.text"
+          :to="item.link"
+          color="primary"
+        >
+          <v-list-item-icon>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <v-list-item-title>{{ item.text }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+
+      <v-divider></v-divider>
+
+      <!-- 文章 Tags -->
+      <v-list dense>
+        <v-list-item>
+          <v-list-item-content>
+            <v-list-item-subtitle>Tags</v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item
+          <v-list-item
           link
           v-for="item in $tag.list"
           :key="item.title"
           :to="item.path"
+          color="primary"
         >
+          <v-list-item-icon>
+            <v-icon>mdi-tag</v-icon>
+          </v-list-item-icon>
           <v-list-item-content>
             <v-list-item-title>{{ item.name }}</v-list-item-title>
           </v-list-item-content>
           <v-list-item-action-text>
-            <v-badge :content="item.pages.length" color="grey" bottom overlap />
+            <v-badge :content="item.pages.length" color="secondary" bottom overlap />
           </v-list-item-action-text>
         </v-list-item>
       </v-list>
@@ -88,3 +141,32 @@ export default {
   },
 };
 </script>
+
+<style lang="stylus" scoped>
+#nav {
+  .v-tab {
+    color: $secondaryColor
+    i {
+      color: $secondaryColor
+    }
+    &.v-tab--active {
+      color: inherit;
+      i {
+        color: inherit;
+      }
+    }
+  }
+  .v-list-item {
+    color: $secondaryColor
+    i {
+      color: $secondaryColor
+    }
+    &.v-list-item--active {
+      color: inherit;
+      i {
+        color: inherit;
+      }
+    }
+  }
+}
+</style>
