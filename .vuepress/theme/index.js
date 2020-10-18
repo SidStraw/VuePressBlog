@@ -47,7 +47,7 @@ module.exports = (themeConfig, ctx) => {
         // layout: 'Tag',  defaults to `FrontmatterKey.vue`
         frontmatter: { title: "Tag" },
         pagination: {
-          lengthPerPage: 5
+          lengthPerPage: 12
         }
       }
     ]

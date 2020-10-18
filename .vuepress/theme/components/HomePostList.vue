@@ -2,7 +2,7 @@
   <v-container grey lighten-5>
     <v-row justify="center">
       <template v-for="(post, i) in posts">
-        <v-col cols="12" sm="6" lg="4" :key="post.path" v-if="i !== 10">
+        <v-col cols="12" sm="6" lg="4" :key="post.path">
           <v-card class="mx-auto" max-width="374">
             <router-link :to="post.path">
               <v-img
@@ -70,9 +70,7 @@ export default {
   },
   computed: {
     posts() {
-      // const posts = this.$site.pages.filter((post) => post.pid === "post");
       const posts = this.$pagination.pages;
-      // posts.length = 1;
       return posts;
     },
   },
