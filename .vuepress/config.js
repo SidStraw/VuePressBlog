@@ -33,6 +33,11 @@ module.exports = {
     heroImage: '',
 
     logo: "",
+
+    color: {
+      $accentColor: '#99B7A3',
+      $secondaryColor: '#84969C',
+    },
     
     // navbar items
     nav: [

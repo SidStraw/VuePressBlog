@@ -13,8 +13,8 @@ export default ({
     theme: {
       themes: {
         light: {
-          primary: '#99B7A3',
-          secondary: '#84969C',
+          primary: siteData?.themeConfig?.color?.$accentColor || '#1976D2',
+          secondary: siteData?.themeConfig?.color?.$secondaryColor || '#424242',
           accent: '#82B1FF',
           error: '#FF5252',
           info: '#2196F3',
