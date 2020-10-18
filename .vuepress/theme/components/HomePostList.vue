@@ -1,6 +1,6 @@
 <template>
   <v-container grey lighten-5>
-    <v-row justify="center">
+    <v-row id="posts" justify="center">
       <template v-for="(post, i) in posts">
         <v-col cols="12" sm="6" lg="4" :key="post.path">
           <v-card class="mx-auto" max-width="374">

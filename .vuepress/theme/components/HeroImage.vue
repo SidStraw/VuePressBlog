@@ -7,14 +7,37 @@
     }"
   >
     <!-- <v-parallax
-      src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
-    ></v-parallax> -->
+        src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+      ></v-parallax> -->
+    <div class="d-none">
+      <span>
+        Photo by
+        <a
+          href="https://unsplash.com/@domenicoloia?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
+        >
+          Domenico Loia
+        </a>
+        on
+        <a
+          href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
+        >
+          Unsplash
+        </a>
+      </span>
+    </div>
     <img class="mask" src="@theme/img/mask-bottom.png" />
-    <div>
-      <h1 class="text-h3 white--text text-center mb-5">{{ $siteTitle }}</h1>
-      <h2 class="text-subtitle-1 white--text text-center">
+    <div class="text-center">
+      <h1 class="text-h3 white--text text-center">{{ $siteTitle }}</h1>
+      <h2 class="text-subtitle-1 white--text text-center my-7">
         {{ $description }}
       </h2>
+      <v-btn
+        large
+        color="primary"
+        @click="() => $vuetify.goTo('#posts', scrollOption)"
+      >
+        Latest Posts
+      </v-btn>
     </div>
   </div>
 </template>
@@ -27,11 +50,17 @@ export default {
   data() {
     return {
       heroImage,
+      scrollOption: {
+        duration: 700,
+        offset: 0,
+        easing: "linear",
+      },
     };
   },
   computed: {},
   mounted() {
-    if(this.$themeConfig.heroImage) this.heroImage = this.$themeConfig.heroImage
+    if (this.$themeConfig.heroImage)
+      this.heroImage = this.$themeConfig.heroImage;
   },
 };
 </script>
