@@ -38,6 +38,7 @@
     "vuepress-plugin-crisp": "^1.0.0"
   },
   "dependencies": {
+    "vuepress-plugin-table-of-contents": "^1.1.7",
     "vuepress-theme-sidstraw-blog": "file:./.vuepress/theme",
     "vuetify": "^2.2.34"
   }

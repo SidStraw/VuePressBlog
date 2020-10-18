@@ -31,9 +31,9 @@
         <v-col cols="12" md="4" lg="3">
           <v-container grey lighten-5 h-100>
             <div class="sticky" :style="{ top: `${stickyTop}px` }">
-              <About />
-              <Toc ref="toc" />
-              <FeaturedPosts ref="featuredPosts" />
+              <About ref="about" />
+              <TOC id="toc" />
+              <FeaturedPosts />
             </div>
           </v-container>
         </v-col>
@@ -60,15 +60,11 @@
 <script>
 import About from "@theme/components/About";
 import FeaturedPosts from "@theme/components/FeaturedPosts";
-import Toc from "@theme/components/Toc.vue";
-// import PostInfo from "@theme/components/PostInfo.vue";
-// import FeaturedPosts from "@theme/components/FeaturedPosts.vue";
 
 export default {
   components: {
     About,
     FeaturedPosts,
-    Toc,
     // PostInfo,
     // FeaturedPosts,
   },
@@ -78,9 +74,8 @@ export default {
     };
   },
   mounted() {
-    const targetElement = window.screen.width >= 1560 ? 'featuredPosts' : 'toc'
-    this.stickyTop = 0 - this.$refs[targetElement].$el.offsetTop + 78;
-    console.log(targetElement, this.$refs[targetElement].$el);
+    this.stickyTop = 0 - this.$refs.about.$el.clientHeight - 5 + 78;
+    window.about = this.$refs.about.$el
   },
 };
 </script>

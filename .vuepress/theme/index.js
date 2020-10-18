@@ -66,6 +66,7 @@ module.exports = (themeConfig, ctx) => {
     "smooth-scroll",
     "reading-progress",
     '@vuepress/back-to-top',
+    'vuepress-plugin-table-of-contents',
     ["@vuepress/medium-zoom", {selector: '.post-content img',}],
     ["@vuepress/blog", defaultBlogPluginOptions],
   ];
