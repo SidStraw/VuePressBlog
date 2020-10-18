@@ -33,7 +33,7 @@
             <div class="sticky" :style="{ top: `${stickyTop}px` }">
               <About />
               <Toc ref="toc" />
-              <FeaturedPosts />
+              <FeaturedPosts ref="featuredPosts" />
             </div>
           </v-container>
         </v-col>
@@ -78,7 +78,9 @@ export default {
     };
   },
   mounted() {
-    this.stickyTop = 0 - this.$refs.toc.$el.offsetTop + 78;
+    const targetElement = window.screen.width >= 1560 ? 'featuredPosts' : 'toc'
+    this.stickyTop = 0 - this.$refs[targetElement].$el.offsetTop + 78;
+    console.log(targetElement, this.$refs[targetElement].$el);
   },
 };
 </script>

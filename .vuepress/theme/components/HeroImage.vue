@@ -51,7 +51,7 @@ export default {
     return {
       heroImage,
       scrollOption: {
-        duration: 700,
+        duration: 100,
         offset: 0,
         easing: "linear",
       },
@@ -77,6 +77,12 @@ export default {
     position: absolute;
     width: 100%;
     bottom: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  #wrap {
+    height: calc(100vh - 50px);
   }
 }
 </style>
