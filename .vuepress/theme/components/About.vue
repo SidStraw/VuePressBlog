@@ -1,5 +1,5 @@
 <template>
-  <v-card class="mb-3 mx-auto" max-width="434" tile>
+  <v-card class="mb-3 mx-auto" max-width="450" tile>
     <v-img
       height="100%"
       src="https://cdn.vuetifyjs.com/images/cards/server-room.jpg"
@@ -21,6 +21,21 @@
           {{ $site.themeConfig.about.bio }}
         </p>
       </div>
+      <v-divider></v-divider>
+      <!-- <v-card-text> -->
+      <div class="pa-3 d-flex justify-center flex-wrap">
+        <v-btn
+          v-for="item in $themeConfig.footer.socialMedia"
+          :key="item.link"
+          :href="item.link"
+          target="_blank"
+          class="mx-1 white--text"
+          icon
+        >
+          <v-icon size="24px">{{ 'mdi-' + item.type.toLowerCase() }}</v-icon>
+        </v-btn>
+      </div>
+      <!-- </v-card-text> -->
     </v-img>
   </v-card>
 </template>
