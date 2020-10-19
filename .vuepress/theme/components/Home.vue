@@ -12,7 +12,7 @@
           <div class="sticky" :style="{ top: `${stickyTop}px` }">
             <v-row>
               <v-col class="px-7" cols="12" sm="6" md="12"><About /></v-col>
-              <v-col class="px-7"><FeaturedPosts ref="featuredPosts" /></v-col>
+              <v-col class="px-7"><FeaturedPosts ref="featuredPosts"/></v-col>
             </v-row>
           </div>
         </v-container>
@@ -22,10 +22,10 @@
 </template>
 
 <script>
-import HomePostList from "./HomePostList";
-import About from "./About";
-import FeaturedPosts from "./FeaturedPosts";
-import { Pagination } from "@vuepress/plugin-blog/lib/client/components";
+import HomePostList from './HomePostList'
+import About from './About'
+import FeaturedPosts from './FeaturedPosts'
+import { Pagination } from '@vuepress/plugin-blog/lib/client/components'
 
 export default {
   components: {
@@ -37,12 +37,12 @@ export default {
   data() {
     return {
       stickyTop: -244,
-    };
+    }
   },
   mounted() {
-    this.stickyTop = 0 - this.$refs.featuredPosts.$el.offsetTop + 78;
+    this.stickyTop = 0 - this.$refs.featuredPosts.$el.offsetTop + 78
   },
-};
+}
 </script>
 
 <style lang="scss" scoped>

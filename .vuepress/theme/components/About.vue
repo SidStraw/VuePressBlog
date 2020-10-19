@@ -8,9 +8,7 @@
     >
       <div class="d-flex flex-column justify-center align-center my-5">
         <v-avatar class="profile" color="grey" size="164" tile>
-          <v-img
-            :src="$site.themeConfig.about.image"
-          ></v-img>
+          <v-img :src="$site.themeConfig.about.image"></v-img>
         </v-avatar>
         <v-list-item color="rgba(0, 0, 0, .4)" dark>
           <v-list-item-content class="text-center">
@@ -30,10 +28,5 @@
 <script>
 export default {
   components: {},
-};
-</script>
-
-<style lang="scss" scoped>
-.bg-img {
 }
-</style>
+</script>

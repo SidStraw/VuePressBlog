@@ -10,9 +10,9 @@
 </template>
 
 <script>
-import DefaultGlobalLayout from "@app/components/GlobalLayout.vue"; // in VuePress Core
-import Navbar from "@theme/components/Navbar";
-import Footer from "@theme/components/Footer";
+import DefaultGlobalLayout from '@app/components/GlobalLayout.vue' // in VuePress Core
+import Navbar from '@theme/components/Navbar'
+import Footer from '@theme/components/Footer'
 // import Header from "@theme/components/Header.vue";
 // import Footer from "@theme/components/Footer.vue";
 
@@ -27,15 +27,15 @@ export default {
   data() {
     return {
       isMobileHeaderOpen: false,
-    };
+    }
   },
 
   mounted() {
     this.$router.afterEach(() => {
-      this.isMobileHeaderOpen = false;
-    });
+      this.isMobileHeaderOpen = false
+    })
   },
-};
+}
 </script>
 
 <style lang="scss">
@@ -65,7 +65,6 @@ export default {
     line-height: 1.25;
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
-    
   }
   h2 {
     padding-bottom: 0.5rem;
@@ -81,6 +80,6 @@ export default {
   }
 }
 .go-to-top {
-  display: block!important;
+  display: block !important;
 }
 </style>

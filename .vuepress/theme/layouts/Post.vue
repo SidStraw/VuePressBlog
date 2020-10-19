@@ -4,10 +4,7 @@
       <v-row no-gutters>
         <v-col class="post-content px-10" cols="12" md="8" lg="9">
           <h1 v-if="$frontmatter.title">{{ $frontmatter.title }}</h1>
-          <p
-            v-if="$frontmatter.date"
-            class="font-weight-black text--disabled ma-0"
-          >
+          <p v-if="$frontmatter.date" class="font-weight-black text--disabled ma-0">
             {{ new Date($frontmatter.date.trim()).toDateString() }}
           </p>
 
@@ -21,11 +18,7 @@
           >
             {{ val }}
           </v-chip>
-          <v-img
-            v-if="$frontmatter.image"
-            class="my-5"
-            :src="$frontmatter.image"
-          ></v-img>
+          <v-img v-if="$frontmatter.image" class="my-5" :src="$frontmatter.image"></v-img>
           <Content />
         </v-col>
         <v-col cols="12" md="4" lg="3">
@@ -58,8 +51,8 @@
 </template>
 
 <script>
-import About from "@theme/components/About";
-import FeaturedPosts from "@theme/components/FeaturedPosts";
+import About from '@theme/components/About'
+import FeaturedPosts from '@theme/components/FeaturedPosts'
 
 export default {
   components: {
@@ -71,13 +64,13 @@ export default {
   data() {
     return {
       stickyTop: -244,
-    };
+    }
   },
   mounted() {
-    this.stickyTop = 0 - this.$refs.about.$el.clientHeight - 5 + 78;
+    this.stickyTop = 0 - this.$refs.about.$el.clientHeight - 5 + 78
     window.about = this.$refs.about.$el
   },
-};
+}
 </script>
 
 <style lang="scss" scoped>
@@ -87,4 +80,3 @@ export default {
   position: sticky;
 }
 </style>
-

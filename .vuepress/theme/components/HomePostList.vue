@@ -1,15 +1,11 @@
 <template>
   <v-container grey lighten-5>
     <v-row id="posts" justify="center">
-      <template v-for="(post, i) in posts">
-        <v-col cols="12" sm="6" lg="4" :key="post.path">
+      <template v-for="post in posts">
+        <v-col :key="post.path" cols="12" sm="6" lg="4">
           <v-card class="mx-auto" max-width="374">
             <router-link :to="post.path">
-              <v-img
-                height="250"
-                :src="post.frontmatter.image"
-                :to="post.path"
-              ></v-img>
+              <v-img height="250" :src="post.frontmatter.image" :to="post.path"></v-img>
             </router-link>
             <v-card-text v-if="post.frontmatter.tags">
               <v-chip
@@ -52,30 +48,27 @@
         </v-col>
       </template>
     </v-row>
-    <!-- <Pagination /> -->
   </v-container>
 </template>
 
 <script>
-import { Pagination } from "@vuepress/plugin-blog/lib/client/components";
 export default {
-  components: {
-    Pagination,
-  },
+  components: {},
   data() {
     return {
       isActive: false,
       page: 1,
-    };
+    }
   },
   computed: {
     posts() {
-      const posts = this.$pagination.pages;
-      return posts;
+      const posts = this.$pagination.pages
+      return posts
     },
   },
+  mounted() {},
   methods: {},
-};
+}
 </script>
 
 <style lang="scss" scoped>

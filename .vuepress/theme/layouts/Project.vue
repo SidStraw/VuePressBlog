@@ -25,9 +25,7 @@
 </template>
 
 <script>
-export default {
-
-}
+export default {}
 </script>
 
 <style lang="stylus" scoped>
@@ -45,4 +43,3 @@ export default {
 // }
 </style>
 <style src="prismjs/themes/prism-okaidia.css"></style>
-

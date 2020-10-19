@@ -6,7 +6,7 @@
 
         <v-list-item :key="item.path" :to="item.path" color="primary">
           <v-list-item-content>
-            <!-- <v-list-item-title v-html="item.title"></v-list-item-title> -->
+            <!-- eslint-disable-next-line vue/no-v-html -->
             <v-list-item-subtitle v-html="item.title"></v-list-item-subtitle>
           </v-list-item-content>
 
@@ -25,10 +25,10 @@
 export default {
   computed: {
     posts() {
-      const posts = this.$site.pages.filter((post) => post.pid === "post");
-      if(posts.length > 5) posts.length = 5;
-      return posts;
+      const posts = this.$site.pages.filter(post => post.pid === 'post')
+      if (posts.length > 5) posts.length = 5
+      return posts
     },
   },
-};
+}
 </script>

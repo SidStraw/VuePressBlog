@@ -18,9 +18,7 @@
           Domenico Loia
         </a>
         on
-        <a
-          href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
-        >
+        <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
           Unsplash
         </a>
       </span>
@@ -31,19 +29,13 @@
       <h2 class="text-subtitle-1 white--text text-center my-7">
         {{ $description }}
       </h2>
-      <v-btn
-        large
-        color="primary"
-        @click="() => $vuetify.goTo('#posts', scrollOption)"
-      >
-        Latest Posts
-      </v-btn>
+      <v-btn large color="primary" @click="() => $vuetify.goTo('#posts', scrollOption)"> Latest Posts </v-btn>
     </div>
   </div>
 </template>
 
 <script>
-const heroImage = require("@theme/img/domenico-loia-EhTcC9sYXsw-unsplash.jpg");
+const heroImage = require('@theme/img/domenico-loia-EhTcC9sYXsw-unsplash.jpg')
 
 export default {
   components: {},
@@ -53,16 +45,15 @@ export default {
       scrollOption: {
         duration: 100,
         offset: 0,
-        easing: "linear",
+        easing: 'linear',
       },
-    };
+    }
   },
   computed: {},
   mounted() {
-    if (this.$themeConfig.heroImage)
-      this.heroImage = this.$themeConfig.heroImage;
+    if (this.$themeConfig.heroImage) this.heroImage = this.$themeConfig.heroImage
   },
-};
+}
 </script>
 
 <style lang="stylus" scoped>

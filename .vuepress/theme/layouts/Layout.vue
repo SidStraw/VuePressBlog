@@ -7,12 +7,16 @@
 </template>
 
 <script>
-import HeroImage from "@theme/components/HeroImage";
-import Home from "@theme/components/Home";
+import HeroImage from '@theme/components/HeroImage'
+import Home from '@theme/components/Home'
 export default {
   components: {
     Home,
-    HeroImage
+    HeroImage,
   },
-};
+  data() {
+    return {}
+  },
+  mounted() {},
+}
 </script>
