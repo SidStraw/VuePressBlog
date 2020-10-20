@@ -1,0 +1,22 @@
+profile:
+  title: test
+  description: hahaha
+  themeConfig:
+    heroImage: /images/uploads/8bit像素版ㄇㄚˊ幾.jpg
+    disqus: "''"
+    nav: haha
+    color:
+      $accentColor: "#99B7A3"
+      $secondaryColor: "#84969C"
+    summary: true
+    logo: /images/uploads/8bit像素版ㄇㄚˊ幾.jpg
+    summaryLength: 123
+    googleAnalytics: "''"
+    about:
+      name: hhh
+      image: sss
+      position: sss
+      bio: bio
+    hostname: "''"
+    sitemap: true
+    footer: "''"
