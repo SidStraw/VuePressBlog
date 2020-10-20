@@ -3,7 +3,7 @@ profile:
   description: hahaha
   themeConfig:
     heroImage: /images/uploads/8bit像素版ㄇㄚˊ幾.jpg
-    disqus: "''"
+    disqus: ""
     nav: haha
     color:
       $accentColor: "#99B7A3"
@@ -11,12 +11,12 @@ profile:
     summary: true
     logo: /images/uploads/8bit像素版ㄇㄚˊ幾.jpg
     summaryLength: 123
-    googleAnalytics: "''"
+    googleAnalytics: ""
     about:
       name: hhh
-      image: sss
+      image: /images/uploads/8bit像素版ㄇㄚˊ幾.jpg
       position: sss
       bio: bio
-    hostname: "''"
-    sitemap: true
+    hostname: ""
+    sitemap: false
     footer: "''"
