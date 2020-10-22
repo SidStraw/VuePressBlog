@@ -1,0 +1,18 @@
+profile:
+  title: "1"
+  description: "1"
+  themeConfig:
+    summaryLength: 111
+    puppies: 11
+    color:
+      $accentColor: "11"
+      $secondaryColor: "11"
+    about:
+      name: "11"
+      position: "11"
+      bio: "11"
+      image: /images/uploads/療癒自己的ㄇㄚˊ幾.jpg
+    disqus: "11"
+    hostname: "11"
+    logo: /images/uploads/療癒自己的ㄇㄚˊ幾.jpg
+    heroImage: /images/uploads/療癒自己的ㄇㄚˊ幾.jpg
