@@ -1,0 +1,46 @@
+title: 網站標題
+description: 吸管就是拿來Sid
+head:
+  - - meta
+    - name: viewport
+      content: width=device-width,user-scaleble=0,initial-scale=1.0,maximum-scale=1.0
+  - - link
+    - rel: stylesheet
+      href: https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900
+  - - link
+    - rel: stylesheet
+      href: https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css
+locales:
+  '/':
+    lang: zh-TW
+themeConfig:
+  summary: true
+  summaryLength: 100
+  heroImage: ''
+  logo: ''
+  color:
+    '$accentColor': '#99B7A3'
+    '$secondaryColor': '#84969C'
+  nav:
+    - text: Home
+      link: '/'
+      icon: mdi-home
+    - text: What's VuePress
+      link: '/2020/05/10/vuepress-introduction/'
+      icon: mdi-vuejs
+  about:
+    name: Sid吸管
+    image: '/images/sid.jpg'
+    position: Frontend Engineer
+    bio: 吸管就是拿來Sid
+  disqus: codeshop-1
+  googleAnalytics: '<GOOGLE ANALYTICS ID>'
+  sitemap: true
+  hostname: https://sidstraw.dev/
+  socialMedia:
+    - type: github
+      link: https://github.com/sidstraw/
+    - type: facebook
+      link: https://facebook.com/j80304xz/
+    - type: linkedin
+      link: https://www.linkedin.com/in/sidstraw/

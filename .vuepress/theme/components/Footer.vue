@@ -3,7 +3,7 @@
     <v-card flat tile color="secondary" class="white--text text-center w-100">
       <v-card-text>
         <v-btn
-          v-for="item in $themeConfig.footer.socialMedia"
+          v-for="item in $themeConfig.socialMedia"
           :key="item.link"
           :href="item.link"
           target="_blank"
@@ -21,8 +21,8 @@
       <v-divider></v-divider>
 
       <v-card-text class="white--text">
-        <template v-if="$themeConfig.footer.copyright">
-          {{ $themeConfig.footer.copyright }}
+        <template v-if="$themeConfig.copyright">
+          {{ $themeConfig.copyright }}
         </template>
         <template v-else> Copyright © {{ new Date().getFullYear() }} - {{ $siteTitle }} All rights reserved. </template>
 

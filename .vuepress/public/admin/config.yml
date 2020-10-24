@@ -1,0 +1,113 @@
+backend:
+  name: github
+  repo: SidStraw/VpressBlog   # Path to your GitHub repository
+
+locale: 'zh_Hant'
+
+# This line should *not* be indented
+publish_mode: editorial_workflow
+
+# This line should *not* be indented
+media_folder: ".vuepress/public/images/uploads" # Media files will be stored in the repo under images/uploads
+public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+
+collections:
+    - name: "blog" # Used in routes, e.g., /admin/collections/blog
+      label: "Blog" # Used in the UI
+      folder: "_posts" # The path to the folder where the documents are stored
+      create: true # Allow users to create new documents in this collection
+      slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+      fields: # The fields for each document, usually in front matter
+        - {label: "title", name: "title", widget: "string", default: "100"}
+        - {label: "date", name: "date", widget: "date", format: 'YYYY-MM-DD'}
+        - {label: "slug", name: "slug", widget: ""}
+        - {label: "tags", name: "tags", widget: "list"}
+        - {label: "description", name: "description", widget: "text"}
+        - {label: "image", name: "image", widget: "image"}
+        - {label: "Draft", name: "draft", widget: "boolean", default: true}
+        - {label: "featured", name: "featured", widget: "boolean", default: false}
+        - {label: 'Blog post content', name: 'body', widget: 'markdown' }
+
+    - name: "config" # Used in routes, e.g., /admin/collections/blog
+      label: "Setting" # Used in the UI
+      editor:
+        preview: false
+      files:
+        - name: "site-config"
+          label: "網站設定"
+          file: ".vuepress/config.yml"
+          fields:
+            - {label: "title", name: "title", widget: "string"}
+            - {label: "description", name: "description", widget: "string"}
+            - label: "head"
+              name: "head"
+              widget: "hidden"
+              default:
+                - - meta
+                  - name: viewport
+                    content: width=device-width,user-scaleble=0,initial-scale=1.0,maximum-scale=1.0
+                - - link
+                  - rel: stylesheet
+                    href: https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900
+                - - link
+                  - rel: stylesheet
+                    href: https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css
+
+            - label: "locales"
+              name: "locales"
+              widget: "hidden"
+              default:
+                "/":
+                  lang: zh-TW
+            - label: "themeConfig"
+              name: "themeConfig"
+              widget: "object"
+              # collapsed: true
+              fields: 
+                - {label: "summary", name: "summary", widget: "boolean", required: false}
+                - {label: "summaryLength", name: "summaryLength", widget: "number", default: "100", value_type: "int"}
+                - label: "Puppy Count"
+                  name: "puppies"
+                  widget: "number"
+                  default: 2
+                  value_type: "int"
+                  min: 1
+                  max: 101
+                  step: 2
+                - {label: "heroImage", name: "heroImage", widget: "image"}
+                - {label: "logo", name: "logo", widget: "image"}
+                - label: "socialMedia"
+                  name: "socialMedia"
+                  widget: "list"
+                  fields: 
+                    - {label: type, name: type, widget: string}
+                    - {label: link, name: link, widget: string}
+                - label: "color"
+                  name: "color"
+                  widget: "object"
+                  fields: 
+                    - {label: "$accentColor", name: "$accentColor", widget: "string", default: ""}
+                    - {label: "$secondaryColor", name: "$secondaryColor", widget: "string", default: ""}
+                # - {label: "nav", name: "nav", widget: "string"}
+                - label: "nav"
+                  name: "nav"
+                  widget: "list"
+                  fields: 
+                    - {label: text, name: text, widget: string}
+                    - {label: link, name: link, widget: string}
+                    - {label: icon, name: icon, widget: string}
+                - label: "about"
+                  name: "about"
+                  widget: "object"
+                  fields: 
+                    - {label: "name", name: "name", widget: "string", default: "Sid"}
+                    - {label: "image", name: "image", widget: "image", default: ""}
+                    - {label: "position", name: "position", widget: "string", default: ""}
+                    - {label: "bio", name: "bio", widget: "string", default: ""}
+                - {label: "disqus", name: "disqus", widget: "string", required: false}
+                - {label: "googleAnalytics", name: "googleAnalytics", widget: "string", required: false}
+                - {label: "sitemap", name: "sitemap", widget: "boolean", required: false}
+                - {label: "hostname", name: "hostname", widget: "string", required: false}
+
+
+

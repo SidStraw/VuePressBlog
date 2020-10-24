@@ -25,7 +25,7 @@
       <!-- <v-card-text> -->
       <div class="pa-3 d-flex justify-center flex-wrap">
         <v-btn
-          v-for="item in $themeConfig.footer.socialMedia"
+          v-for="item in $themeConfig.socialMedia"
           :key="item.link"
           :href="item.link"
           target="_blank"

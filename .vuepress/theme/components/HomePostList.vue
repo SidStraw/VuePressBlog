@@ -1,5 +1,13 @@
 <template>
   <v-container grey lighten-5>
+    <v-text-field
+      v-if="$currentTag"
+      color="primary"
+      label="分類標籤"
+      prepend-inner-icon="mdi-tag"
+      readonly
+      :value="$currentTag.key"
+    ></v-text-field>
     <v-row id="posts" justify="center">
       <template v-for="post in posts">
         <v-col :key="post.path" cols="12" sm="6" lg="4">

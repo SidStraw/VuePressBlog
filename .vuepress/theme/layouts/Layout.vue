@@ -1,6 +1,6 @@
 <template>
   <div class="grey lighten-5">
-    <HeroImage />
+    <HeroImage v-if="this.$route.path === '/'" />
     <Home v-if="$pagination" />
     <Content v-else />
   </div>
@@ -17,6 +17,8 @@ export default {
   data() {
     return {}
   },
-  mounted() {},
+  mounted() {
+    console.log(this.$currentTag)
+  },
 }
 </script>
