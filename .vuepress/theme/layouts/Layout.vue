@@ -1,19 +1,24 @@
 <template>
   <div class="grey lighten-5">
-    <Home
-      v-if="$pagination"
-    />
+    <HeroImage v-if="this.$route.path === '/'" />
+    <Home v-if="$pagination" />
     <Content v-else />
   </div>
 </template>
 
 <script>
-import Home from "@theme/components/Home";
+import HeroImage from '@theme/components/HeroImage'
+import Home from '@theme/components/Home'
 export default {
   components: {
     Home,
+    HeroImage,
   },
-};
+  data() {
+    return {}
+  },
+  mounted() {
+    console.log(this.$currentTag)
+  },
+}
 </script>
-
-<style src="prismjs/themes/prism-okaidia.css"></style>
