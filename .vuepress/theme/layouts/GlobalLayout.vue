@@ -38,7 +38,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="stylus">
 .w-100 {
   width: 100% !important;
 }
