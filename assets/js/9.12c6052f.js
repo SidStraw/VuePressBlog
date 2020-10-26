@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[9],{378:function(t,e,n){"use strict";n.r(e);var c={components:{},computed:{projects:function(){return this.$pagination._matchedPages}}},o=n(8),s=Object(o.a)(c,(function(){var t=this.$createElement;return(this._self._c||t)("div")}),[],!1,null,"1ecd2821",null);e.default=s.exports}}]);
