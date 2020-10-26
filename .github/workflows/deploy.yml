@@ -29,10 +29,10 @@ jobs:
       with:
         cmd: build # will run `yarn build` command
     - name: Archive Production Artifact
-    uses: actions/upload-artifact@master
-    with:
-      name: dist
-      path: dist
+      uses: actions/upload-artifact@master
+      with:
+        name: dist
+        path: dist
     # - name: Commit files
     #   run: |
     #     echo ${{secrets.DEPLOY_PASSWORD}} | sudo -S chown -R $USER:$USER $PUBLISH_DIR
