@@ -28,23 +28,46 @@ jobs:
     - uses: borales/actions-yarn@v2.0.0
       with:
         cmd: build # will run `yarn build` command
-    - name: Commit files
-      run: |
-        echo ${{secrets.DEPLOY_PASSWORD}} | sudo -S chown -R $USER:$USER $PUBLISH_DIR
-        cd $PUBLISH_DIR
-        git init
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git status
-        git remote add origin https://$MY_SECRET@github.com/$GITHUB_REPOSITORY.git
-        git checkout -b gh-pages
-        git add --all
-        git commit -m "deploy to Github pages"
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: 'gh-pages'
-        force: true
-        directory: '.vuepress/dist'
+    - name: Archive Production Artifact
+    uses: actions/upload-artifact@master
+    with:
+      name: dist
+      path: dist
+    # - name: Commit files
+    #   run: |
+    #     echo ${{secrets.DEPLOY_PASSWORD}} | sudo -S chown -R $USER:$USER $PUBLISH_DIR
+    #     cd $PUBLISH_DIR
+    #     git init
+    #     git config --local user.email "action@github.com"
+    #     git config --local user.name "GitHub Action"
+    #     git status
+    #     git remote add origin https://$MY_SECRET@github.com/$GITHUB_REPOSITORY.git
+    #     git checkout -b gh-pages
+    #     git add --all
+    #     git commit -m "deploy to Github pages"
+    # - name: Push changes
+    #   uses: ad-m/github-push-action@master
+    #   with:
+    #     github_token: ${{ secrets.GITHUB_TOKEN }}
+    #     branch: 'gh-pages'
+    #     force: true
+    #     directory: '.vuepress/dist'
 
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+      - name: Download Artifact
+        uses: actions/download-artifact@master
+        with:
+          name: dist
+          path: dist
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
