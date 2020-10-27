@@ -23,25 +23,14 @@ module.exports = (themeConfig, ctx) => {
           lengthPerPage: 12,
         },
       },
-      // {
-      //   id: "project",
-      //   dirname: "_projects",
-      //   path: "/projects/",
-      //   layout: "Projects",
-      //   itemLayout: "Project",
-      //   frontmatter: { title: "Project" },
-      //   itemPermalink: "/projects/:slug",
-      //   pagination: {
-      //     lengthPerPage: 10
-      //   }
-      // }
     ],
     frontmatters: [
       {
         id: 'tag',
         keys: ['tag', 'tags'],
         path: '/tag/',
-        // layout: 'Tag',  defaults to `FrontmatterKey.vue`
+        layout: 'Tag', // defaults to `FrontmatterKey.vue`
+        scopeLayout: 'TagPosts',
         frontmatter: { title: 'Tag' },
         pagination: {
           lengthPerPage: 12,
@@ -106,7 +95,7 @@ module.exports = (themeConfig, ctx) => {
   /**
    * Generate summary.
    */
-  config.extendPageData = function(pageCtx) {
+  config.extendPageData = function (pageCtx) {
     const strippedContent = pageCtx._strippedContent
     if (!strippedContent) {
       return
