@@ -21,12 +21,12 @@ collections:
         - {label: "title", name: "title", widget: "string", default: "100"}
         - {label: "date", name: "date", widget: "date", format: 'YYYY-MM-DD'}
         - {label: "slug", name: "slug", widget: ""}
-        - {label: "tags", name: "tags", widget: "list"}
-        - {label: "description", name: "description", widget: "text"}
-        - {label: "image", name: "image", widget: "image"}
-        - {label: "Draft", name: "draft", widget: "boolean", default: true}
-        - {label: "featured", name: "featured", widget: "boolean", default: false}
-        - {label: 'Blog post content', name: 'body', widget: 'markdown' }
+        - {label: "tags", name: "tags", widget: "list", required: false}
+        - {label: "description", name: "description", widget: "text", required: false}
+        - {label: "image", name: "image", widget: "image", required: false}
+        - {label: "Draft", name: "draft", widget: "boolean", default: true, required: false}
+        - {label: "featured", name: "featured", widget: "boolean", default: false, required: false}
+        - {label: 'Blog post content', name: 'body', widget: 'markdown', required: false}
 
     - name: "config" # Used in routes, e.g., /admin/collections/blog
       label: "Setting" # Used in the UI
@@ -37,8 +37,8 @@ collections:
           label: "網站設定"
           file: ".vuepress/config.yml"
           fields:
-            - {label: "title", name: "title", widget: "string"}
-            - {label: "description", name: "description", widget: "string"}
+            - {label: "網站標題", name: "title", widget: "string"}
+            - {label: "網站描述", name: "description", widget: "text"}
             - label: "head"
               name: "head"
               widget: "hidden"
@@ -59,55 +59,51 @@ collections:
               default:
                 "/":
                   lang: zh-TW
-            - label: "themeConfig"
+            - label: "主題設定"
               name: "themeConfig"
               widget: "object"
               # collapsed: true
               fields: 
-                - {label: "summary", name: "summary", widget: "boolean", required: false}
-                - {label: "summaryLength", name: "summaryLength", widget: "number", default: "100", value_type: "int"}
-                - label: "Puppy Count"
-                  name: "puppies"
-                  widget: "number"
-                  default: 2
-                  value_type: "int"
-                  min: 1
-                  max: 101
-                  step: 2
-                - {label: "heroImage", name: "heroImage", widget: "image"}
-                - {label: "logo", name: "logo", widget: "image"}
-                - label: "socialMedia"
+                - {label: "是否開啟內文預覽", name: "summary", widget: "boolean", required: false}
+                - {label: "內文預覽字數設定", name: "summaryLength", widget: "number", default: "100", value_type: "int", required: false}
+                - {label: "首頁封面圖片", name: "heroImage", widget: "image", required: false}
+                - {label: "LOGO 圖片", name: "logo", widget: "image", required: false}
+                - label: "社群媒體設定"
                   name: "socialMedia"
                   widget: "list"
+                  required: false
                   fields: 
-                    - {label: type, name: type, widget: string}
+                    - {label: 媒體 icon, name: type, widget: string, hint: "facebook、instagram、youtube、github、linkedin...等，可至 https://cdn.materialdesignicons.com/5.4.55/ 搜尋適合 icon"}
                     - {label: link, name: link, widget: string}
-                - label: "color"
+                - label: "網站色系"
                   name: "color"
                   widget: "object"
+                  required: false
                   fields: 
-                    - {label: "$accentColor", name: "$accentColor", widget: "string", default: ""}
-                    - {label: "$secondaryColor", name: "$secondaryColor", widget: "string", default: ""}
+                    - {label: "網站主要色系", name: "$accentColor", widget: "string", default: ""}
+                    - {label: "網站次要色系", name: "$secondaryColor", widget: "string", default: ""}
                 # - {label: "nav", name: "nav", widget: "string"}
-                - label: "nav"
+                - label: "導航列設定"
                   name: "nav"
                   widget: "list"
+                  required: false
                   fields: 
-                    - {label: text, name: text, widget: string}
+                    - {label: 連結顯示名稱, name: text, widget: string}
                     - {label: link, name: link, widget: string}
                     - {label: icon, name: icon, widget: string}
-                - label: "about"
+                - label: "關於我"
                   name: "about"
                   widget: "object"
+                  required: false
                   fields: 
-                    - {label: "name", name: "name", widget: "string", default: "Sid"}
-                    - {label: "image", name: "image", widget: "image", default: ""}
-                    - {label: "position", name: "position", widget: "string", default: ""}
-                    - {label: "bio", name: "bio", widget: "string", default: ""}
-                - {label: "disqus", name: "disqus", widget: "string", required: false}
-                - {label: "googleAnalytics", name: "googleAnalytics", widget: "string", required: false}
-                - {label: "sitemap", name: "sitemap", widget: "boolean", required: false}
-                - {label: "hostname", name: "hostname", widget: "string", required: false}
+                    - {label: "稱呼", name: "name", widget: "string", default: "Sid", required: false}
+                    - {label: "個人照片", name: "image", widget: "image", default: "", required: false}
+                    - {label: "職稱", name: "position", widget: "string", default: "", required: false}
+                    - {label: "人物介紹", name: "bio", widget: "string", default: "", required: false}
+                - {label: "disqus 討論區 ID", name: "disqus", widget: "string", required: false}
+                - {label: "GoogleAnalytics 分析資源代碼", name: "googleAnalytics", widget: "string", required: false}
+                - {label: "是否設置 sitemap", name: "sitemap", widget: "boolean", required: false}
+                - {label: "主機網址", name: "hostname", widget: "string", required: false, hint: "若啟動 Sitemap 設置則本項必填，填寫格式範例： https://sidstraw.dev/"}
 
 
 

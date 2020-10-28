@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vuepress dev",
     "build": "vuepress build",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "deploy:firebase": "yarn build && firebase deploy"
   },
   "repository": {
     "type": "git",
