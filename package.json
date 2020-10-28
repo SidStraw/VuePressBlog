@@ -4,8 +4,8 @@
   "description": "My Website & Blog",
   "main": "index.js",
   "scripts": {
-    "dev": "vuepress dev",
-    "build": "vuepress build",
+    "dev": "node renewPaletteStylus.js && vuepress dev",
+    "build": "node renewPaletteStylus.js && vuepress build",
     "lint": "eslint .",
     "deploy:firebase": "yarn build && firebase deploy"
   },
@@ -39,6 +39,7 @@
     "vuepress": "^1.2.0"
   },
   "dependencies": {
-    "vuepress-theme-sidstraw-blog": "file:./.vuepress/theme"
+    "vuepress-theme-sidstraw-blog": "file:./.vuepress/theme",
+    "yaml": "^1.10.0"
   }
 }
