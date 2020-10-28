@@ -1,4 +1,4 @@
-title: 網站標題
+title: 這可得好好管管
 description: 吸管就是拿來Sid
 head:
   - - meta
@@ -11,32 +11,32 @@ head:
     - rel: stylesheet
       href: https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css
 locales:
-  '/':
+  /:
     lang: zh-TW
 themeConfig:
-  summary: true
-  summaryLength: 100
-  heroImage: ''
-  logo: ''
-  color:
-    '$accentColor': '#99B7A3'
-    '$secondaryColor': '#84969C'
+  heroImage: ""
+  disqus: codeshop-1
   nav:
     - text: Home
-      link: '/'
+      link: /
       icon: mdi-home
     - text: What's VuePress
-      link: '/2020/05/10/vuepress-introduction/'
+      link: /2020/05/10/vuepress-introduction/
       icon: mdi-vuejs
+  color:
+    $accentColor: "#99B7A3"
+    $secondaryColor: "#84969C"
+  summary: true
+  logo: ""
+  summaryLength: 100
+  googleAnalytics: <GOOGLE ANALYTICS ID>
   about:
     name: Sid吸管
-    image: '/images/sid.jpg'
+    image: /images/sid.jpg
     position: Frontend Engineer
     bio: 吸管就是拿來Sid
-  disqus: codeshop-1
-  googleAnalytics: '<GOOGLE ANALYTICS ID>'
-  sitemap: true
   hostname: https://sidstraw.dev/
+  sitemap: true
   socialMedia:
     - type: github
       link: https://github.com/sidstraw/
