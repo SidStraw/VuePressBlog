@@ -23,6 +23,9 @@ themeConfig:
     - text: What's VuePress
       link: /2020/05/10/vuepress-introduction/
       icon: mdi-vuejs
+    - text: YB
+      link: https://i.youbike.com.tw/home
+      icon: mdi-vuejs
   color:
     $accentColor: "#99B7A3"
     $secondaryColor: "#84969C"
