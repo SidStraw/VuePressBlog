@@ -1,20 +1,21 @@
 ---
-date: '2020-05-10'
-slug: vuepress-introduction_
-tags:
-- 前端開發
-- VuePress
-- Vue
-title: VuePress - 顛覆式的網站產生工具
-description: VuePress - 顛覆式的網站產生工具
-author: SidStraw
-image: https://i.imgur.com/u7De015.png
+draft: false
 meta:
   - name: author
     content: SidStraw
   - http-equiv: content-language
     content: zh-TW
-featured: true
+author: SidStraw
+title: VuePress - 微冷門卻很有趣的網站產生工具
+date: 2020-05-10
+slug: vuepress-introduction_
+tags:
+  - 前端開發
+  - VuePress
+  - Vue
+description: VuePress - 顛覆式的網站產生工具
+image: https://i.imgur.com/u7De015.png
+featured: false
 ---
 
 VuePress 是 Sid 最近愛上的一個「靜態網站生成器」，這個部落格也是使用 VuePress 架設的，我接下來會撰寫一系列的 VuePress 相關文章來介紹與教學，希望能對大家有所幫助
