@@ -28,7 +28,7 @@
         </v-tabs>
         <!-- 無nav使用tag -->
         <v-tabs v-else optional centered>
-          <v-tab v-for="item in $tag.list" :key="item.text" :to="item.link">
+          <v-tab v-for="item in $tag.list" :key="item.text" :to="item.path">
             <v-icon class="mr-2">mdi-tag</v-icon>
             {{ item.name }}
           </v-tab>
