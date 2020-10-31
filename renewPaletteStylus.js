@@ -10,8 +10,8 @@ if (color && Object.keys(color).some(key => !!color[key])) {
   const stylusContent = Object.keys(color)
     .map(key => `${key} = ${color[key] || defaultColor[key]};`)
     .join('\n')
-
-  fs.writeFileSync('./.vuepress/styles/palette.styl', fileStylus + '\n' + stylusContent)
+  const filteredStylus = fileStylus.replace(/^\$accentColor.*$|^\$secondaryColor.*$/gm, '').replace(/^\s$/gm, '')
+  fs.writeFileSync('./.vuepress/styles/palette.styl', stylusContent + '\n' + filteredStylus)
 }
 
 console.log('palette.styl 更新完成')
