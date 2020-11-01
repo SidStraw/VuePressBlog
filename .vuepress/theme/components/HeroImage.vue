@@ -1,11 +1,5 @@
 <template>
-  <div
-    id="wrap"
-    class="d-flex justify-center align-center"
-    :style="{
-      'background-image': `url(${heroImage}), linear-gradient(to top right, ${$vuetify.theme.themes.light.secondary}, ${$vuetify.theme.themes.light.primary})`,
-    }"
-  >
+  <div id="wrap" class="d-flex justify-center align-center" :style="background">
     <!-- <v-parallax
         src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
       ></v-parallax> -->
@@ -49,7 +43,17 @@ export default {
       },
     }
   },
-  computed: {},
+  computed: {
+    background() {
+      const mask = {
+        'background-image': `url(${heroImage}), linear-gradient(to top right, ${this.$vuetify.theme.themes.light.secondary}, ${this.$vuetify.theme.themes.light.primary})`,
+      }
+      const noMask = {
+        'background-image': `url(${heroImage})`,
+      }
+      return this.$themeConfig.heroImageMask ? mask : noMask
+    },
+  },
   mounted() {
     if (this.$themeConfig.heroImage) this.heroImage = this.$themeConfig.heroImage
   },
