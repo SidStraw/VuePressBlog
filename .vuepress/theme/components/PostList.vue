@@ -71,7 +71,14 @@ export default {
   computed: {
     posts() {
       const posts = this.$pagination.pages
-      return posts
+      const sortPosts = posts.sort((a, b) => {
+        const aDate = a.frontmatter.date || ''
+        const bDate = b.frontmatter.date || ''
+        if (aDate < bDate) return 1
+        if (aDate > bDate) return -1
+        return 0
+      })
+      return sortPosts
     },
   },
   mounted() {},

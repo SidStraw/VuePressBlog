@@ -1,6 +1,20 @@
-# 14. 結合 CI/CD 才是完整的 JAMstack
-
-# 結合 CI/CD 才是完整的 JAMstack
+---
+date: '2020-01-10'
+slug: vuepress-introduction_
+tags:
+- JAMstack
+- VuePress
+title: 結合 CI/CD 才是完整的 JAMstack
+description: 結合 CI/CD 才是完整的 JAMstack
+author: SidStraw
+image: https://i.imgur.com/u7De015.png
+meta:
+  - name: author
+    content: SidStraw
+  - http-equiv: content-language
+    content: zh-TW
+featured: true
+---
 
 ## 何謂 CI/CD
 

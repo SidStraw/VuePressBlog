@@ -25,8 +25,16 @@
 export default {
   computed: {
     posts() {
-      const featuredPost = this.$pagination.pages.filter(post => post.frontmatter.featured)
-      const posts = this.$pagination.pages.filter(post => post.pid === 'post')
+      const posts = this.$site.pages
+        .filter(post => post.pid === 'post')
+        .sort((a, b) => {
+          const aDate = a.frontmatter.date || ''
+          const bDate = b.frontmatter.date || ''
+          if (aDate < bDate) return 1
+          if (aDate > bDate) return -1
+          return 0
+        })
+      const featuredPost = posts.filter(post => post.frontmatter.featured)
       if (featuredPost.length > 5) featuredPost.length = 5
       if (posts.length > 5) posts.length = 5
       return featuredPost.length ? featuredPost : posts
