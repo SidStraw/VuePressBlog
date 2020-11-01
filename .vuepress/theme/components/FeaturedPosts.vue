@@ -25,9 +25,11 @@
 export default {
   computed: {
     posts() {
-      const posts = this.$site.pages.filter(post => post.pid === 'post')
+      const featuredPost = this.$pagination.pages.filter(post => post.frontmatter.featured)
+      const posts = this.$pagination.pages.filter(post => post.pid === 'post')
+      if (featuredPost.length > 5) featuredPost.length = 5
       if (posts.length > 5) posts.length = 5
-      return posts
+      return featuredPost.length ? featuredPost : posts
     },
   },
 }
