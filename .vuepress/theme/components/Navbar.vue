@@ -68,7 +68,7 @@
       <v-divider></v-divider>
 
       <!-- 文章 Tags -->
-      <v-list dense>
+      <v-list v-if="$tag.list.length" dense>
         <v-list-item>
           <v-list-item-content>
             <v-list-item-subtitle>Tags</v-list-item-subtitle>

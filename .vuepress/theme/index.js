@@ -9,21 +9,34 @@ module.exports = (themeConfig, ctx) => {
 
   themeConfig.logo = themeConfig.logo || themeConfig.about.image
 
-  const defaultBlogPluginOptions = {
-    directories: [
-      {
-        id: 'post',
-        dirname: '_posts',
-        path: '/',
-        // layout: 'IndexPost', defaults to `Layout.vue`
-        itemLayout: 'Post',
-        frontmatter: { title: 'Home' },
-        itemPermalink: '/:year/:month/:day/:slug',
-        pagination: {
-          lengthPerPage: 12,
-        },
+  const directories = [
+    {
+      id: 'post',
+      dirname: '_posts',
+      path: themeConfig.pages ? '/blog' : '/',
+      // layout: 'IndexPost', defaults to `Layout.vue`
+      itemLayout: 'Post',
+      frontmatter: { title: themeConfig.pages ? 'Blog' : 'Home' },
+      itemPermalink: '/:year/:month/:day/:slug',
+      pagination: {
+        lengthPerPage: 12,
       },
-    ],
+    },
+    {
+      id: 'page',
+      dirname: '_pages',
+      path: '/',
+      layout: 'HomePage', // defaults to `Layout.vue`
+      itemLayout: 'Page',
+      frontmatter: { title: 'Home' },
+      itemPermalink: '/:slug',
+    },
+  ]
+
+  !themeConfig.pages && directories.pop()
+
+  const defaultBlogPluginOptions = {
+    directories,
     frontmatters: [
       {
         id: 'tag',

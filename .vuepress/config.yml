@@ -17,6 +17,7 @@ themeConfig:
   heroImage: ""
   heroImageMask: true
   disqus: codeshop-1
+  pages: false
   nav:
     - text: Home
       link: /
