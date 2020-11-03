@@ -30,24 +30,15 @@
             </div>
           </v-container>
         </v-col>
+        <v-col class="pa-sm-10 pa-1">
+          <v-divider class="my-5"></v-divider>
+          <ClientOnly v-if="$themeConfig.disqus">
+            <Disqus :shortname="$themeConfig.disqus" class="disqus-comments" language="zh_TW" />
+          </ClientOnly>
+        </v-col>
       </v-row>
     </v-container>
   </div>
-
-  <!-- <ClientOnly v-if="$themeConfig.disqus">
-        <el-card class="comments-area my-4">
-          <div
-            slot="header"
-            class="clearfix"
-          >
-            <h5 class="m-0">Leave a comment!</h5>
-          </div>
-          <Disqus
-            :shortname="$themeConfig.disqus"
-            class="disqus-comments"
-          />
-        </el-card>
-      </ClientOnly> -->
 </template>
 
 <script>
