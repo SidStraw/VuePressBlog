@@ -18,15 +18,22 @@ collections:
       create: true # Allow users to create new documents in this collection
       slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
       fields: # The fields for each document, usually in front matter
-        - {label: "title", name: "title", widget: "string", default: "100"}
-        - {label: "date", name: "date", widget: "date", format: 'YYYY-MM-DD'}
-        - {label: "slug", name: "slug", widget: ""}
-        - {label: "tags", name: "tags", widget: "list", required: false}
-        - {label: "description", name: "description", widget: "text", required: false}
-        - {label: "image", name: "image", widget: "image", required: false}
+        - {label: "文章標題", name: "h1", widget: "string", default: ""}
+        - {label: "本文網址", name: "title", widget: "string", default: ""}
+        - label: "文章建立時間"
+          name: "date"
+          widget: "datetime"
+          default: ""
+          date_format: 'YYYY-MM-DD' # e.g. 24.12.2021
+          time_format: false
+          format: 'YYYY-MM-DD'
+          picker_utc: false
+        - {label: "分類標籤", name: "tags", widget: "list", required: false}
+        - {label: "文章簡述", name: "description", widget: "text", required: false}
+        - {label: "封面圖片", name: "image", widget: "image", required: false}
         # - {label: "Draft", name: "draft", widget: "boolean", default: true, required: false}
-        - {label: "featured", name: "featured", widget: "boolean", default: false, required: false}
-        - {label: 'Blog post content', name: 'body', widget: 'markdown', required: false}
+        - {label: "是否列為精選文章", name: "featured", widget: "boolean", default: false, required: false}
+        - {label: '文章內容', name: 'body', widget: 'markdown', required: false}
 
     - name: "config" # Used in routes, e.g., /admin/collections/blog
       label: "Setting" # Used in the UI
@@ -64,6 +71,7 @@ collections:
               widget: "object"
               # collapsed: true
               fields: 
+                - {label: "是否開啟頁面系統", name: "pages", widget: "boolean", required: false}
                 - {label: "是否開啟內文預覽", name: "summary", widget: "boolean", required: false}
                 - {label: "內文預覽字數設定", name: "summaryLength", widget: "number", default: "100", value_type: "int", required: false}
                 - {label: "首頁封面圖片", name: "heroImage", widget: "image", required: false}
@@ -80,8 +88,10 @@ collections:
                   widget: "object"
                   required: false
                   fields: 
-                    - {label: "網站主要色系", name: "$accentColor", widget: "string", default: ""}
-                    - {label: "網站次要色系", name: "$secondaryColor", widget: "string", default: ""}
+                    - { label: '網站主要色系', name: '$accentColor', widget: 'color', allowInput: true, default: '', required: false }
+                    - { label: '網站次要色系', name: '$secondaryColor', widget: 'color', allowInput: true, default: '', required: false }
+                    # - {label: "網站主要色系", name: "$accentColor", widget: "string", default: ""}
+                    # - {label: "網站次要色系", name: "$secondaryColor", widget: "string", default: ""}
                 # - {label: "nav", name: "nav", widget: "string"}
                 - label: "導航列設定"
                   name: "nav"
