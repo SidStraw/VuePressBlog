@@ -31,7 +31,7 @@ themeConfig:
   logo: ""
   summaryLength: 100
   heroImageMask: true
-  googleAnalytics: G-573Q77Q1F3
+  googleAnalytics: UA-102566956-5
   about:
     name: Sid吸管
     image: /images/sid.jpg
