@@ -15,9 +15,7 @@ locales:
     lang: zh-TW
 themeConfig:
   heroImage: ""
-  heroImageMask: true
   disqus: codeshop-1
-  pages: false
   nav:
     - text: Home
       link: /
@@ -28,16 +26,18 @@ themeConfig:
   color:
     $accentColor: "#99B7A3"
     $secondaryColor: "#84969C"
+  pages: false
   summary: true
   logo: ""
   summaryLength: 100
-  googleAnalytics: <GOOGLE ANALYTICS ID>
+  heroImageMask: true
+  googleAnalytics: G-573Q77Q1F3
   about:
     name: Sid吸管
     image: /images/sid.jpg
     position: Frontend Engineer
     bio: 吸管就是拿來Sid
-  hostname: https://sidstraw.dev/
+  hostname: https://sid.tw/
   sitemap: true
   socialMedia:
     - type: github
