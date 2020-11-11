@@ -54,7 +54,8 @@
     "vuetify": "^2.2.34",
     "@mdi/font": "^5.4.55",
     "@vuepress/plugin-back-to-top": "^1.6.0",
-    "vuepress-plugin-table-of-contents": "^1.1.7"
+    "vuepress-plugin-table-of-contents": "^1.1.7",
+    "slugify": "^1.4.6"
   },
   "devDependencies": {
     "vuepress": "^1.2.0"

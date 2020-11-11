@@ -1,4 +1,5 @@
 const removeMd = require('remove-markdown')
+const slugify = require('slugify')
 
 module.exports = (themeConfig, ctx) => {
   themeConfig = Object.assign(themeConfig, {
@@ -17,7 +18,7 @@ module.exports = (themeConfig, ctx) => {
       // layout: 'IndexPost', defaults to `Layout.vue`
       itemLayout: 'Post',
       frontmatter: { title: themeConfig.pages ? 'Blog' : 'Home' },
-      itemPermalink: '/:year/:month/:day/:slug',
+      itemPermalink: '/:year/:month/:day/:slug', // 文章連結已透過 config.extendPageData 設置
       pagination: {
         lengthPerPage: 12,
       },
@@ -109,10 +110,9 @@ module.exports = (themeConfig, ctx) => {
    * Generate summary.
    */
   config.extendPageData = function (pageCtx) {
+    const { frontmatter } = pageCtx
     const strippedContent = pageCtx._strippedContent
-    if (!strippedContent) {
-      return
-    }
+    if (!strippedContent) return
 
     const sanitizedContent = strippedContent.trim().replace(/^#+\s+(.*)/, '')
 
@@ -121,8 +121,22 @@ module.exports = (themeConfig, ctx) => {
     }
 
     pageCtx.content = removeMd(sanitizedContent)
-    pageCtx.frontmatter.image =
-      pageCtx.frontmatter.image || `https://source.unsplash.com/random/600x400?nature,summer,light,${Date.now()}`
+    frontmatter.image =
+      frontmatter.image || `https://source.unsplash.com/random/600x400?nature,summer,light,${Date.now()}`
+
+    if (frontmatter.type === 'post' && frontmatter.date) {
+      const pageDateString = new Date(frontmatter.date).toISOString().split('T')[0]
+      frontmatter.date = pageDateString
+
+      const slugifyLink = frontmatter.slug && slugify(frontmatter.slug, { lower: true })
+      const title =
+        frontmatter.title &&
+        frontmatter.title
+          .trim()
+          .replace(/[.,/#!$%^&*;:{}[\]=\-_`~()\s]/g, '-')
+          .replace(/-{2,}/g, '-')
+      frontmatter.permalink = `/${pageDateString.replace(/-/g, '/')}/${encodeURI(slugifyLink || title)}`
+    }
   }
 
   return config

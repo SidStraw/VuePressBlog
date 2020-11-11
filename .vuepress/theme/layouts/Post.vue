@@ -3,7 +3,7 @@
     <v-container grey lighten-5>
       <v-row no-gutters>
         <v-col class="post-content px-10" cols="12" md="8" lg="9">
-          <h1 v-if="$frontmatter.h1">{{ $frontmatter.h1 }}</h1>
+          <h1 v-if="$frontmatter.title">{{ $frontmatter.title }}</h1>
           <p v-if="$frontmatter.date" class="font-weight-black text--disabled ma-0">
             {{ new Date($frontmatter.date.trim()).toDateString() }}
           </p>
