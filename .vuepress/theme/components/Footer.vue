@@ -26,8 +26,8 @@
         </template>
         <template v-else> Copyright © {{ new Date().getFullYear() }} - {{ $siteTitle }} All rights reserved. </template>
 
-        Powered by
-        <a href="https://sidstraw.dev" target="_blank" class="white--text text-decoration-none"> SidStraw </a>
+        This theme of the site powered by
+        <a href="https://sid.tw" target="_blank" class="white--text text-decoration-none"> Sid.tw </a>
       </v-card-text>
     </v-card>
   </v-footer>

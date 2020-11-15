@@ -7,7 +7,7 @@
 
         <div class="d-flex flex-column text-center">
           <router-link to="/" class="text-decoration-none">
-            <div class="text-h4">{{ $site.title }}</div>
+            <div :class="$vuetify.breakpoint.xsOnly ? 'text-h5' : 'text-h4'">{{ $site.title }}</div>
           </router-link>
         </div>
 
