@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: SidStraw/VpressBlog   # Path to your GitHub repository
+site_url: https://sid.tw
 
 locale: 'zh_Hant'
 
@@ -14,6 +15,8 @@ public_folder: "/images/uploads" # The src attribute for uploaded media will beg
 collections:
     - name: "blog" # Used in routes, e.g., /admin/collections/blog
       label: "Blog" # Used in the UI
+      editor:
+        preview: false
       folder: "_posts" # The path to the folder where the documents are stored
       create: true # Allow users to create new documents in this collection
       slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
@@ -52,7 +55,7 @@ collections:
               default:
                 - - meta
                   - name: viewport
-                    content: width=device-width,user-scaleble=0,initial-scale=1.0,maximum-scale=1.0
+                    content: width=device-width,user-scalable=0,initial-scale=1.0,maximum-scale=1.0
                 - - link
                   - rel: stylesheet
                     href: https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900
