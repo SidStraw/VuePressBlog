@@ -74,6 +74,7 @@ collections:
               widget: "object"
               # collapsed: true
               fields: 
+                - {label: "網站標語", name: "slogan", widget: "string", required: false}
                 - {label: "是否開啟頁面系統", name: "pages", widget: "boolean", required: false}
                 - {label: "是否開啟內文預覽", name: "summary", widget: "boolean", required: false}
                 - {label: "內文預覽字數設定", name: "summaryLength", widget: "number", default: "100", value_type: "int", required: false}
