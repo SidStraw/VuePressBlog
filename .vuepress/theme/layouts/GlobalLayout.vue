@@ -6,6 +6,7 @@
       <DefaultGlobalLayout />
     </div>
     <Footer />
+    <Chat />
   </v-app>
 </template>
 
@@ -13,6 +14,7 @@
 import DefaultGlobalLayout from '@app/components/GlobalLayout.vue' // in VuePress Core
 import Navbar from '@theme/components/Navbar'
 import Footer from '@theme/components/Footer'
+import Chat from '@theme/components/Chat'
 // import Header from "@theme/components/Header.vue";
 // import Footer from "@theme/components/Footer.vue";
 
@@ -21,6 +23,7 @@ export default {
     DefaultGlobalLayout,
     Navbar,
     Footer,
+    Chat,
     // Header,
   },
 
