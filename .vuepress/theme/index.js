@@ -24,6 +24,15 @@ module.exports = (themeConfig, ctx) => {
       },
     },
     {
+      id: 'portfolio',
+      dirname: '_portfolio',
+      path: '/portfolio',
+      layout: 'NotFound', // defaults to `Layout.vue`
+      itemLayout: 'Page',
+      frontmatter: { title: 'Portfolio' },
+      itemPermalink: '/:slug',
+    },
+    {
       id: 'page',
       dirname: '_pages',
       path: '/',

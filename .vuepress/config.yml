@@ -21,8 +21,8 @@ themeConfig:
     - text: Home
       link: /
       icon: mdi-home
-    - text: What's VuePress
-      link: /2020/05/10/vuepress-introduction/
+    - text: 所有文章
+      link: /blog
       icon: mdi-vuejs
   color:
     $accentColor: "#99B7A3"
