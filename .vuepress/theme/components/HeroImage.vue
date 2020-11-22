@@ -19,11 +19,7 @@
     </div>
     <img class="mask" src="@theme/img/mask-bottom.png" />
     <div class="text-center">
-      <h1 v-if="$themeConfig.slogan" class="text-h3 white--text text-center">{{ $themeConfig.slogan }}</h1>
-      <h2 class="text-subtitle-1 white--text text-center my-7">
-        {{ $description }}
-      </h2>
-      <v-btn large color="primary" @click="() => $vuetify.goTo('#posts', scrollOption)"> Latest Posts </v-btn>
+      <slot />
     </div>
   </div>
 </template>
