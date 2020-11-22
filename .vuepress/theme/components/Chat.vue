@@ -9,7 +9,12 @@
       </template>
 
       <v-list>
-        <v-list-item v-for="(item, index) in $themeConfig.contactUs" :key="index" :href="item.link" target="_blank">
+        <v-list-item
+          v-for="(item, index) in $themeConfig.contactUs"
+          :key="index"
+          :href="handleLinkType(item.icon.toLowerCase(), item.link)"
+          :target="handleLinkTarget(item.icon)"
+        >
           <v-list-item-icon>
             <v-icon>{{ 'mdi-' + item.icon.toLowerCase() }}</v-icon>
           </v-list-item-icon>
@@ -22,7 +27,20 @@
 
 <script>
 export default {
-  data: () => ({}),
+  data: () => ({
+    linkType: {
+      phone: 'tel:',
+      email: 'mailto:',
+    },
+  }),
+  methods: {
+    handleLinkType(type, link) {
+      return (this.linkType[type] || '') + link
+    },
+    handleLinkTarget(type) {
+      return type.toLowerCase() === 'phone' ? '' : '_blank'
+    },
+  },
 }
 </script>
 
