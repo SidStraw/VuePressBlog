@@ -78,6 +78,20 @@ module.exports = (themeConfig, ctx) => {
     'vuepress-plugin-table-of-contents',
     ['@vuepress/medium-zoom', { selector: '.post-content img' }],
     ['@vuepress/blog', blogPluginOptions],
+    ['container', { type: 'tip', defaultTitle: 'TIP' }],
+    ['container', { type: 'warning', defaultTitle: 'WARNING' }],
+    ['container', { type: 'danger', defaultTitle: 'WARNING' }],
+    [
+      'container',
+      {
+        type: 'details',
+        before: info =>
+          `<details class="custom-block details">${
+            info ? `<summary class="custom-block-title">${info}</summary>` : ''
+          }\n`,
+        after: () => '</details>\n',
+      },
+    ],
   ]
 
   if (themeConfig.sitemap && themeConfig.hostname) {

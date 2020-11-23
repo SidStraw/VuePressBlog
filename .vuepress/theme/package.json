@@ -51,6 +51,7 @@
     "vuepress-plugin-seo": "^0.1.2",
     "vuepress-plugin-sitemap": "^2.1.2",
     "vuepress-plugin-smooth-scroll": "^0.0.4",
+    "vuepress-plugin-container": "^2.1.5",
     "vuetify": "^2.2.34",
     "@mdi/font": "^5.4.55",
     "@vuepress/plugin-back-to-top": "^1.6.0",
