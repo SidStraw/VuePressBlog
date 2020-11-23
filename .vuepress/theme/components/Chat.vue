@@ -16,7 +16,7 @@
           :target="handleLinkTarget(item.icon)"
         >
           <v-list-item-icon>
-            <v-icon>{{ 'mdi-' + item.icon.toLowerCase() }}</v-icon>
+            <v-icon>{{ handleIcon(item.icon) }}</v-icon>
           </v-list-item-icon>
           <v-list-item-title>{{ item.title }}</v-list-item-title>
         </v-list-item>
@@ -39,6 +39,10 @@ export default {
     },
     handleLinkTarget(type) {
       return type.toLowerCase() === 'phone' ? '' : '_blank'
+    },
+    handleIcon(icon) {
+      const iconType = icon.toLowerCase()
+      return iconType === 'line' ? 'mdi-chat-processing-outline' : 'mdi-' + iconType
     },
   },
 }
