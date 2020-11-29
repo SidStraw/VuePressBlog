@@ -46,10 +46,10 @@ export default {
   },
   computed: {
     show: {
-      get: function() {
+      get: function () {
         return this.showPopup
       },
-      set: function(value) {
+      set: function (value) {
         if (value) return null
         this.$emit('closePopup')
       },
@@ -80,7 +80,7 @@ export default {
     })
     this.zhIndex = new Flexsearch({
       encode: false,
-      tokenize: function(str) {
+      tokenize: function (str) {
         // eslint-disable-next-line no-control-regex
         return str.replace(/[\x00-\x7F]/g, '').split('')
       },
