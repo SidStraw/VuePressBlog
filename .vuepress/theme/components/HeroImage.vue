@@ -42,10 +42,10 @@ export default {
   computed: {
     background() {
       const mask = {
-        'background-image': `url(${heroImage}), linear-gradient(to top right, ${this.$vuetify.theme.themes.light.secondary}, ${this.$vuetify.theme.themes.light.primary})`,
+        'background-image': `url(${this.heroImage}), linear-gradient(to top right, ${this.$vuetify.theme.themes.light.secondary}, ${this.$vuetify.theme.themes.light.primary})`,
       }
       const noMask = {
-        'background-image': `url(${heroImage})`,
+        'background-image': `url(${this.heroImage})`,
       }
       return this.$themeConfig.heroImageMask ? mask : noMask
     },
