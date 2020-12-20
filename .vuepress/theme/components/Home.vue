@@ -2,7 +2,7 @@
   <v-container grey lighten-5>
     <v-row no-gutters>
       <v-col cols="12" md="8" lg="9" order="2" order-md="0">
-        <PostList />
+        <PostList :posts-data="$pagination.pages" />
         <div class="text-center">
           <Pagination class="my-0 mx-auto" />
         </div>

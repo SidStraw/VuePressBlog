@@ -62,6 +62,12 @@
 <script>
 export default {
   components: {},
+  props: {
+    postsData: {
+      type: Array,
+      default: () => [],
+    },
+  },
   data() {
     return {
       isActive: false,
@@ -70,7 +76,7 @@ export default {
   },
   computed: {
     posts() {
-      const posts = this.$pagination.pages
+      const posts = this.postsData
       const sortPosts = posts.sort((a, b) => {
         const aDate = a.frontmatter.date || ''
         const bDate = b.frontmatter.date || ''
