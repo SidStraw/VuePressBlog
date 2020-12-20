@@ -1,4 +1,4 @@
-title: 這可得好好管管
+title: 賴彥雄中醫師
 description: 吸管就是拿來Sid
 head:
   - - meta
@@ -15,7 +15,7 @@ locales:
     lang: zh-TW
 themeConfig:
   slogan: 想得多，不代表做的少
-  heroImage: ""
+  heroImage: /images/uploads/chinesemedgo_logo.jpg
   disqus: codeshop-1
   nav:
     - text: Home
@@ -27,17 +27,17 @@ themeConfig:
   color:
     $accentColor: "#99B7A3"
     $secondaryColor: "#84969C"
-  pages: false
+  pages: true
   summary: true
   logo: ""
   summaryLength: 100
-  heroImageMask: true
+  heroImageMask: false
   googleAnalytics: UA-102566956-5
   about:
-    name: Sid吸管
-    image: /images/sid.jpg
+    name: 賴彥雄醫師
+    image: /images/uploads/about.jpg
     position: Frontend Engineer
-    bio: 吸管就是拿來Sid
+    bio: 中醫是一種技藝而非一門學問，我的執著來自於療程中更少的疼痛與更快的療效，成為溫柔而精準的中醫師。
   hostname: https://sid.tw/
   sitemap: true
   socialMedia:

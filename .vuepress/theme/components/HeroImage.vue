@@ -59,7 +59,7 @@ export default {
 <style lang="stylus" scoped>
 #wrap {
   position: relative;
-  height: calc(100vh - 110px);
+  height: 801px;
   background-blend-mode: multiply;
   background-size: cover;
   background-position: center;
@@ -73,7 +73,7 @@ export default {
 
 @media (max-width: 600px) {
   #wrap {
-    height: calc(100vh - 50px);
+    height: 801px
   }
 }
 </style>
