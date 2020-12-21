@@ -1,9 +1,9 @@
 <template>
   <v-sheet class="mx-auto" elevation="8">
-    <h2 class="pt-5 px-5 text-center primary--text">精選案例</h2>
+    <h2 class="pt-5 px-5 text-center primary--text">{{ title }}</h2>
     <v-slide-group v-model="model" class="pa-4" show-arrows center-active>
       <v-slide-item v-for="p in portfolio" :key="p.key">
-        <v-card class="ma-4" height="200" width="300" :to="p.path">
+        <v-card class="ma-4" height="200" width="300" :to="itemLink && p.path">
           <v-img
             :src="p.frontmatter.image"
             class="white--text align-end fill-height"
@@ -20,6 +20,16 @@
 
 <script>
 export default {
+  props: {
+    title: {
+      type: String,
+      default: '精選案例',
+    },
+    itemLink: {
+      type: Boolean,
+      default: false,
+    },
+  },
   data: () => ({
     model: null,
   }),
