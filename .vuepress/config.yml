@@ -1,5 +1,5 @@
 title: 賴彥雄中醫師
-description: 吸管就是拿來Sid
+description: 中醫是一種技藝而非一門學問，我的執著來自於療程中更少的疼痛與更快的療效，成為溫柔而精準的中醫師。
 head:
   - - meta
     - name: viewport
@@ -18,7 +18,7 @@ themeConfig:
   heroImage: /images/uploads/chinesemedgo_logo.jpg
   disqus: codeshop-1
   nav:
-    - text: Home
+    - text: 首頁
       link: /
       icon: 
     - text: 部落格
@@ -31,8 +31,8 @@ themeConfig:
       link: "#contact"
       icon: 
   color:
-    $accentColor: "#99B7A3"
-    $secondaryColor: "#84969C"
+    $accentColor: "#888988"
+    $secondaryColor: "#c7cac7"
   pages: true
   summary: true
   logo: ""
@@ -42,7 +42,7 @@ themeConfig:
   about:
     name: 賴彥雄醫師
     image: /images/uploads/about.jpg
-    position: Frontend Engineer
+    position: 中醫針灸診脈
     bio: 中醫是一種技藝而非一門學問，我的執著來自於療程中更少的疼痛與更快的療效，成為溫柔而精準的中醫師。
   hostname: https://sid.tw/
   sitemap: true

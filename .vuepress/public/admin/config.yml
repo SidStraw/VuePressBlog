@@ -80,6 +80,8 @@ collections:
                 - {label: "內文預覽字數設定", name: "summaryLength", widget: "number", default: "100", value_type: "int", required: false}
                 - {label: "首頁封面圖片", name: "heroImage", widget: "image", required: false}
                 - {label: "LOGO 圖片", name: "logo", widget: "image", required: false}
+                - {label: "行程班表", name: "schedule", widget: "image", required: false}
+                - {label: "Line QRCode", name: "QRCode", widget: "image", required: false}
                 - label: "社群媒體設定"
                   name: "socialMedia"
                   widget: "list"
@@ -118,6 +120,3 @@ collections:
                 - {label: "GoogleAnalytics 分析資源代碼", name: "googleAnalytics", widget: "string", required: false}
                 - {label: "是否設置 sitemap", name: "sitemap", widget: "boolean", required: false}
                 - {label: "主機網址", name: "hostname", widget: "string", required: false, hint: "若啟動 Sitemap 設置則本項必填，填寫格式範例： https://sidstraw.dev/"}
-
-
-

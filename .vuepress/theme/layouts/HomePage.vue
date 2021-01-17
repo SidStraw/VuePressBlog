@@ -12,7 +12,7 @@
         <v-col cols="12" md="6" class="pa-10 text-center d-flex align-center">
           <div>
             <h1 class="py-7 text-h5">{{ $siteTitle }}</h1>
-            <p class="font-weight-light ">
+            <p class="font-weight-light">
               {{ $themeConfig.about.bio }}
             </p>
             <v-btn class="ma-2" tile outlined color=""> <v-icon left>mdi-human-greeting</v-icon> 聯絡諮詢 </v-btn>
