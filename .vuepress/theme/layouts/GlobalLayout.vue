@@ -49,7 +49,7 @@ export default {
   height: 100% !important;
 }
 #global-content {
-  margin-top: 110px;
+  margin-top: 50px;
   &.xs {
     margin-top: 50px;
   }

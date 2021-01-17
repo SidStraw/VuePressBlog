@@ -20,10 +20,16 @@ themeConfig:
   nav:
     - text: Home
       link: /
-      icon: mdi-home
-    - text: 所有文章
-      link: /blog
-      icon: mdi-vuejs
+      icon: 
+    - text: 部落格
+      link: "posts"
+      icon: 
+    - text: 患者評價
+      link: "/#testimonial"
+      icon: 
+    - text: 聯絡諮詢
+      link: "#contact"
+      icon: 
   color:
     $accentColor: "#99B7A3"
     $secondaryColor: "#84969C"
@@ -32,7 +38,7 @@ themeConfig:
   logo: ""
   summaryLength: 100
   heroImageMask: false
-  googleAnalytics: UA-102566956-5
+  googleAnalytics: UA-122464537-1
   about:
     name: 賴彥雄醫師
     image: /images/uploads/about.jpg
@@ -52,3 +58,5 @@ themeConfig:
     - {icon: facebook-messenger, title: FB Message, link: /}
     - {icon: line, title: Line, link: /}
     - {icon: phone, title: Phone, link: /}
+  schedule: /images/uploads/S__41370852.jpg
+  QRCode: /images/uploads/yk_line.png

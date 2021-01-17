@@ -5,35 +5,34 @@
         <v-app-bar-nav-icon @click="drawer = true" />
         <v-spacer></v-spacer>
 
-        <div class="d-flex flex-column text-center">
+        <!-- <div class="d-flex flex-column text-center">
           <router-link to="/" class="text-decoration-none">
             <div :class="$vuetify.breakpoint.xsOnly ? 'text-h5' : 'text-h4'">{{ $site.title }}</div>
           </router-link>
-        </div>
+        </div> -->
 
+        <template v-if="$vuetify.breakpoint.smAndUp">
+          <!-- 有設置 nav -->
+          <v-tabs v-if="$themeConfig.nav" optional centered background-color="#0000">
+            <v-tab v-for="item in $themeConfig.nav" :key="item.text" :to="item.link">
+              <v-icon v-if="item.icon" class="mr-2">{{ item.icon }}</v-icon>
+              {{ item.text }}
+            </v-tab>
+          </v-tabs>
+          <!-- 無nav使用tag -->
+          <v-tabs v-else optional centered>
+            <v-tab v-for="item in $tag.list" :key="item.text" :to="item.path">
+              <v-icon class="mr-2">mdi-tag</v-icon>
+              {{ item.name }}
+            </v-tab>
+          </v-tabs>
+        </template>
         <v-spacer></v-spacer>
 
         <v-btn icon @click="toggle">
           <v-icon>mdi-magnify</v-icon>
         </v-btn>
       </div>
-
-      <template v-if="$vuetify.breakpoint.smAndUp" v-slot:extension>
-        <!-- 有設置 nav -->
-        <v-tabs v-if="$themeConfig.nav" optional centered>
-          <v-tab v-for="item in $themeConfig.nav" :key="item.text" :to="item.link">
-            <v-icon v-if="item.icon" class="mr-2">{{ item.icon }}</v-icon>
-            {{ item.text }}
-          </v-tab>
-        </v-tabs>
-        <!-- 無nav使用tag -->
-        <v-tabs v-else optional centered>
-          <v-tab v-for="item in $tag.list" :key="item.text" :to="item.path">
-            <v-icon class="mr-2">mdi-tag</v-icon>
-            {{ item.name }}
-          </v-tab>
-        </v-tabs>
-      </template>
     </v-app-bar>
     <v-navigation-drawer v-model="drawer" app temporary>
       <v-list-item>
