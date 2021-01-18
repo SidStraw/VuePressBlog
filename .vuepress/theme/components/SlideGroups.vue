@@ -56,10 +56,10 @@ export default {
       return this.$site.pages
         .filter(item => item.id === 'portfolio')
         .sort((a, b) => {
-          const aDate = a.frontmatter.date || ''
-          const bDate = b.frontmatter.date || ''
-          if (aDate < bDate) return 1
-          if (aDate > bDate) return -1
+          const aDate = a.regularPath || ''
+          const bDate = b.regularPath || ''
+          if (aDate < bDate) return -1
+          if (aDate > bDate) return 1
           return 0
         })
     },
