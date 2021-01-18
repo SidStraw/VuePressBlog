@@ -53,7 +53,8 @@ export default {
   },
   computed: {
     posts() {
-      const posts = this.$site.pages.filter(post => post.pid === 'post')
+      const pages = this.$site.pages
+      const posts = pages.reverse().filter(post => post.pid === 'post')
       return posts <= 5 ? posts : posts.slice(0, 6)
     },
   },
