@@ -3,24 +3,24 @@
     <h2 id="testimonial" class="px-5 text-center primary--text">{{ title }}</h2>
     <v-slide-group v-model="model" class="pa-4" show-arrows center-active @change="disableCycle">
       <v-slide-item v-for="p in portfolio" :key="p.key" v-slot:default="{ active, toggle }">
-        <v-card class="ma-4" height="400" width="323" :to="itemLink ? p.path : ''" @click="toggle">
-          <!-- <v-img
-            :src="p.frontmatter.image"
-            class="white--text align-end fill-height"
-            gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
-            height="200px"
-          >
-            <v-card-title v-text="p.frontmatter.title"></v-card-title>
-          </v-img> -->
-          <v-row no-gutters class="h-100 pa-5" justify="center">
-            <v-avatar class="profile" color="grey" size="150">
-              <v-img :src="$site.themeConfig.about.image"></v-img>
-            </v-avatar>
-            <v-card-title>
-              <v-icon large left> mdi-twitter </v-icon>
-              <span class="title font-weight-light">Twitter</span>
+        <v-card class="ma-4 text-center" height="400" width="323" :to="itemLink ? p.path : ''" @click="toggle">
+          <div class="h-100 d-flex flex-column">
+            <v-card-title class="d-flex justify-center">
+              <v-avatar class="profile" color="grey" size="150">
+                <v-img :src="p.frontmatter.image"></v-img>
+              </v-avatar>
             </v-card-title>
-          </v-row>
+            <v-card-subtitle class="mt-1">
+              <span class="font-weight-light">{{ p.title }}</span>
+            </v-card-subtitle>
+            <v-rating :value="p.frontmatter.star" small readonly dense></v-rating>
+            <v-card-text class="flex-grow-1">
+              <span class="font-weight-light">{{ p.frontmatter.description }}</span>
+            </v-card-text>
+            <v-card-text>
+              <span>{{ p.frontmatter.name }}</span>
+            </v-card-text>
+          </div>
         </v-card>
       </v-slide-item>
     </v-slide-group>
