@@ -1,5 +1,5 @@
 ---
-title: "如何判斷血瘀的部位?"
+title: "如何判斷血瘀的部位"
 date: 2019-08-28
 tags: 
   - "tcm-consultation"

@@ -58,7 +58,7 @@ export default {
     }
   },
   created() {
-    console.log(Date.now() < new Date(this.$frontmatter.date))
+    // console.log(Date.now() < new Date(this.$frontmatter.date))
   },
   mounted() {
     this.stickyTop = 0 - this.$refs.about.$el.clientHeight - 5 + 78
