@@ -20,6 +20,7 @@
         </v-col>
       </v-row>
       <PostList :posts-data="posts" />
+      <Content />
       <SlideGroups title="患者評價" cycle />
       <v-row>
         <v-col>

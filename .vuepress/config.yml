@@ -44,8 +44,8 @@ themeConfig:
     image: /images/uploads/about.jpg
     position: 中醫針灸診脈
     bio: 中醫是一種技藝而非一門學問，我的執著來自於療程中更少的疼痛與更快的療效，成為溫柔而精準的中醫師。
-  hostname: https://sid.tw/
-  sitemap: true
+  hostname: https://www.chinesemedgo.com/
+  sitemap: false
   socialMedia:
     - type: github
       link: https://github.com/sidstraw/
