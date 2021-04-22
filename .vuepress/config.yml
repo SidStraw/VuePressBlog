@@ -47,16 +47,13 @@ themeConfig:
   hostname: https://www.chinesemedgo.com/
   sitemap: false
   socialMedia:
-    - type: github
-      link: https://github.com/sidstraw/
     - type: facebook
-      link: https://facebook.com/j80304xz/
-    - type: linkedin
-      link: https://www.linkedin.com/in/sidstraw/
+      link: https://www.facebook.com/chinesemedgo/
+    - type: line
+      link: https://line.me/R/ti/p/@col0597o
   contactUs:
-    - {icon: email, title: E-mail, link: /}
-    - {icon: facebook-messenger, title: FB Message, link: /}
-    - {icon: line, title: Line, link: /}
-    - {icon: phone, title: Phone, link: /}
+    - {icon: facebook-messenger, title: FB Message, link: https://www.facebook.com/chinesemedgo/}
+    - {icon: line, title: Line, link: https://line.me/R/ti/p/@col0597o}
+    - {icon: phone, title: Phone, link: 0919-696015}
   schedule: /images/uploads/S__41370852.jpg
   QRCode: /images/uploads/yk_line.png
