@@ -4,6 +4,7 @@ date: 2018-07-09
 tags: 
   - "中醫醫案"
 type: post
+image: /images/uploads/slinky.jpeg
 ---
 
 ![](/images/uploads/slinky-300x225.jpg)

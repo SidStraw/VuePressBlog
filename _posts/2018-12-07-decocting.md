@@ -4,6 +4,7 @@ date: 2018-12-07
 tags: 
   - "中醫客問答"
 type: post
+image: /images/uploads/20181205_162923.jpeg
 ---
 
 ##  醫師您好，想請問水藥應該怎麼煮呢？

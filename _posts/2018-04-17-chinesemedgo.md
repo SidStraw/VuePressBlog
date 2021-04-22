@@ -4,6 +4,7 @@ date: 2018-04-17
 tags: 
   - "中醫醫案"
 type: post
+image: /images/uploads/318230.jpeg
 ---
 
 ## 如果治療不是最重要的...

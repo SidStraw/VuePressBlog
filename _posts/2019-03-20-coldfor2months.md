@@ -4,6 +4,7 @@ date: 2019-03-20
 tags: 
   - "中醫醫案"
 type: post
+image: /images/uploads/香附.jpeg.jpeg
 ---
 
 ## 108/02/25

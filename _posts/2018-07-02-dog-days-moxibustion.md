@@ -4,6 +4,7 @@ date: 2018-07-02
 tags: 
   - "中醫客問答"
 type: post
+image: /images/uploads/庚.gif
 ---
 
 時間到了七月，氣候相當的炎熱其實之前就很熱

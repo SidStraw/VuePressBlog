@@ -4,6 +4,7 @@ date: 2018-11-19
 tags: 
   - "中醫客問答"
 type: post
+image: /images/uploads/採訪-700x466.jpeg
 ---
 
 ![](/images/uploads/採訪-300x200.jpg)

@@ -4,6 +4,7 @@ date: 2018-06-10
 tags: 
   - "中醫客問答"
 type: post
+image: /images/uploads/dizzy-1024x682.jpeg
 ---
 
 ![](/images/uploads/dizzy-300x200.jpg)
