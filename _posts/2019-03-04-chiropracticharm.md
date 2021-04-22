@@ -2,7 +2,7 @@
 title: "整脊後頭暈"
 date: 2019-03-04
 tags: 
-  - "tcm-consultation"
+  - "中醫客問答"
 type: post
 ---
 

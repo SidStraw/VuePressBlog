@@ -2,7 +2,7 @@
 title: "針灸安全嗎"
 date: 2019-09-03
 tags: 
-  - "tcm-consultation"
+  - "中醫客問答"
 type: post
 ---
 

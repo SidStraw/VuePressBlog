@@ -2,7 +2,7 @@
 title: "中醫不科學嗎"
 date: 2018-06-25
 tags: 
-  - "tcm-consultation"
+  - "中醫客問答"
 type: post
 ---
 

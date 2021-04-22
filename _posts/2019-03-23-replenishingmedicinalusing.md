@@ -2,7 +2,7 @@
 title: "吃了補藥還是覺得疲累"
 date: 2019-03-23
 tags: 
-  - "tcm-consultation"
+  - "中醫客問答"
 type: post
 ---
 

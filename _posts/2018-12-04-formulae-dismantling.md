@@ -2,7 +2,7 @@
 title: "方劑拆解"
 date: 2018-12-04
 tags: 
-  - "tcm-consultation"
+  - "中醫客問答"
 type: post
 ---
 

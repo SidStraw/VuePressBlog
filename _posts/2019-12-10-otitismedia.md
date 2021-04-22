@@ -2,7 +2,7 @@
 title: "中耳炎"
 date: 2019-12-10
 tags: 
-  - "tcm-consultation"
+  - "中醫客問答"
 type: post
 ---
 

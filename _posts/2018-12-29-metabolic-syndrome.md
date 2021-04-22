@@ -2,7 +2,7 @@
 title: "痰濕、胰島素阻抗與斷食"
 date: 2018-12-29
 tags: 
-  - "tcm-consultation"
+  - "中醫客問答"
 type: post
 ---
 

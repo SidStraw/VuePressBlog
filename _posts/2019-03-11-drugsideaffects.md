@@ -2,7 +2,7 @@
 title: "吃完藥更嚴重該繼續吃嗎"
 date: 2019-03-11
 tags: 
-  - "tcm-consultation"
+  - "中醫客問答"
 type: post
 ---
 

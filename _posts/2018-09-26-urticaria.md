@@ -2,7 +2,7 @@
 title: "蕁麻疹"
 date: 2018-09-26
 tags: 
-  - "tcm-consultation"
+  - "中醫客問答"
 type: post
 ---
 

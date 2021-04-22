@@ -2,7 +2,7 @@
 title: "慢性腎衰竭與痛風"
 date: 2019-05-11
 tags: 
-  - "tcm-consultation"
+  - "中醫客問答"
 type: post
 ---
 

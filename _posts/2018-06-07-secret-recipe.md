@@ -2,7 +2,7 @@
 title: "甲之蜜糖，乙之砒霜"
 date: 2018-06-07
 tags: 
-  - "tcm-consultation"
+  - "中醫客問答"
 type: post
 ---
 

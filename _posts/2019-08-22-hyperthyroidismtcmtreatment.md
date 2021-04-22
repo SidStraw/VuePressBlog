@@ -2,7 +2,7 @@
 title: "中醫的甲狀腺亢進治療"
 date: 2019-08-22
 tags: 
-  - "tcm-consultation"
+  - "中醫客問答"
 type: post
 ---
 

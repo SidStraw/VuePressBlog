@@ -2,7 +2,7 @@
 title: "癌症患者飲食"
 date: 2018-07-26
 tags: 
-  - "tcm-consultation"
+  - "中醫客問答"
 type: post
 ---
 

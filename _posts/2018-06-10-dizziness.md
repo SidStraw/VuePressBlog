@@ -2,7 +2,7 @@
 title: "眩暈"
 date: 2018-06-10
 tags: 
-  - "tcm-consultation"
+  - "中醫客問答"
 type: post
 ---
 

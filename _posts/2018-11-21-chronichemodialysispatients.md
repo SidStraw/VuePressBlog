@@ -2,7 +2,7 @@
 title: "洗腎後高血壓、心跳慢"
 date: 2018-11-21
 tags: 
-  - "tcm-consultation"
+  - "中醫客問答"
 type: post
 ---
 

@@ -2,7 +2,7 @@
 title: "選舉症侯群（採訪）"
 date: 2018-11-19
 tags: 
-  - "tcm-consultation"
+  - "中醫客問答"
 type: post
 ---
 

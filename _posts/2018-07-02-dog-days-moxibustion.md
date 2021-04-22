@@ -2,7 +2,7 @@
 title: "三分鐘了解三伏貼"
 date: 2018-07-02
 tags: 
-  - "tcm-consultation"
+  - "中醫客問答"
 type: post
 ---
 

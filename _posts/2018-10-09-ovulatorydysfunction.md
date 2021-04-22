@@ -2,7 +2,7 @@
 title: "排卵異常"
 date: 2018-10-09
 tags: 
-  - "tcm-consultation"
+  - "中醫客問答"
 type: post
 ---
 

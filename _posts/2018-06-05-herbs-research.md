@@ -2,7 +2,7 @@
 title: "中藥不是這樣用的"
 date: 2018-06-05
 tags: 
-  - "tcm-consultation"
+  - "中醫客問答"
 type: post
 ---
 

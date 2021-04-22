@@ -2,7 +2,7 @@
 title: "如何判斷血瘀的部位"
 date: 2019-08-28
 tags: 
-  - "tcm-consultation"
+  - "中醫客問答"
 type: post
 ---
 

@@ -2,7 +2,7 @@
 title: "自己開藥自己煎～"
 date: 2018-12-07
 tags: 
-  - "tcm-consultation"
+  - "中醫客問答"
 type: post
 ---
 

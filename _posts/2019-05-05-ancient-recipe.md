@@ -2,7 +2,7 @@
 title: "一帖失傳已久的方子？"
 date: 2019-05-05
 tags: 
-  - "tcm-consultation"
+  - "中醫客問答"
 type: post
 ---
 

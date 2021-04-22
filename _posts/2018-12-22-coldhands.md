@@ -2,7 +2,7 @@
 title: "手腳冰冷"
 date: 2018-12-22
 tags: 
-  - "tcm-consultation"
+  - "中醫客問答"
 type: post
 ---
 

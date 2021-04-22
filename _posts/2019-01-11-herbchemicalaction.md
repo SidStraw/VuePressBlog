@@ -2,7 +2,7 @@
 title: "方劑會互相作用嗎"
 date: 2019-01-11
 tags: 
-  - "tcm-consultation"
+  - "中醫客問答"
 type: post
 ---
 

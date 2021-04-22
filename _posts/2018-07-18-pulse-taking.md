@@ -2,7 +2,7 @@
 title: "把脈到底在把些什麼呢？"
 date: 2018-07-18
 tags: 
-  - "tcm-consultation"
+  - "中醫客問答"
 type: post
 ---
 

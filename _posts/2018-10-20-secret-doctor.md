@@ -2,7 +2,7 @@
 title: "關於自學中醫"
 date: 2018-10-20
 tags: 
-  - "tcm-consultation"
+  - "中醫客問答"
 type: post
 ---
 
