@@ -2,7 +2,7 @@
 title: "感冒2個月不癒的阿姨"
 date: 2019-03-20
 tags: 
-  - "tcm-case-report"
+  - "中醫醫案"
 type: post
 ---
 

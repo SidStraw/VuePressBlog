@@ -2,7 +2,7 @@
 title: "更年期燥熱的阿姨"
 date: 2018-05-27
 tags: 
-  - "tcm-case-report"
+  - "中醫醫案"
 type: post
 ---
 

@@ -2,7 +2,7 @@
 title: "賴彥雄中醫"
 date: 2018-04-17
 tags: 
-  - "tcm-case-report"
+  - "中醫醫案"
 type: post
 ---
 

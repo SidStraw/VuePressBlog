@@ -2,7 +2,7 @@
 title: "胃口不好的弟弟"
 date: 2018-10-24
 tags: 
-  - "tcm-case-report"
+  - "中醫醫案"
 type: post
 ---
 

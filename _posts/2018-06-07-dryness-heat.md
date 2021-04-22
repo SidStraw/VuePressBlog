@@ -2,7 +2,7 @@
 title: "自覺燥熱的妹子"
 date: 2018-06-07
 tags: 
-  - "tcm-case-report"
+  - "中醫醫案"
 type: post
 ---
 

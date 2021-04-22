@@ -2,7 +2,7 @@
 title: "以為自己熱潮紅的阿姨"
 date: 2018-07-06
 tags: 
-  - "tcm-case-report"
+  - "中醫醫案"
 type: post
 ---
 

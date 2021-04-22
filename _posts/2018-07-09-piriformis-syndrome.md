@@ -2,7 +2,7 @@
 title: "腰痛的作業員"
 date: 2018-07-09
 tags: 
-  - "tcm-case-report"
+  - "中醫醫案"
 type: post
 ---
 

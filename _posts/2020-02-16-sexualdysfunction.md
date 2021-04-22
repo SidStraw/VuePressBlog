@@ -2,7 +2,7 @@
 title: "性功能障礙的阿伯"
 date: 2020-02-16
 tags: 
-  - "tcm-case-report"
+  - "中醫醫案"
 type: post
 ---
 

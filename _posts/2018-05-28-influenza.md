@@ -2,7 +2,7 @@
 title: "18歲弟弟流感發燒"
 date: 2018-05-28
 tags: 
-  - "tcm-case-report"
+  - "中醫醫案"
 type: post
 ---
 

@@ -2,7 +2,7 @@
 title: "暑病兼口氣重的先生"
 date: 2018-06-08
 tags: 
-  - "tcm-case-report"
+  - "中醫醫案"
 type: post
 ---
 

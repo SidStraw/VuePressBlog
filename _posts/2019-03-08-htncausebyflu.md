@@ -2,7 +2,7 @@
 title: "感冒造成血壓高的阿姨"
 date: 2019-03-08
 tags: 
-  - "tcm-case-report"
+  - "中醫醫案"
 type: post
 ---
 
