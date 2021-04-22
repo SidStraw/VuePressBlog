@@ -32,7 +32,7 @@
           class="mx-1 white--text"
           icon
         >
-          <v-icon size="24px">{{ 'mdi-' + item.type.toLowerCase() }}</v-icon>
+          <v-icon size="24px">{{ handleIcon(item.type) }}</v-icon>
         </v-btn>
       </div>
       <!-- </v-card-text> -->
@@ -43,5 +43,11 @@
 <script>
 export default {
   components: {},
+  methods: {
+    handleIcon(icon) {
+      const iconType = icon.toLowerCase()
+      return iconType === 'line' ? 'mdi-chat-processing-outline' : 'mdi-' + iconType
+    },
+  },
 }
 </script>
