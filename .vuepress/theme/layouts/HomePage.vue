@@ -62,3 +62,9 @@ export default {
   mounted() {},
 }
 </script>
+
+<style scoped>
+.container {
+  max-width: 1400px;
+}
+</style>
