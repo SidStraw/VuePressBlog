@@ -1,7 +1,7 @@
 backend:
   name: github
-  repo: SidStraw/VpressBlog   # Path to your GitHub repository
-site_url: https://sid.tw
+  repo: chinesemedgo/Blog   # Path to your GitHub repository
+site_url: https://www.chinesemedgo.com
 
 locale: 'zh_Hant'
 
