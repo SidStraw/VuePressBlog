@@ -17,9 +17,8 @@
           </v-list-item-content>
         </v-list-item>
 
-        <p class="text-center white--text lighten-5">
-          {{ $site.themeConfig.about.bio }}
-        </p>
+        <!-- eslint-disable-next-line vue/no-v-html -->
+        <p class="text-center white--text lighten-5 px-10" v-html="$site.themeConfig.about.bio" />
       </div>
       <v-divider></v-divider>
       <!-- <v-card-text> -->
