@@ -1,5 +1,5 @@
-title: 這可得好好管管
-description: 吸管就是拿來Sid
+title: 這可要好好管管
+description: 缺乏熱情？這可要好好管管
 head:
   - - meta
     - name: viewport
@@ -15,7 +15,7 @@ locales:
     lang: zh-TW
 themeConfig:
   slogan: 想得多，不代表做的少
-  heroImage: ""
+  heroImage: /images/P1010537.jpeg
   disqus: codeshop-1
   nav:
     - text: Home
@@ -34,10 +34,10 @@ themeConfig:
   heroImageMask: true
   googleAnalytics: UA-102566956-5
   about:
-    name: Sid吸管
-    image: /images/sid.jpg
+    name: Sid
+    image: /images/LinkedInPhoto.jpeg
     position: Frontend Engineer
-    bio: 吸管就是拿來Sid
+    bio: <p>於開發團隊中擔任 Frontend Engineer，對於使用前端技術開發與維護 Web、React Native App 相關服務具有充足的經驗。</p>得益於部隊中的歷練，工作中善於溝通協調且樂於分享所學，更瞭解依當下條件取捨的重要性，期許自身能不斷產出最適合團隊與產品需求，可靠性、可讀性俱佳的程式碼。
   hostname: https://sid.tw/
   sitemap: true
   socialMedia:
