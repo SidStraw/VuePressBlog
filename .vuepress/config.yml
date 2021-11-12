@@ -14,7 +14,7 @@ locales:
   /:
     lang: zh-TW
 themeConfig:
-  slogan: 想得多，不代表做的少
+  slogan: 興趣使然的軟體工程師
   heroImage: /images/P1010537.jpeg
   disqus: codeshop-1
   nav:
