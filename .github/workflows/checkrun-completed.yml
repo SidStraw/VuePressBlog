@@ -1,0 +1,50 @@
+name: Cloudflare Pages Deployed
+
+on:
+  check_run:
+    types: [completed]
+
+# only run test with latest commit
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Test
+    runs-on: ubuntu-latest
+    if: github.event.check_run.pull_requests[0]
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+          cache: 'yarn'
+
+      - name: Set testing state
+        uses: thollander/actions-comment-pull-request@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          pr_number: ${{ github.event.check_run.pull_requests[0].number }}
+          comment_includes: 'Playwright tests'
+          message: |
+            ## Playwright tests
+            testing...
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Check object
+        run: |
+          cat << OBJECT
+          ${{ toJson(github) }}
+          OBJECT
+      - name: Get Cloudflare Page URL
+        id: get_url
+        run: |
+          DEPLOYMENT_URL=$(node ${GITHUB_WORKSPACE}/.github/get-cloudflare-page-url.js "${{ github.event.check_run.output.summary }}")
+          echo $DEPLOYMENT_URL
+          echo "::set-output name=url::$DEPLOYMENT_URL"
+      - run: echo ${{ steps.get_url.outputs.url }}
+      - run: echo $DEPLOYMENT_URL
