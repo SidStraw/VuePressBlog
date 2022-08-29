@@ -1,0 +1,29 @@
+name: Cloudflare Pages Deployed
+
+on:
+  check_run:
+    types: [completed]
+
+jobs:
+  build:
+    name: Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+          cache: 'yarn'
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Check object
+        run: |
+          cat << OBJECT
+          ${{ toJson(github) }}
+          OBJECT
+      - name: Get Cloudflare Page URL
+        run: echo "DEPLOYMENT_URL=$(node ${GITHUB_WORKSPACE}/.github/get-cloudflare-page-url.js "${{ github.event.check_run.output.summary }}")"
+        continue-on-error: true
+      - run: echo $DEPLOYMENT_URL
