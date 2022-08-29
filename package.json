@@ -39,6 +39,7 @@
     "vuepress": "^1.2.0"
   },
   "dependencies": {
+    "jsdom": "^20.0.0",
     "vuepress-theme-sidstraw-blog": "file:./.vuepress/theme",
     "yaml": "^1.10.0"
   }
