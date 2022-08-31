@@ -6,7 +6,6 @@
 - add some markdown posts to `_posts`, check the existing example
 - deploy your blog, check [Deployment](#deployment)
 
-
 install dependencies
 
 ```bash
