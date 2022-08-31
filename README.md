@@ -1,5 +1,7 @@
 # Sid's Vuepress Blog
 
+version: 0.1.0
+
 ## Getting Started
 
 - install it locally [installing]
