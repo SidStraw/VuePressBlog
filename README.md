@@ -1,6 +1,6 @@
 # Sid's Vuepress Blog
 
-version: 0.1.0
+version: 0.1.1
 
 ## Getting Started
 
