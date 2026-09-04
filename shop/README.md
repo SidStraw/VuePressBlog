@@ -34,11 +34,11 @@ products:
       - 流程優化
   - title: Vtuber 企劃諮詢顧問
     category: 企劃顧問
-    description: 針對角色定位、內容規劃、活動發想與執行策略提供企劃顧問建議。
+    description: 提供 Vtuber 粉絲企劃的活動發想、應援內容規劃與執行策略顧問建議，不是 Vtuber 本身或公司的經營顧問。
     icon: mdi-account-star-outline
     tags:
-      - 內容企劃
-      - 品牌定位
+      - 粉絲企劃
+      - 應援活動
   - title: Vtuber 二創周邊
     category: 周邊合作
     description: 可洽談 Vtuber 二創周邊的企劃、設計合作與販售安排。
