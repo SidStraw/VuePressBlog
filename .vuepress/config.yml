@@ -24,6 +24,9 @@ themeConfig:
     - text: 所有文章
       link: /blog
       icon: mdi-vuejs
+    - text: 商店
+      link: /shop
+      icon: mdi-storefront-outline
   color:
     $accentColor: "#99B7A3"
     $secondaryColor: "#84969C"
