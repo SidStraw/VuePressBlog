@@ -78,9 +78,9 @@
               <v-btn
                 color="primary"
                 class="white--text"
-                :href="buildContactLink(product)"
-                :target="contactTarget(product)"
-                :rel="contactRel(product)"
+                :href="product.resolvedContactLink"
+                :target="product.contactTarget"
+                :rel="product.contactRel"
               >
                 <v-icon left>mdi-send</v-icon>
                 {{ product.contactLabel || '聯絡我' }}
@@ -103,32 +103,30 @@ export default {
       return this.$page.frontmatter.description || ''
     },
     products() {
-      return this.$page.frontmatter.products || []
+      const products = this.$page.frontmatter.products || []
+
+      return products.map(product => {
+        const resolvedContactLink = product.contactLink || this.buildEmailLink(product.title)
+        return {
+          ...product,
+          resolvedContactLink,
+          contactTarget: resolvedContactLink.startsWith('http') ? '_blank' : undefined,
+          contactRel: resolvedContactLink.startsWith('http') ? 'noopener noreferrer' : undefined,
+        }
+      })
     },
     contactEmail() {
       return this.$page.frontmatter.contactEmail || ''
     },
   },
   methods: {
-    buildContactLink(product) {
-      if (product.contactLink) {
-        return product.contactLink
-      }
-
+    buildEmailLink(productTitle) {
       if (!this.contactEmail) {
         return '/'
       }
 
-      const subject = encodeURIComponent(`排氣管管 SidEffect｜${product.title} 洽詢`)
+      const subject = encodeURIComponent(`排氣管管 SidEffect｜${productTitle} 洽詢`)
       return `mailto:${this.contactEmail}?subject=${subject}`
-    },
-    contactTarget(product) {
-      const link = this.buildContactLink(product)
-      return link.startsWith('http') ? '_blank' : undefined
-    },
-    contactRel(product) {
-      const link = this.buildContactLink(product)
-      return link.startsWith('http') ? 'noopener noreferrer' : undefined
     },
   },
 }
